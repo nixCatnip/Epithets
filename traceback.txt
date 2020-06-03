@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 97, in script
+    jump workMessage
+ScriptError: could not find label 'workMessage'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 97, in script
+    jump workMessage
+  File "C:\Users\Nix\Downloads\renpy-7.3.5-sdk\renpy\ast.py", line 1697, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\Nix\Downloads\renpy-7.3.5-sdk\renpy\script.py", line 898, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'workMessage'.
+
+Windows-8-6.2.9200
+Ren'Py 7.3.5.606
+Epithets 1.0
+Wed Jun 03 02:28:03 2020
