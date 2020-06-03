@@ -102,9 +102,17 @@ label textMessage:
     return
 #Spacer
 
+#Flag Defines, because ren.py only allows binary flags I need one for each possiblity.
+$ harukiChat = "False"
+$ yoikishiChat = "False"
+$ himeChat = "False"
+$ reiChat = "False"
+$ Email = "False"
+#Spacer
+
 label HarukiMessage:
     nar "...Haruki."
-    $ chat = 1
+    $ harukiChat = "True"
     show fuyu really at farleft
     with moveinright
     show haruki smug at farright
@@ -144,7 +152,7 @@ label HarukiMessage:
 
 label YoikishiMessage:
     nar "...Yoikishi."
-    $ chat = 2
+    $ yoikishiChat = "True"
     show fuyu neut at farleft
     with moveinright
     show yoikishi excited at farright
@@ -170,7 +178,7 @@ label YoikishiMessage:
 
 label HimeMessage:
     nar "...Hime."
-    $ chat = 3
+    $ himeChat = "True"
     show fuyu neut at farleft
     with moveinright
     show hime yo at farright
@@ -211,7 +219,7 @@ label HimeMessage:
 
 label ReiMessage:
     nar "...Rei."
-    $ chat = 4
+    $ reiChat = "true"
     show fuyu down at farleft
     with moveinright
     show rei cautious at farright
@@ -236,7 +244,7 @@ label ReiMessage:
 
 label WorkMessage:
     nar "...Her."
-    $ chat = 5
+    $ Email = "True"
     hide fuyu neut
     show the email at truecenter
     with Dissolve(0.5)
@@ -271,11 +279,11 @@ label Day2:
     scene classroom evening
     with Dissolve(0.5)
     nar "That was until after school."
-    show hime cool at farleft
     show yoikishi hap at left
+    show hime cool at farleft
     show rei distracted at right
     #checks if Haruki was texted last night
-    if chat = 1:
+    if harukiChat:
         show haruki frown at farright
     else:
         show haruki smug at farright
