@@ -2,9 +2,25 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 122: expected 'image_name_component' not found.
-    hide scene apartment night
-        ^
+File "game/script.rpy", line 106: expected statement.
+    harukiChat = "False"
+               ^
+
+File "game/script.rpy", line 107: expected statement.
+    yoikishiChat = "False"
+                 ^
+
+File "game/script.rpy", line 108: expected statement.
+    himeChat = "False"
+             ^
+
+File "game/script.rpy", line 109: expected statement.
+    reiChat = "False"
+            ^
+
+File "game/script.rpy", line 110: expected statement.
+    Email = "False"
+          ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Jun 02 20:37:47 2020
+Wed Jun 03 16:25:46 2020
