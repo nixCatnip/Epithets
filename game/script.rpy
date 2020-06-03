@@ -24,7 +24,7 @@ transform farright:
 transform center:
     xalign 0.5
     yalign 1.0
-transform center:
+transform truecenter:
     xalign 0.5
     yalign 0.5
 #Spacer
@@ -32,9 +32,9 @@ transform center:
 #Basic introduction into the gist of the story
 label start:
     play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0
-    nar "Ah, San Francisco, the salty air of the sea mixed with the salty attitudes of young adults expirencing true independence for the first time in their lives."
-    nar "Five of these young adults attend the local univeristy, hailing from across the sea, here to expand their minds and hearts."
-    nar "Ah, here comes one now. Arriving home after a long day of, less than enjoyable work. perhaps the salty-est of them all, Fuyuhiko Shiro."
+    nar "Ah, San Francisco, the salty air of the sea mixed with the salty attitudes of young adults experiencing true independence for the first time in their lives."
+    nar "Five of these young adults attend the local university, hailing from across the sea, here to expand their minds and hearts."
+    nar "Ah, here comes one now. Arriving home after a long day of less than enjoyable work. perhaps the saltiest of them all, Fuyuhiko Shiro."
     scene apartment night
     show fuyu really
     with Dissolve(.5)
@@ -42,7 +42,7 @@ label start:
     fuy "She always thinks she knows what's best for me. She's not my fucking mom!"
     nar "He stomps across his small apartment and flips open a laptop, furiously scrolling through social media."
     nar "perhaps we should have him recall a few of his companions to take his mind off of things."
-    nar "Noncanonically of course."
+    nar "Noncanonically, of course."
     jump recallMenu
 #Spacer
 
@@ -59,7 +59,7 @@ label recallMenu:
         "Yoikishi Konpeki":
             show fuyu neut
             fuy "A History Major. He's obsessed with both the Code of Chivalry and the Bushido Code, especially famous upholders of each."
-            fuy "Not to mention he's super immature, he's taken to naming us after seasons lately."
+            fuy "Not to mention he's super immature. Lately, he's taken to naming us after seasons."
             fuy "He's also very protective of his sister, Hime. It's hard to imagine him without her, and it's clear he has a great love for her."
             jump recallMenu
         "Himiko Konpeki":
@@ -75,7 +75,7 @@ label recallMenu:
             show fuyu neut
             fuy "A Theology Major. He practices some weird niche religon, one that his family holds a lot of power in."
             show fuyu down
-            fuy "Sometimes, I pity him in a weird way; we were both put in such a bad situation by our parents."
+            fuy "Sometimes, I pity him in a weird way. We were both put in such a bad situation by our parents."
             fuy "But Rei doesn't seem to notice that the pressure on him is unhealthy and barely listens to me when I talk to him about it."
             fuy "Worse yet, he was one of the people to see me at my worst earlier today."
             jump recallMenu
@@ -104,23 +104,23 @@ label textMessage:
 
 label HarukiMessage:
     nar "...Haruki."
-    $ chat = "Haruki"
+    $ chat = 1
     show fuyu really at farleft
     with moveinright
     show haruki smug at farright
     with Dissolve(0.5)
-    thar "Heya there Fuyu. Are you up to anything? I'd love to swing by and snatch you up~."
+    thar "Heya there, Fuyu. Are you up to anything? I'd love to swing by and snatch you up~."
     tfuy "Not now Haruki, gods, especially not right now."
     show haruki frown
     thar "What do you mean?"
-    thar "Are you alright Fuyu?"
+    thar "Are you alright, Fuyu?"
     $ renpy.pause(2.5)
     thar "Fuyu?"
     tfuy "Stop calling me that."
     thar "What?"
     stop music fadeout 1.0
     $ renpy.pause(2.0)
-    thar "What do you mean Fuyu?"
+    thar "What do you mean, Fuyu?"
     show fuyu snap
     tfuy "MY NAME IS FUYUHIKO."
     show fuyu really
@@ -136,7 +136,7 @@ label HarukiMessage:
     with moveinleft
     hide haruki frown
     with Dissolve(0.5)
-    nar "Exhausted, the boy crawls into bed, and begins falls into unconsciousness. The events of the day racing through his head and dreams."
+    nar "Exhausted, the boy crawls into bed, and begins to fall into unconsciousness. The events of the day racing through his head and dreams."
     scene black
     with Dissolve(0.5)
     jump Day2
@@ -144,7 +144,7 @@ label HarukiMessage:
 
 label YoikishiMessage:
     nar "...Yoikishi."
-    $ chat = "Yoikishi"
+    $ chat = 2
     show fuyu neut at farleft
     with moveinright
     show yoikishi excited at farright
@@ -152,7 +152,7 @@ label YoikishiMessage:
     tyoi "winter! you HAVE to see this!"
     show yoikishi err
     tyoi "oh right"
-    tfuy "It's fine Yoikishi."
+    tfuy "It's fine, Yoikishi."
     tyoi "if its fine then why are you calling me that! >:("
     tfuy "Okay then,"
     show fuyu smile
@@ -164,13 +164,13 @@ label YoikishiMessage:
     tyoi "oh right! i had a video to show you, you'll love it!"
     scene black
     with Dissolve(0.5)
-    nar "The boys continued chatting about nothing of importance. It was a nice distraction for Fuyuhiko, one he really needed"
+    nar "The boys continued chatting about nothing of importance. It was a nice distraction for Fuyuhiko, one he really needed."
     jump Day2
 #Spacer
 
 label HimeMessage:
     nar "...Hime."
-    $ chat = "Hime"
+    $ chat = 3
     show fuyu neut at farleft
     with moveinright
     show hime yo at farright
@@ -179,13 +179,13 @@ label HimeMessage:
     nar "Hime sends a image of her tagging her store along with a transcription."
     show fuyu smile
     tfuy "Amazing."
-    thim "I know right!"
+    thim "I know right!?"
     show hime cool
     thim "I've been waiting to do this for so long."
     tfuy "What broke the camel's back?"
     $ renpy.pause(2.0)
     show hime uncomfy
-    thim "My asshat of a manager threated my job because I refused to go out with him."
+    thim "My asshat of a manager threatened my job because I refused to go out with him."
     show fuyu down
     tfuy "Oh."
     thim "Yeah."
@@ -211,21 +211,21 @@ label HimeMessage:
 
 label ReiMessage:
     nar "...Rei."
-    $ chat = "Rei"
+    $ chat = 4
     show fuyu down at farleft
     with moveinright
     show rei cautious at farright
     with Dissolve(0.5)
     trei "Shiro, are you there?"
     $ renpy.pause(3.0)
-    trei "Shiro please."
+    trei "Shiro, please."
     $ renpy.pause(1.0)
     trei "Shiro."
-    tfuy "What do you want Rei?"
+    tfuy "What do you want, Rei?"
     trei "I just wanted to make sure you were okay."
     tfuy "I'm fine. Leave me alone."
-    trei "Are you sure Shiro?"
-    tfuy "Don't make me block you Rei."
+    trei "Are you sure, Shiro?"
+    tfuy "Don't make me block you, Rei."
     $ renpy.pause(1.0)
     nar "Fuyu sits for a few moments, waiting for a text that will never come."
     scene black
@@ -236,7 +236,7 @@ label ReiMessage:
 
 label WorkMessage:
     nar "...Her."
-    $ chat = "Work"
+    $ chat = 5
     hide fuyu neut
     show the email at truecenter
     with Dissolve(0.5)
@@ -265,3 +265,19 @@ label Day2:
     scene apartment day
     with Dissolve(0.5)
     nar "The next day passed mostly uneventfully"
+    scene hallway day
+    with Dissolve(0.5)
+    nar "The same classes in the same order and the same motions."
+    scene classroom evening
+    with Dissolve(0.5)
+    nar "That was until after school."
+    show hime cool at farleft
+    show yoikishi hap at left
+    show rei distracted at right
+    #checks if Haruki was texted last night
+    if chat = 1:
+        show haruki frown at farright
+    else:
+        show haruki smug at farright
+    with Dissolve(0.5)
+    nar "Club time, that is."
