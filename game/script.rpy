@@ -31,13 +31,20 @@ transform truecenter:
 
 #Basic introduction into the gist of the story
 label start:
+    #Flag Defines
+    $ HarukiChat = False
+    $ YoikishiChat = False
+    $ HimeChat = False
+    $ ReiChat = False
+    $ WorkChat = False
+    #Spacer
     play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0
     nar "Ah, San Francisco, the salty air of the sea mixed with the salty attitudes of young adults experiencing true independence for the first time in their lives."
     nar "Five of these young adults attend the local university, hailing from across the sea, here to expand their minds and hearts."
     nar "Ah, here comes one now. Arriving home after a long day of less than enjoyable work. perhaps the saltiest of them all, Fuyuhiko Shiro."
     scene apartment night
     show fuyu really
-    with Dissolve(.5)
+    with Dissolve(0.5)
     fuy "I can't believe that woman!"
     fuy "She always thinks she knows what's best for me. She's not my fucking mom!"
     nar "He stomps across his small apartment and flips open a laptop, furiously scrolling through social media."
@@ -51,30 +58,38 @@ label recallMenu:
     menu:
         "Haruki Supai":
             show fuyu what
+            with Dissolve(0.5)
             fuy "Haruki? He's a Computer Science Major. I've known him for the longest. He's been a chaotic bastard since the day we met."
             show fuyu really
+            with Dissolve(0.5)
             fuy "He's arrogant, somewhat violent, and worse of all, flirty. Guy's gay and he owns it, maybe a bit too much."
             fuy "Sometimes it feels like everything he says is specifically meant to make me uncomfortable, or annoyed."
             jump recallMenu
         "Yoikishi Konpeki":
             show fuyu neut
+            with Dissolve(0.5)
             fuy "A History Major. He's obsessed with both the Code of Chivalry and the Bushido Code, especially famous upholders of each."
             fuy "Not to mention he's super immature. Lately, he's taken to naming us after seasons."
             fuy "He's also very protective of his sister, Hime. It's hard to imagine him without her, and it's clear he has a great love for her."
             jump recallMenu
         "Himiko Konpeki":
             show fuyu neut
+            with Dissolve(0.5)
             fuy "Right, Himiko. She goes by Hime, and she's the only one of us that doesn't attend college."
             fuy "She works as a Graffiti Artist and Cashier and hates that part-time job as much as I."
             show fuyu smile
+            with Dissolve(0.5)
             fuy "She's even told me that she started tagging the area around her workplace."
             show fuyu neut
+            with Dissolve(0.5)
             fuy "Her nickname comes from a childhood love of princesses, and it stuck. Thanks to her brother, that is."
             jump recallMenu
         "Rei Amanshi":
             show fuyu neut
+            with Dissolve(0.5)
             fuy "A Theology Major. He practices some weird niche religon, one that his family holds a lot of power in."
             show fuyu down
+            with Dissolve(0.5)
             fuy "Sometimes, I pity him in a weird way. We were both put in such a bad situation by our parents."
             fuy "But Rei doesn't seem to notice that the pressure on him is unhealthy and barely listens to me when I talk to him about it."
             fuy "Worse yet, he was one of the people to see me at my worst earlier today."
@@ -86,6 +101,7 @@ label recallMenu:
 #Text Message time
 label textMessage:
     show fuyu neut
+    with Dissolve(0.5)
     nar "As the boy finishes his recollection, his phone begins to buzz. When he picks it up, a message from someone appears on the screen."
     nar "A message from..."
     menu:
@@ -102,17 +118,9 @@ label textMessage:
     return
 #Spacer
 
-#Flag Defines, because ren.py only allows binary flags I need one for each possiblity.
-$ harukiChat = "False"
-$ yoikishiChat = "False"
-$ himeChat = "False"
-$ reiChat = "False"
-$ Email = "False"
-#Spacer
-
 label HarukiMessage:
     nar "...Haruki."
-    $ harukiChat = "True"
+    $ HarukiChat = True
     show fuyu really at farleft
     with moveinright
     show haruki smug at farright
@@ -120,6 +128,7 @@ label HarukiMessage:
     thar "Heya there, Fuyu. Are you up to anything? I'd love to swing by and snatch you up~."
     tfuy "Not now Haruki, gods, especially not right now."
     show haruki frown
+    with Dissolve(0.5)
     thar "What do you mean?"
     thar "Are you alright, Fuyu?"
     $ renpy.pause(2.5)
@@ -132,6 +141,7 @@ label HarukiMessage:
     show fuyu snap
     tfuy "MY NAME IS FUYUHIKO."
     show fuyu really
+    with Dissolve(0.5)
     tfuy "It's not \"Fuyu\"."
     tfuy "It's not \"sweetheart\" or \"doll\"."
     tfuy "It's Fuyuhiko."
@@ -152,23 +162,27 @@ label HarukiMessage:
 
 label YoikishiMessage:
     nar "...Yoikishi."
-    $ yoikishiChat = "True"
+    $ YoikishiChat = True
     show fuyu neut at farleft
     with moveinright
     show yoikishi excited at farright
     with Dissolve(0.5)
     tyoi "winter! you HAVE to see this!"
     show yoikishi err
+    with Dissolve(0.5)
     tyoi "oh right"
     tfuy "It's fine, Yoikishi."
     tyoi "if its fine then why are you calling me that! >:("
     tfuy "Okay then,"
     show fuyu smile
+    with Dissolve(0.5)
     tfuy "Fall."
     show fuyu neut
     show yoikishi hap
+    with Dissolve(0.5)
     tyoi "there you go!"
     show yoikishi excited
+    with Dissolve(0.5)
     tyoi "oh right! i had a video to show you, you'll love it!"
     scene black
     with Dissolve(0.5)
@@ -178,7 +192,7 @@ label YoikishiMessage:
 
 label HimeMessage:
     nar "...Hime."
-    $ himeChat = "True"
+    $ HimeChat = True
     show fuyu neut at farleft
     with moveinright
     show hime yo at farright
@@ -186,24 +200,32 @@ label HimeMessage:
     thim "You are going to love what I just did."
     nar "Hime sends a image of her tagging her store along with a transcription."
     show fuyu smile
+    with Dissolve(0.5)
     tfuy "Amazing."
     thim "I know right!?"
     show hime cool
+    with Dissolve(0.5)
     thim "I've been waiting to do this for so long."
     tfuy "What broke the camel's back?"
     $ renpy.pause(2.0)
     show hime uncomfy
+    with Dissolve(0.5)
     thim "My asshat of a manager threatened my job because I refused to go out with him."
     show fuyu down
+    with Dissolve(0.5)
     tfuy "Oh."
     thim "Yeah."
     $ renpy.pause(3.0)
+    show fuyu neut
+    with Dissolve(0.5)
     tfuy "I tried to get out of my \"Accessibility Benefits\" again today."
     show hime cool
+    with Dissolve(0.5)
     thim "And how'd that go?"
     tfuy "Not great."
     thim "Our bosses suck, huh?"
     show fuyu neut
+    with Dissolve(0.5)
     tfuy "Yup"
     thim "I'll see you tomorrow, Fuyuhiko."
     hide hime cool
@@ -219,7 +241,7 @@ label HimeMessage:
 
 label ReiMessage:
     nar "...Rei."
-    $ reiChat = "true"
+    $ ReiChat = True
     show fuyu down at farleft
     with moveinright
     show rei cautious at farright
@@ -244,7 +266,7 @@ label ReiMessage:
 
 label WorkMessage:
     nar "...Her."
-    $ Email = "True"
+    $ WorkChat = True
     hide fuyu neut
     show the email at truecenter
     with Dissolve(0.5)
@@ -258,9 +280,11 @@ label WorkMessage:
     fuy "I'M NOT A FUCKING KID ANYMORE DAD!"
     $ renpy.pause(2.0)
     show fuyu what
+    with Dissolve(0.5)
     fuy "I-"
     $ renpy.pause(2.0)
     show fuyu down
+    with Dissolve(0.5)
     fuy "I need some sleep."
     scene black
     with Dissolve(0.5)
@@ -282,10 +306,10 @@ label Day2:
     show yoikishi hap at left
     show hime cool at farleft
     show rei distracted at right
-    #checks if Haruki was texted last night
-    if harukiChat:
-        show haruki frown at farright
-    else:
-        show haruki smug at farright
+    show haruki smug at farright
     with Dissolve(0.5)
+    #checks if Haruki was texted last night
+    if HarukiChat:
+        show haruki frown at farright
+        with Dissolve(0.5)
     nar "Club time, that is."
