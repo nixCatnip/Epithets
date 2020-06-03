@@ -1,4 +1,4 @@
-violentdefine fuy = Character("Fuyuhiko")
+define fuy = Character("Fuyuhiko")
 define har = Character("Haruki")
 define rei = Character("Rei")
 define him = Character("Hime")
@@ -27,6 +27,7 @@ transform center:
 transform center:
     xalign 0.5
     yalign 0.5
+#Spacer
 
 #Basic introduction into the gist of the story
 label start:
