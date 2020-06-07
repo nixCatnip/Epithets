@@ -1,28 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 278, in script
-    if harukiChat:
-  File "game/script.rpy", line 278, in <module>
-    if harukiChat:
-NameError: name 'harukiChat' is not defined
+  File "game/script.rpy", line 287, in script
+    if HarukiChat = True:
+SyntaxError: invalid syntax (game/script.rpy, line 287)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 278, in script
-    if harukiChat:
+  File "game/script.rpy", line 287, in script
+    if HarukiChat = True:
   File "C:\Users\Nix\Downloads\renpy-7.3.5-sdk\renpy\ast.py", line 1832, in execute
     if renpy.python.py_eval(condition):
-  File "C:\Users\Nix\Downloads\renpy-7.3.5-sdk\renpy\python.py", line 2059, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Nix\Downloads\renpy-7.3.5-sdk\renpy\python.py", line 2052, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 278, in <module>
-    if harukiChat:
-NameError: name 'harukiChat' is not defined
+  File "C:\Users\Nix\Downloads\renpy-7.3.5-sdk\renpy\python.py", line 2057, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\Nix\Downloads\renpy-7.3.5-sdk\renpy\python.py", line 692, in py_compile
+    raise e
+SyntaxError: invalid syntax (game/script.rpy, line 287)
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Epithets 1.0
-Wed Jun 03 16:23:55 2020
+Wed Jun 03 16:45:55 2020
