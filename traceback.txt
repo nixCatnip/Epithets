@@ -1,24 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 287, in script
-    if HarukiChat = True:
-SyntaxError: invalid syntax (game/script.rpy, line 287)
+  File "game/script.rpy", line 333, in script
+    jump SadBoyHours
+ScriptError: could not find label 'SadBoyHours'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 287, in script
-    if HarukiChat = True:
-  File "C:\Users\Nix\Downloads\renpy-7.3.5-sdk\renpy\ast.py", line 1832, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\Nix\Downloads\renpy-7.3.5-sdk\renpy\python.py", line 2057, in py_eval
-    code = py_compile(code, 'eval')
-  File "C:\Users\Nix\Downloads\renpy-7.3.5-sdk\renpy\python.py", line 692, in py_compile
-    raise e
-SyntaxError: invalid syntax (game/script.rpy, line 287)
+  File "game/script.rpy", line 333, in script
+    jump SadBoyHours
+  File "C:\Users\Nix\Downloads\renpy-7.3.5-sdk\renpy\ast.py", line 1697, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\Nix\Downloads\renpy-7.3.5-sdk\renpy\script.py", line 898, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'SadBoyHours'.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Epithets 1.0
-Wed Jun 03 16:45:55 2020
+Wed Jun 17 17:54:08 2020

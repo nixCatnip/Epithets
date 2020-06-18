@@ -1,8 +1,8 @@
-define fuy = Character("Fuyuhiko")
-define har = Character("Haruki")
-define rei = Character("Rei")
-define him = Character("Hime")
-define yoi = Character("Yoikishi")
+define fuy = Character("Fuyuhiko", color="#8ceffa")
+define har = Character("Haruki", color="#fa8c8c")
+define rei = Character("Rei", color="#93fa8c")
+define him = Character("Hime", color="#faf48c")
+define yoi = Character("Yoikishi", color="#8c95fa")
 define tfuy = Character("Fuyuhiko", color="#1d8f5f")
 define thar = Character("Haruki", color="#1d8f5f")
 define trei = Character("Rei", color="#1d8f5f")
@@ -313,3 +313,228 @@ label Day2:
         show haruki frown at farright
         with Dissolve(0.5)
     nar "Club time, that is."
+    show fuyu neut at center
+    with Dissolve(0.5)
+    fuy "Really, our club was just an excuse to use this classroom after school hours, we never really did anything with it."
+    fuy "But club  time does bring up the question of who to spend it with."
+    menu:
+        "Yoikishi and Hime":
+            hide haruki
+            hide rei
+            with Dissolve(0.5)
+            show yoikishi at farright
+            with moveinleft
+            show hime at farleft
+            with moveinleft
+            jump YoikishiandHime
+        "Haruki and Rei":
+            hide yoikishi
+            hide hime
+            with Dissolve(0.5)
+            show haruki at farright
+            with moveinright
+            show rei at farleft
+            with moveinright
+            jump HarukiandRei
+        "Nobody":
+            hide yoikishi
+            hide hime
+            hide rei
+            hide haruki
+            with Dissolve(0.5)
+            jump Nobody
+#Spacer
+
+label YoikishiandHime:
+    if HimeChat:
+        nar "Placeholder"
+    if YoikishiChat:
+        nar "Placeholder"
+    else:
+        nar "Placeholder"
+#Spacer
+
+label HarukiandRei:
+    if HarukiChat:
+        har "Oh. Hi... Fuyuhiko."
+        rei "Hello, Shiro."
+        har "I was... Just getting this guy to talk about that great fire in the sky."
+        show fuyu what
+        with Dissolve(0.5)
+        fuy "The Sun?"
+        show rei cautious
+        with Dissolve(0.5)
+        rei "No!"
+        rei "Lantern. He means Lantern."
+        fuy "Lantern?"
+        show haruki smug
+        with Dissolve(0.5)
+        har "That god his parents forced our boy into worshipping."
+        har "I mean seriously. You're so obsessed, it's almost pitiful."
+        show rei shatter
+        with Dissolve(0.5)
+        rei "They didn't force me into anything, HARUKI!"
+        show haruki frown
+        show fuyu down
+        with Dissolve(0.5)
+        $ renpy.pause(2.0)
+        har "Rei..."
+        show fuyu really
+        with Dissolve(0.5)
+        fuy "Shut up, Haruki."
+        show rei cautious
+        with Dissolve(0.5)
+        rei "Look. If you want to see that they didn't force me into following Lantern. Come to my house tonight Haruki."
+        fuy "I don't think that's a good idea."
+        nar "Haruki grumbled, he had something we wanted to say but he held himself back."
+        rei "Well, how about you come over, Shiro?"
+        show haruki whatever
+        with Dissolve(0.5)
+        har "Really? So you're just gonna invite him over. What are you planning on doing Rei?"
+        rei "Nothing!"
+        har "Nothing!? Because it seems to me like you're planning a little sacrifice!"
+        fuy "Haruki!"
+        show haruki angry
+        with Dissolve(0.5)
+        har "Oh fuck you too Fuyuhiko!"
+        show haruki shut
+        with Dissolve(0.5)
+        har "I'm done with this, I'll see you all next time..."
+        hide haruki
+        with Dissolve(0.5)
+        show rei at left
+        with moveinright
+        show fuyu at right
+        with moveinleft
+        rei "I can't believe him."
+        show rei distracted
+        with Dissolve(0.5)
+        rei "So Shiro, are you coming over?"
+        fuy "Yeah"
+        rei "Good. We'll leave once club is over."
+        jump ReiHouse
+    elif ReiChat:
+        har "Hey Fuyu~"
+        rei "Shiro."
+        har "I was just getting this guy to talk about that great fire in the sky."
+        show fuyu what
+        with Dissolve(0.5)
+        fuy "The Sun?"
+        rei "Lantern. He means Lantern."
+        fuy "Lantern?"
+        har "That god his parents forced our boy into worshipping."
+        har "I mean seriously. You're so obsessed, it's almost pitiful."
+        $ renpy.pause(2.0)
+        rei "Shiro. Can I talk to you, in private?"
+        fuy "Oh, uh, sure."
+        har "Hey, where are you going? I was just teasing Rei."
+        rei "Sure you were, Supai."
+        scene hallway afternoon
+        hide haruki
+        show rei cautious at left
+        show fuyu what at right
+        with Dissolve(0.5)
+        rei "About last night."
+        nar "Fuyuhiko groans, remembering their conversation, and what preceeded it."
+        show fuyu really
+        with Dissolve(0.5)
+        fuy "Really, Rei? You don't have to do this, I'm fine."
+        rei "I know you aren't Shiro, I saw what happened."
+        rei "I just, want to know what's going on."
+        show fuyu down
+        with Dissolve(0.5)
+        nar "Fuyuhiko doesn't respond, instead opting to sit with the other boy in scilence."
+        rei "If you don't tell me, I'll just find out through Lantern."
+        fuy "You can't do that."
+        rei "I can, Shiro."
+        fuy "Then prove it."
+        rei "I- I can't not here."
+        rei "Come ot my house, after club, I'll show you then, okay?"
+        hide rei
+        with Dissolve(0.5)
+        nar "Rei went back into the classroom, but it didn't take long for someone else to emerge from the doorway"
+        show haruki frown at left
+        with moveinleft
+        har "What was that about? I didn't mean to hurt him, honest."
+        har "I just, went a little far."
+        fuy "This isn't about you Haruki."
+        har "What?"
+        fuy "It's between me and him, he invited me over to his."
+        har "Really? Are you gonna go?"
+        show haruki smug
+        with Dissolve(0.5)
+        har "There might be another boy would love you at his house~"
+        menu:
+            "Yes":
+                har "Well then."
+                har "Suit yourself, Fuyu."
+                hide haruki
+                with Dissolve(0.5)
+                nar "Fuyu sat in the hallway for the rest of the club time, thinking about what the hell was going to transpire at Rei's house."
+                nar "Until the boy appeared to show him."
+                jump ReiHouse
+            "No":
+                har "Well then."
+                har "How come to that other boy's house?"
+                show fuyu neut
+                with Dissolve(0.5)
+                fuyu "I don't see why not."
+                jump HarukiHouse
+    else:
+        har "Hey Fuyu~"
+        rei "Hello, Shiro."
+        har "I was just getting this guy to talk about that great fire in the sky."
+        show fuyu what
+        with Dissolve(0.5)
+        fuy "The Sun?"
+        show rei cautious
+        with Dissolve(0.5)
+        rei "No!"
+        rei "Lantern. He means Lantern."
+        fuy "Lantern?"
+        har "That god his parents forced our boy into worshipping."
+        har "I mean seriously. You're so obsessed, it's almost pitiful."
+        show rei shatter
+        with Dissolve(0.5)
+        rei "They didn't force me into anything, HARUKI!"
+        show haruki frown
+        show fuyu down
+        with Dissolve(0.5)
+        $ renpy.pause(2.0)
+        har "Rei..."
+        har "I- I was just teasing."
+        rei "God can you hear yourself!"
+        rei "I can't believe you. You can't even believe me, for a second!"
+        show rei disappoint
+        with Dissolve(0.5)
+        rei "What about you Shiro, come to my house after club, I'll show you Lantern's flame."
+        show haruki whatever
+        with Dissolve(0.5)
+        har "Don't do that, don't drag him into this."
+        har "If you're going that then, Fuyu, you should come to mine. I haven't gotten a chance to really talk to lately."
+        nar "This whole conversation, He's barely processed what happened. And now a choice to make?"
+        nar "How about we help our Silver Boy."
+        nar "Who's offer should he accept?"
+        menu:
+            "Haruki's":
+                rei "Oh."
+                show haruki smug
+                with Dissolve(0.5)
+                har "Good choice, Fuyu."
+                nar "The rest of the time passed awkwardly, Rei eventually drifting to the Konpeki siblings."
+                jump HarukiHouse
+            "Rei's":
+                har "Hmm, fine."
+                hide haruki
+                show fuyu at right
+                with moveinright
+                nar "Haruki left the club after what you said, the rest of you followed not soon after."
+                jump ReiHouse
+#Spacer
+
+label Nobody:
+    if WorkChat:
+        nar "Placeholder"
+    else:
+        nar "Placeholder"
+#Spacer

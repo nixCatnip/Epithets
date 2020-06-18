@@ -2,25 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 106: expected statement.
-    harukiChat = "False"
-               ^
-
-File "game/script.rpy", line 107: expected statement.
-    yoikishiChat = "False"
-                 ^
-
-File "game/script.rpy", line 108: expected statement.
-    himeChat = "False"
-             ^
-
-File "game/script.rpy", line 109: expected statement.
-    reiChat = "False"
-            ^
-
-File "game/script.rpy", line 110: expected statement.
-    Email = "False"
-          ^
+File "game/script.rpy", line 524: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Rei's"
+           ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Jun 03 16:25:46 2020
+Wed Jun 17 21:06:56 2020
