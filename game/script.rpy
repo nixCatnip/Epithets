@@ -351,7 +351,7 @@ label YoikishiandHime:
     if YoikishiChat:
         nar "Placeholder"
     else:
-        nar "Placeholder"
+        nar "Placerholder"
 #Spacer
 
 label HarukiandRei:
