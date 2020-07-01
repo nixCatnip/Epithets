@@ -347,11 +347,159 @@ label Day2:
 
 label YoikishiandHime:
     if HimeChat:
-        nar "Placeholder"
+        yoi "Hey Winter!"
+        him "Nice to see you, Fuyuhiko."
+        show fuyu smile
+        with Dissolve(0.5)
+        fuy "You too, Hime"
+        show yoikishi excited
+        with Dissolve(0.5)
+        yoi "Hey! Can you help us resolve something?"
+        yoi "Which is stronger, the pen or the sword?"
+        show fuyu waht
+        with Dissolve(0.5)
+        him "No offense Fuyuhiko, but Yoikishi, did you just ask the blind kid about art vs fighting?"
+        show yoikishi err
+        with Dissolve(0.5)
+        yoi "Just because he's going to pick the much cooler swords doen't mean he's biased."
+        nar "Normally this would be the point in the the story where a couple text boxes show up for who Fuyuhiko should agree with."
+        nar "Unfortunately..."
+        show fuyu neut
+        with Dissolve(0.5)
+        fuy "Yeah that is pretty stupid."
+        fuy "I mean, strength is such an arbitary thing, and I. Can't. See. Shit."
+        fuy "But, for the sake of agruement, Hime wins."
+        show yoikshi huh
+        with None
+        show hime yo
+        with Dissolve(0.5)
+        yoi "what"
+        show yoikishi err
+        with Dissolve(0.5)
+        yoi "But whyyyyy."
+        him "Just face the fact that I'm better, bro."
+        yoi "No fair!"
+        show fuyu smile
+        with Dissolve(0.5)
+        fuy "That's just the way the sword crumbles."
+        him "Oh, Fuyuhiko, do you wanna ahng out at ours after club?"
+        show hime cool
+        show yoikishi so
+        with Dissolve(0.5)
+        nar "Yoikishi grumbles incoherantly, which Hime assures Fuyuhiko is a yes."
+        fuy "Sure, as long as he doesn't try to kill me."
+        show yoikishi murder
+        with Dissolve(0.5)
+        yoi "..."
+        him "He won't."
+        show hime ugh
+        with Dissolve(0.5)
+        him "Probably."
+        jump KonpekiHouse
     if YoikishiChat:
-        nar "Placeholder"
+        yoi "Winter, Hey!!!"
+        him "Hanging out with the cool kids huh, Fuyuhiko."
+        show fuyu smile
+        with Dissolve(0.5)
+        fuy "You know it."
+        show yoikishi excited
+        with Dissolve(0.5)
+        yoi "Hey! Can you help us resolve something?"
+        yoi "Which is stronger, the pen or the sword?"
+        show fuyu waht
+        with Dissolve(0.5)
+        him "No offense Fuyuhiko, but Yoikishi, did you just ask the blind kid about art vs fighting?"
+        show yoikishi err
+        with Dissolve(0.5)
+        yoi "Just because he's going to pick the much cooler swords doen't mean he's biased."
+        nar "Normally this would be the point in the the story where a couple text boxes show up for who Fuyuhiko should agree with."
+        nar "Unfortunately..."
+        show fuyu neut
+        with Dissolve(0.5)
+        fuy "Yeah that is pretty stupid."
+        fuy "I mean, strength is such an arbitary thing, and I. Can't. See. Shit."
+        show fuyu smile
+        with Dissolve(0.5)
+        fuy "But, for the sake of arguement, Yoikishi wins."
+        show yoikishi excited
+        show hime ugh
+        with Dissolve(0.5)
+        yoi "Yes!"
+        yoi "Beat that Hime!"
+        show hime cool
+        with Dissolve(0.5)
+        him "I want a recounting of the votes. This is election fraud."
+        fuy "Too bad, your bother is just a master of gerrymandering."
+        show yoikishi hap
+        with Dissolve(0.5)
+        yoi "Hey! Speaking of gerrymandering, do you wanna come over tonight Winter!?"
+        show hime ugh
+        him "Wha-"
+        fuy "Sure."
+        him "Hey!"
+        show fuyu neut
+        with Dissolve(0.5)
+        him "He's not the only one who lives in that house."
+        yoi "Someone's a sore loooserrr."
+        him "Only 'cause you're a sore winner."
+        fuy "So, are you okay with me coming over Hime?"
+        him "Well, since you asked so nicely..."
+        show hime cool
+        with Dissolve(0.5)
+        him "Sure."
+        yoi "So it's settled then!"
+        jump KonpekiHouse
     else:
-        nar "Placeholder"
+        yoi "Hey Winter!"
+        him "Hanging out with the cool kids huh, Fuyuhiko."
+        show fuyu smile
+        with Dissolve(0.5)
+        fuy "You know it."
+        show yoikishi excited
+        with Dissolve(0.5)
+        yoi "Hey! Can you help us resolve something?"
+        yoi "Which is stronger, the pen or the sword?"
+        show fuyu what
+        with Dissolve(0.5)
+        him "No offense Fuyuhiko, but Yoikishi, did you just ask the blind kid about art vs fighting?"
+        show yoikishi err
+        with Dissolve(0.5)
+        yoi "Just because he's going to pick the much cooler swords doen't mean he's biased."
+        nar "Normally this would be the point in the the story where a couple text boxes show up for who Fuyuhiko should agree with."
+        nar "Unfortunately..."
+        show fuyu neut
+        with Dissolve(0.5)
+        fuy "Yeah that is pretty stupid."
+        fuy "I mean, strength is such an arbitary thing, and I. Can't. See. Shit."
+        fuy "So, you both lose."
+        show yoikishi huh
+        show hime ugh
+        with None
+        yoi "what"
+        show yoikishi err
+        show hime cool
+        with Dissolve(0.5)
+        yoi "You can't do that!"
+        fuy "That's just what happens when you give one person all the power."
+        him "Going full robber baron huh, Fuyuhiko."
+        fuy "I'm just teaching someone a very important lesson about captalism."
+        show yoikishi so
+        with Dissolve(0.5)
+        yoi "If you're so smart..."
+        show yoikishi excited
+        with Dissolve(0.5)
+        yoi "Then beat me at Zenshin Tactics!"
+        him "Alternatively..."
+        show hime yo
+        with Dissolve(0.5)
+        him "Hang out with someone who doesn't constantly suggest activites you can't do."
+        show yoikishi err
+        with Dissolve(0.5)
+        yoi "Oh."
+        him "Waddya say?"
+        fuy "Sure. Once club is over."
+        him "Great."
+        jump KonpekiHouse
 #Spacer
 
 label HarukiandRei:
@@ -537,4 +685,12 @@ label Nobody:
         nar "Placeholder"
     else:
         nar "Placeholder"
+#Spacer
+
+label KonpekiHouse:
+    nar "Placeholder"
+#Spacer
+
+label HarukiHouse:
+    nar "Placeholder"
 #Spacer
