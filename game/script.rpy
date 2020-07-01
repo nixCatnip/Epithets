@@ -345,6 +345,7 @@ label Day2:
             jump Nobody
 #Spacer
 
+#Yoikishi/Hime's Club time conversation
 label YoikishiandHime:
     if HimeChat:
         yoi "Hey Winter!"
@@ -502,6 +503,7 @@ label YoikishiandHime:
         jump KonpekiHouse
 #Spacer
 
+#Haruki/Rei's Club time conversation
 label HarukiandRei:
     if HarukiChat:
         har "Oh. Hi... Fuyuhiko."
@@ -680,6 +682,7 @@ label HarukiandRei:
                 jump ReiHouse
 #Spacer
 
+#Solo Club time + afternoon
 label Nobody:
     if WorkChat:
         nar "Placeholder"
