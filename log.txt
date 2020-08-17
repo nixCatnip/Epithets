@@ -1,4 +1,4 @@
-Wed Jun 17 21:23:19 2020
+Tue Jun 30 21:00:00 2020
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
  
@@ -7,11 +7,11 @@ Bootstrap to the start of init.init took 0.09s
 Early init took 0.00s
 Loader init took 0.03s
 Loading error handling took 0.03s
-Loading script took 0.13s
-Loading save slot metadata. took 0.03s
+Loading script took 0.14s
+Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.13s
+Running init code took 0.12s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s

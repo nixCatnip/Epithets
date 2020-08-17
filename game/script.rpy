@@ -1,3 +1,4 @@
+
 define fuy = Character("Fuyuhiko", color="#8ceffa")
 define har = Character("Haruki", color="#fa8c8c")
 define rei = Character("Rei", color="#93fa8c")
@@ -695,5 +696,9 @@ label KonpekiHouse:
 #Spacer
 
 label HarukiHouse:
+    nar "Placeholder"
+#Spacer
+
+label ReiHouse:
     nar "Placeholder"
 #Spacer
