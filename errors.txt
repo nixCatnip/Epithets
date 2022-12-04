@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 524: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Rei's"
-           ^
+File "game/script.rpy", line 373: expected statement.
+    shows hime yo
+                 ^
 
-Ren'Py Version: Ren'Py 7.3.5.606
-Wed Jun 17 21:06:56 2020
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Sun Dec  4 16:12:12 2022
