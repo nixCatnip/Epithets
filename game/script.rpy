@@ -360,10 +360,10 @@ label YoikishiandHime:
         yoi "Which looks cooler, the pen or the sword?"
         show fuyu what
         with Dissolve(0.5)
-        him "No offense Fuyuhiko, but did you just ask the blind kid about which looks cooler Yoikishi?"
+        him "No offense Fuyuhiko, but did you just ask the blind kid about if fighting or art looks cooler Yoikishi?"
         show yoikishi err
         with Dissolve(0.5)
-        yoi "Just because he's going to pick the much cooler swords doen't mean he's biased."
+        yoi "Just because he's going to pick the much cooler swords doesn't mean he's biased."
         nar "Normally this would be the point in the the story where a couple text boxes show up for who Fuyuhiko should agree with."
         nar "Unfortunately..."
         show fuyu neut
@@ -371,7 +371,7 @@ label YoikishiandHime:
         fuy "Yeah that is pretty stupid."
         fuy "I mean, strength is such an arbitary thing, and I. Can't. See. Shit."
         fuy "But, for the sake of agruement, Hime wins."
-        show yoikshi huh
+        show yoikishi huh
         show hime yo
         yoi "what"
         show yoikishi err
@@ -379,7 +379,21 @@ label YoikishiandHime:
         yoi "But whyyyyy."
         him "Just face the fact that I'm better, bro."
         yoi "No fair!"
-        #unfinished
+        show hime cool
+        with Dissolve(0.5)
+        him "Life isn't fair."
+        him "Your brilliant decision does remind me Fuyuhiko, I have some art stuff back home I could show you after school if you want."
+        show yoikishi excited
+        with Dissolve(0.5)
+        yoi "Oh! Please come over!"
+        yoi "I got some new games I wanna show you!"
+        show yoikishi hap
+        with Dissolve(0.5)
+        fuy "Well, I don't have anything else to do so..."
+        show fuyu smile
+        with Dissolve(0.5)
+        fuy "Why not?"
+        jump KonpekiHouse
     if YoikishiChat:
         yoi "Winter, Hey!!!"
         him "Hanging out with the cool kids huh, Fuyuhiko."
@@ -392,17 +406,29 @@ label YoikishiandHime:
         yoi "Which looks cooler, the pen or the sword?"
         show fuyu what
         with Dissolve(0.5)
-        him "No offense Fuyuhiko, but did you just ask the blind kid about which looks cooler Yoikishi?"
+        him "No offense Fuyuhiko, but did you just ask the blind kid about if fighting or art looks cooler Yoikishi?"
         show yoikishi err
         with Dissolve(0.5)
-        yoi "Just because he's going to pick the much cooler swords doen't mean he's biased."
+        yoi "Just because he's going to pick the much cooler swords doesn't mean he's biased."
         nar "Normally this would be the point in the the story where a couple text boxes show up for who Fuyuhiko should agree with."
         nar "Unfortunately..."
         show fuyu neut
         with Dissolve(0.5)
         fuy "Yeah that is pretty stupid."
-        fuy "I mean, strength is such an arbitary thing, and I. Can't. See. Shit."
-        #Unfinished
+        fuy "I mean, coolness is such an arbitary thing, and I. Can't. See. Shit."
+        yoi "I guess that's fair..."
+        him "There's the Fuyuhiko we know and love."
+        show yoikishi excited
+        with Dissolve(0.5)
+        yoi "Oh! Speaking of loving you!"
+        yoi "Do you wanna come over after club?"
+        yoi "I got some new games I wanna show you!"
+        him "We could also paint some shit in my room."
+        fuy "I don't have anything else to do so..."
+        show fuyu smile
+        with Dissolve(0.5)
+        fuy "Why not?"
+        jump KonpekiHouse
     else:
         yoi "Hey Winter!"
         him "Hanging out with the cool kids huh, Fuyuhiko."
@@ -415,17 +441,37 @@ label YoikishiandHime:
         yoi "Which looks cooler, the pen or the sword?"
         show fuyu what
         with Dissolve(0.5)
-        him "No offense Fuyuhiko, but did you just ask the blind kid about which looks cooler Yoikishi?"
+        him "No offense Fuyuhiko, but did you just ask the blind kid about if fighting or art looks cooler Yoikishi?"
         show yoikishi err
         with Dissolve(0.5)
-        yoi "Just because he's going to pick the much cooler swords doen't mean he's biased."
+        yoi "Just because he's going to pick the much cooler swords doesn't mean he's biased."
         nar "Normally this would be the point in the the story where a couple text boxes show up for who Fuyuhiko should agree with."
         nar "Unfortunately..."
         show fuyu neut
         with Dissolve(0.5)
         fuy "Yeah that is pretty stupid."
-        fuy "I mean, strength is such an arbitary thing, and I. Can't. See. Shit."
-        #Unfinished
+        fuy "I mean, coolness is such an arbitary thing, and I. Can't. See. Shit."
+        yoi "I guess that's fair..."
+        him "There's the Fuyuhiko we know and love."
+        show yoikishi excited
+        with Dissolve(0.5)
+        yoi "Oh! Speaking of loving you!"
+        yoi "Do you wanna come over after club?"
+        $ renpy.pause(1.0)
+        show yoikishi err
+        with Dissolve(0.5)
+        yoi "Oh, um, not like... that..."
+        show yoikishi excited
+        with Dissolve(0.5)
+        yoi "I got some new games I wanna show you!"
+        him "We could also paint some shit in my room."
+        show yoikishi hap
+        with Dissolve(0.5)
+        fuy "I don't have anything else to do so..."
+        show fuyu smile
+        with Dissolve(0.5)
+        fuy "Why not?"
+        jump KonpekiHouse
 #Spacer
 
 label HarukiandRei:
