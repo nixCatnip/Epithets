@@ -55,6 +55,7 @@ label start:
 #Spacer
 
 #Recall menu, featuring the descriptions of the other Epithets
+#Can be easily skipped but introduces the characters
 label recallMenu:
     menu:
         "Haruki Supai":
@@ -100,6 +101,7 @@ label recallMenu:
 #Spacer
 
 #Text Message time
+#This is the first actual choice, Fuyuhiko is more sympathetic to the character who texts him (except for Haruki, whom he only gets more hostile with).
 label textMessage:
     show fuyu neut
     with Dissolve(0.5)
@@ -119,6 +121,7 @@ label textMessage:
     return
 #Spacer
 
+#Haruki and Fuyuhiko fight about his name.
 label HarukiMessage:
     nar "...Haruki."
     $ HarukiChat = True
@@ -161,6 +164,7 @@ label HarukiMessage:
     jump Day2
 #Spacer
 
+#Yoikishi shows some Fuyuhiko some images he can't see.
 label YoikishiMessage:
     nar "...Yoikishi."
     $ YoikishiChat = True
@@ -191,6 +195,7 @@ label YoikishiMessage:
     jump Day2
 #Spacer
 
+#Himiko and Fuyuhiko bond over mutual hatred of Capitalism
 label HimeMessage:
     nar "...Hime."
     $ HimeChat = True
@@ -240,6 +245,7 @@ label HimeMessage:
     jump Day2
 #Spacer
 
+#Rei is vaguely concerned about Fuyuhiko, he gets shut out.
 label ReiMessage:
     nar "...Rei."
     $ ReiChat = True
@@ -265,6 +271,7 @@ label ReiMessage:
     jump Day2
 #Spacer
 
+#Fuyuhiko is reminded of daddy issues via work issues, tramua.
 label WorkMessage:
     nar "...Her."
     $ WorkChat = True
@@ -317,7 +324,8 @@ label Day2:
     show fuyu neut at center
     with Dissolve(0.5)
     fuy "Really, our club was just an excuse to use this classroom after school hours, we never really did anything with it."
-    fuy "But club  time does bring up the question of who to spend it with."
+    fuy "But club time does bring up the question of who to spend it with."
+    #Choice of who to spend club time with
     menu:
         "Yoikishi and Hime":
             hide haruki
@@ -347,7 +355,9 @@ label Day2:
 #Spacer
 
 #Yoikishi/Hime's Club time conversation
+#Fuyuhiko decides on his own what (who) is cooler, and is convinced to come over after.
 label YoikishiandHime:
+    #Chooses Hime if she texted him.
     if HimeChat:
         yoi "Hey Winter!"
         him "Nice to see you, Fuyuhiko."
@@ -398,6 +408,7 @@ label YoikishiandHime:
         with Dissolve(0.5)
         him "Probably."
         jump KonpekiHouse
+    #Sides with Yoikishi if he texted him.
     if YoikishiChat:
         yoi "Winter, Hey!!!"
         him "Hanging out with the cool kids huh, Fuyuhiko."
@@ -451,6 +462,7 @@ label YoikishiandHime:
         him "Sure."
         yoi "So it's settled then!"
         jump KonpekiHouse
+    #Stays neutral if no one texted him, still comes over though.
     else:
         yoi "Hey Winter!"
         him "Hanging out with the cool kids huh, Fuyuhiko."
@@ -505,7 +517,10 @@ label YoikishiandHime:
 #Spacer
 
 #Haruki/Rei's Club time conversation
+#Haruki is being a kinda a dick to Rei, he's right though,,
 label HarukiandRei:
+    #Haruki is quieter if he texted Fuyuhiko and got blown up at.
+    #Also removes option to visit him (consider changing)
     if HarukiChat:
         har "Oh. Hi... Fuyuhiko."
         rei "Hello, Shiro."
@@ -564,6 +579,7 @@ label HarukiandRei:
         fuy "Yeah"
         rei "Good. We'll leave once club is over."
         jump ReiHouse
+    #Rei trusts Fuyuhiko more implicitly if he texted him, talks to him more openly
     elif ReiChat:
         har "Hey Fuyu~"
         rei "Shiro."
@@ -631,6 +647,7 @@ label HarukiandRei:
                 with Dissolve(0.5)
                 fuyu "I don't see why not."
                 jump HarukiHouse
+    #Rei and Haruki fight, both invite Fuyuhiko over as power moves
     else:
         har "Hey Fuyu~"
         rei "Hello, Shiro."
