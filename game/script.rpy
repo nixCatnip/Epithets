@@ -664,3 +664,15 @@ label Nobody:
     else:
         nar "Placeholder"
 #Spacer
+
+label KonpekiHouse:
+    nar "Placeholder"
+#Spacer 
+
+label HarukiHouse:
+    nar "Placeholder"
+#Spacer
+
+label ReiHouse:
+    nar "Placeholder"
+#Spacer
