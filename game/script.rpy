@@ -68,7 +68,7 @@ label recallMenu:
         "Yoikishi Konpeki":
             show fuyu neut
             with Dissolve(0.5)
-            fuy "A History major. He's obsessed with both the Code of Chivalry and the Bushido Code, especially famous upholders of each."
+            fuy "A History major. He's obsessed with ancient knights and samurai, especially the way they fought."
             fuy "Not to mention he's super immature. Lately, he's taken to nicknaming us after seasons."
             fuy "He's also very protective of his sister, Hime. The two of them are always together. It's hard to imagine him without her, and vice versa."
             jump recallMenu
@@ -76,7 +76,7 @@ label recallMenu:
             show fuyu neut
             with Dissolve(0.5)
             fuy "Right, Himiko. She goes by Hime, and she's the only one of us that doesn't attend college."
-            fuy "She works as a graffiti artist and a cashier and hates that part-time job as much as I."
+            fuy "She works as a graffiti artist and a cashier and hates that dead-end job as much as I hate mine."
             show fuyu smile
             with Dissolve(0.5)
             fuy "She's even told me that she started tagging the area around her workplace."
@@ -91,7 +91,7 @@ label recallMenu:
             show fuyu down
             with Dissolve(0.5)
             fuy "Sometimes, I pity him in a weird way. We were both put in such a bad situation by our parents."
-            fuy "But Rei doesn't seem to notice that the pressure on him is unhealthy and barely listens to me if I talk to him about it."
+            fuy "But Rei doesn't seem to notice that all the pressure being put on him is unhealthy."
             fuy "And, worse yet, he was one of the people to see me at my worst earlier today."
             jump recallMenu
         "Move Foward":
@@ -171,8 +171,9 @@ label YoikishiMessage:
     $ renpy.pause(2.0)
     show yoikishi err
     with Dissolve(0.5)
-    nar "Nothing happens, Yoikishi must have sent Winter a picture without any alternate text for his screen-reader to pick up on, again."
+    nar "Nothing happens, Yoikishi must have sent Winter a picture without any text for his screen-reader to pick up on, again."
     tyoi "oh right"
+    tyoi "sorry winter"
     tfuy "It's fine, Yoikishi."
     tyoi "if its fine then why are you calling me that! >:("
     tfuy "Okay then,"
@@ -200,7 +201,7 @@ label HimeMessage:
     show hime yo at farright
     with Dissolve(0.5)
     thim "You are going to love what I just did."
-    nar "Hime sends a image of her tagging her store along with a transcription."
+    nar "Hime sends a image of her tagging her store with a huge middle-finger along with an audio transcription."
     show fuyu smile
     with Dissolve(0.5)
     tfuy "Amazing."
@@ -220,7 +221,8 @@ label HimeMessage:
     $ renpy.pause(3.0)
     show fuyu neut
     with Dissolve(0.5)
-    tfuy "I tried to get out of my \"Accessibility Benefits\" again today."
+    tfuy "I tried to get out of my so-called \"Accessibility Accomodations\" again today."
+    tfuy "All that and they can't spare the resources to actually let me do my job myself."
     show hime cool
     with Dissolve(0.5)
     thim "And how'd that go?"
@@ -228,14 +230,14 @@ label HimeMessage:
     thim "Our bosses suck, huh?"
     show fuyu neut
     with Dissolve(0.5)
-    tfuy "Yup"
+    tfuy "Yup."
     thim "I'll see you tomorrow, Fuyuhiko."
     hide hime cool
     with Dissolve(0.5)
     tfuy "You too, Hime."
     show fuyu down at center
     with moveinleft
-    fuy "I really need to work on my people skills."
+    fuy "I think I need to work on my people skills."
     scene black
     with Dissolve(0.5)
     jump Day2
@@ -252,7 +254,7 @@ label ReiMessage:
     $ renpy.pause(3.0)
     trei "Shiro, please."
     $ renpy.pause(1.0)
-    trei "Shiro."
+    trei "Shiro I can see the read message."
     tfuy "What do you want, Rei?"
     trei "I just wanted to make sure you were okay."
     tfuy "I'm fine. Leave me alone."
@@ -278,7 +280,8 @@ label WorkMessage:
     fuy "That fucking bitch."
     fuy "She just aired our private conversation to the whole cafe!"
     fuy "It's bad enough putting up with her shit when it was just us."
-    fuy "I bet she thinks she's doing what's best for me."
+    fuy "I bet she thinks she's doing what's best for me. I-"
+    nar "Winter seethes, fury threatening to cloud his mind."
     fuy "I'M NOT A FUCKING KID ANYMORE DAD!"
     $ renpy.pause(2.0)
     show fuyu what
