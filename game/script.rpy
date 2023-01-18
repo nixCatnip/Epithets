@@ -666,7 +666,21 @@ label HarukiandRei:
 
 label Nobody:
     if WorkChat:
-        nar "Placeholder"
+        nar "Fuyuhiko is far too tired to socialize, he's still thinking about that email he recieved yesterday."
+        nar "Accomadations are one thing, when they actually help him do his damn job."
+        nar "But this? He's not a toddler, he's more than capable of handling himself without hurting someone."
+        show fuyu snap
+        with Dissolve(0.5)
+        nar "More than capable of working without a babysitter watching his every move."
+        nar "And all this but they can't put braille labels on fucking anything!"
+        fuy "Ugh!"
+        nar "His clubmates eye Fuyuhiko, more concerned than anything."
+        show fuyu neut
+        with Dissolve(0.5)
+        fuy "I'm going home, I-I need to be alone."
+        nar "A few of his friends hesistate before saying nothing, but Fuyuhiko doesn't wait for their approval."
+        nar "Fuyuhiko grabs his bag and heads back to his apartment."
+        jump HomeAlone
     else:
         nar "Placeholder"
 #Spacer
@@ -683,5 +697,9 @@ label HarukiHouse:
 #Spacer
 
 label ReiHouse:
+    nar "Placeholder"
+#Spacer
+
+label HomeAlone:
     nar "Placeholder"
 #Spacer
