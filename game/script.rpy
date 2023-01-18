@@ -40,8 +40,8 @@ label start:
     #Spacer
     play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0
     nar "Ah, San Francisco, the salty air of the sea mixed with the salty attitudes of young adults experiencing true independence for the first time in their lives."
-    nar "Five of these young adults attend the local university, hailing from across the sea, here to expand their minds and hearts."
-    nar "Ah, here comes one now. Arriving home after a long day of less than enjoyable work. perhaps the saltiest of them all, Fuyuhiko Shiro."
+    nar "Five of these young adults attend the local prestigious university, hailing from across the sea, here to expand their hearts and minds."
+    nar "Ah, here comes one now, arriving home after a long day of work. Perhaps the saltiest of them all, Fuyuhiko Shiro."
     scene apartment night
     show fuyu really
     with Dissolve(0.5)
