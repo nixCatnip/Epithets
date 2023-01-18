@@ -364,6 +364,7 @@ label YoikishiandHime:
         show fuyu what
         with Dissolve(0.5)
         him "No offense Fuyuhiko, but did you just ask the blind kid about if fighting or art looks cooler Yoikishi?"
+        him "Like, looks, in specific?"
         show yoikishi err
         with Dissolve(0.5)
         yoi "Just because he's going to pick the much cooler swords doesn't mean he's biased."
@@ -372,7 +373,7 @@ label YoikishiandHime:
         show fuyu neut
         with Dissolve(0.5)
         fuy "Yeah that is pretty stupid."
-        fuy "I mean, strength is such an arbitary thing, and I. Can't. See. Shit."
+        fuy "I mean, coolness is such an arbitary thing, and I. Can't. See. Shit."
         fuy "But, for the sake of agruement, Hime wins."
         show yoikishi huh
         show hime yo
@@ -399,7 +400,7 @@ label YoikishiandHime:
         jump KonpekiHouse
     if YoikishiChat:
         yoi "Winter, Hey!!!"
-        him "Hanging out with the cool kids huh, Fuyuhiko."
+        him "Hanging out with the cool kids huh, Fuyuhiko?"
         show fuyu smile
         with Dissolve(0.5)
         fuy "You know it."
@@ -410,6 +411,7 @@ label YoikishiandHime:
         show fuyu what
         with Dissolve(0.5)
         him "No offense Fuyuhiko, but did you just ask the blind kid about if fighting or art looks cooler Yoikishi?"
+        him "Like, looks, in specific?"
         show yoikishi err
         with Dissolve(0.5)
         yoi "Just because he's going to pick the much cooler swords doesn't mean he's biased."
@@ -434,7 +436,7 @@ label YoikishiandHime:
         jump KonpekiHouse
     else:
         yoi "Hey Winter!"
-        him "Hanging out with the cool kids huh, Fuyuhiko."
+        him "Hanging out with the cool kids huh, Fuyuhiko?"
         show fuyu smile
         with Dissolve(0.5)
         fuy "You know it."
@@ -445,6 +447,7 @@ label YoikishiandHime:
         show fuyu what
         with Dissolve(0.5)
         him "No offense Fuyuhiko, but did you just ask the blind kid about if fighting or art looks cooler Yoikishi?"
+        him "Like, looks, in specific?"
         show yoikishi err
         with Dissolve(0.5)
         yoi "Just because he's going to pick the much cooler swords doesn't mean he's biased."
@@ -669,6 +672,9 @@ label Nobody:
 #Spacer
 
 label KonpekiHouse:
+    #Regardless of route, Fuyuhiko is ultimately invited by both siblings for art stuff and video games respectively
+    #Should offer another choice between the two and then do the thing
+    #Then Haruki calls Hime and tells them to meet up in club room tomorrow even though they don't have club
     nar "Placeholder"
 #Spacer 
 
