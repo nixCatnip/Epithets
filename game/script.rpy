@@ -764,8 +764,14 @@ label KonpekiHouse:
     him "Hang out with who you want man, but I did get some cool new spray paint cans, wanna see how they sound?"
     menu:
         "The Remaining of Them":
+            #This references the Last of Us Part 2 and the insane blind accessiblity options it has
+            #If you want, you could research them and include them in the conversation
+            #Or just have Ryuji and Fuyuhiko talk about whatever
             nar "Placeholder"
         "Spray Paint":
+            #Himiko likes to paint, Fuyuhiko likes to sit and listen
+            #It's more about the meaning behind the rebellion y'know
+            #Probably have them talk about their jobs? Or maybe Haruki.
             nar "Placeholder"
 #Spacer 
 
