@@ -6,6 +6,7 @@ There are five main routes:
 - Fuyuhiko (Alone): I want this to focus on Fuyuhiko's relationship with his work and feeling
 infantilized as a result of his disability. This exists as a subplot in all routes but is focused
 on when Fuyuhiko doesn't interact with the club.
+    - Has a cane, for the record.
 - Himiko: The chaotic riot grrrl herself, she doesn't actually technically attend the college that
 the rest of the club does. Her brother does though, and no one ever seems to stop her from showing
 up. Her route focuses on her and Fuyuhiko's frustration with the world and capitalism, and that affects

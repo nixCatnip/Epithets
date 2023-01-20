@@ -745,6 +745,28 @@ label KonpekiHouse:
     nar "The drive to the Konpeki place isn't long. Leave it to Himiko to know all the possible shortcuts."
     scene konpeki day
     nar "And soon enough, they're home."
+    show ryuji excited at farleft
+    with Dissolve(0.5)
+    ryu "Come on Winter!"
+    show fuyu smile at center
+    with Dissolve(0.5)
+    fuy "I'm coming! I'm coming."
+    show hime yo at far right
+    him "Slow down!"
+    show ryuji hap
+    show hime cool
+    show fuyu neut
+    with Dissolve(0.5)
+    nar "Fuyuhiko brings out his cane and the Konpeki siblings show him around the house."
+    nar "But soon enough it comes down to another competition between the siblings for Fuyuhiko's attention."
+    nar "Maybe he should have a little less agency this time."
+    ryu "Come on dude! We have gotta try out The Remaining of Them!"
+    him "Hang out with who you want man, but I did get some cool new spray paint cans, wanna see how they sound?"
+    menu:
+        "The Remaining of Them":
+            nar "Placeholder"
+        "Spray Paint":
+            nar "Placeholder"
 #Spacer 
 
 label HarukiHouse:
