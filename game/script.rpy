@@ -682,7 +682,49 @@ label Nobody:
         nar "Fuyuhiko grabs his bag and heads back to his apartment."
         jump HomeAlone
     else:
-        nar "Placeholder"
+        nar "Fuyuhiko is far too tired to socialize, he sits alone in a far corner of the room."
+        show haruki shut
+        show hime uncomfy
+        show rei disappoint
+        show yoikishi so
+        with Dissolve(0.5)
+        nar "His clubmates appear every now again, trying to make conversation."
+        show fuyu really
+        with Dissolve(0.5)
+        nar "Fuyuhiko gives them the mininmum response beyond \"Fuck off.\""
+        hide haruki
+        hide hime
+        hide rei
+        hide yoikishi
+        with Dissolve(0.5)
+        nar "It's clear Fuyuhiko is struggling with something but he won't talk about it."
+        menu:
+            "Look at it.":
+                $ WorkChat = True
+                hide fuyu
+                show the email at truecenter
+                with Dissolve(0.5)
+                nar "The email."
+                hide the email
+                show fuyu really
+                with Dissolve(0.5)
+                nar "They treat him like a child."
+                nar "So incapable, so stupid."
+                nar "It's not that Fuyuhiko doesn't need help sometimes, no."
+                nar "It's their idea of helping him."
+                nar "They won't give him the tools to do his job properly himself, braile labels, text readers."
+                nar "So they stick him with a babysitter, someone who has the mercy to pretend he's helping."
+                nar "It's like he's an infant."
+                fuy "I'm sick of it."
+                nar "Eventually Fuyuhiko gets tired of pretending he's participating in club."
+                nar "He goes home."
+                jump HomeAlone
+            "Don't.":
+                nar "He can't afford to talk about it."
+                nar "He can't afford to think about it."
+                nar "He can't afford to look at it."
+                nar "Eventually, he goes home."
+                jump HomeAlone
 #Spacer
 
 label KonpekiHouse:
