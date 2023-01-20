@@ -2,12 +2,12 @@ define fuy = Character("Fuyuhiko", color="#8ceffa")
 define har = Character("Haruki", color="#fa8c8c")
 define rei = Character("Rei", color="#93fa8c")
 define him = Character("Hime", color="#faf48c")
-define yoi = Character("Yoikishi", color="#8c95fa")
+define ryu = Character("Ryuji", color="#8c95fa")
 define tfuy = Character("Fuyuhiko", color="#1d8f5f")
 define thar = Character("Haruki", color="#1d8f5f")
 define trei = Character("Rei", color="#1d8f5f")
 define thim = Character("Hime", color="#1d8f5f")
-define tyoi = Character("Yoikishi", color="#1d8f5f")
+define tryu = Character("Ryuji", color="#1d8f5f")
 define nar = Character("")
 transform left:
     xalign 0.25
@@ -34,7 +34,7 @@ transform truecenter:
 label start:
     #Flag Defines
     $ HarukiChat = False
-    $ YoikishiChat = False
+    $ RyujiChat = False
     $ HimeChat = False
     $ ReiChat = False
     $ WorkChat = False
@@ -66,7 +66,7 @@ label recallMenu:
             fuy "He's arrogant, somewhat violent, and worse of all, flirty. Guy's attractive and he owns it, maybe a bit too much."
             fuy "Sometimes it feels like everything he says is specifically meant to make me uncomfortable, or annoyed."
             jump recallMenu
-        "Yoikishi Konpeki":
+        "Ryuji Konpeki":
             show fuyu neut
             with Dissolve(0.5)
             fuy "A History major. He's obsessed with ancient knights and samurai, especially the way they fought."
@@ -108,8 +108,8 @@ label textMessage:
     menu:
         "Haruki":
             jump HarukiMessage
-        "Yoikishi":
-            jump YoikishiMessage
+        "Ryuji":
+            jump RyujiMessage
         "Hime":
             jump HimeMessage
         "Rei":
@@ -161,33 +161,33 @@ label HarukiMessage:
     jump Day2
 #Spacer
 
-label YoikishiMessage:
-    nar "...Yoikishi."
-    $ YoikishiChat = True
+label RyujiMessage:
+    nar "...Ryuji."
+    $ RyujiChat = True
     show fuyu neut at farleft
     with moveinright
-    show yoikishi excited at farright
+    show ryuji excited at farright
     with Dissolve(0.5)
-    tyoi "winter! you HAVE to see this!"
+    tryu "winter! you HAVE to see this!"
     $ renpy.pause(2.0)
-    show yoikishi err
+    show ryuji err
     with Dissolve(0.5)
-    nar "Nothing happens, Yoikishi must have sent Winter a picture without any text for his screen-reader to pick up on, again."
-    tyoi "oh right"
-    tyoi "sorry winter"
-    tfuy "It's fine, Yoikishi."
-    tyoi "if its fine then why are you calling me that! >:("
+    nar "Nothing happens, Ryuji must have sent Winter a picture without any text for his screen-reader to pick up on, again."
+    tryu "oh right"
+    tryu "sorry winter"
+    tfuy "It's fine, Ryuji."
+    tryu "if its fine then why are you calling me that! >:("
     tfuy "Okay then,"
     show fuyu smile
     with Dissolve(0.5)
     tfuy "Fall."
     show fuyu neut
-    show yoikishi hap
+    show ryuji hap
     with Dissolve(0.5)
-    tyoi "there you go!"
-    show yoikishi excited
+    tryu "there you go!"
+    show ryuji excited
     with Dissolve(0.5)
-    tyoi "here! i'll describe it to you! oh, and i have waaay more to talk to you about!"
+    tryu "here! i'll describe it to you! oh, and i have waaay more to talk to you about!"
     scene black
     with Dissolve(0.5)
     nar "The boys continued chatting about nothing of importance. It was a nice distraction for Fuyuhiko, one he really needed."
@@ -314,7 +314,7 @@ label Day2:
     scene classroom evening
     with Dissolve(0.5)
     nar "That was until after school."
-    show yoikishi hap at left
+    show ryuji hap at left
     show hime cool at farleft
     show rei distracted at right
     show haruki smug at farright
@@ -329,17 +329,17 @@ label Day2:
     fuy "Really, our club was just an excuse to use this classroom after school hours, we never really did anything with it but talk and hang out. It was convienent."
     fuy "But club time does bring up the question of who to spend it with."
     menu:
-        "Yoikishi and Hime":
+        "Ryuji and Hime":
             hide haruki
             hide rei
             with Dissolve(0.5)
-            show yoikishi at farright
+            show ryuji at farright
             with moveinleft
             show hime at farleft
             with moveinleft
-            jump YoikishiandHime
+            jump RyujiandHime
         "Haruki and Rei":
-            hide yoikishi
+            hide ryuji
             hide hime
             with Dissolve(0.5)
             show haruki at farright
@@ -348,7 +348,7 @@ label Day2:
             with moveinright
             jump HarukiandRei
         "Nobody":
-            hide yoikishi
+            hide ryuji
             hide hime
             hide rei
             hide haruki
@@ -356,24 +356,24 @@ label Day2:
             jump Nobody
 #Spacer
 
-label YoikishiandHime:
+label RyujiandHime:
     if HimeChat:
-        yoi "Hey Winter!"
+        ryu "Hey Winter!"
         him "Nice to see you, Fuyuhiko."
         show fuyu smile
         with Dissolve(0.5)
         fuy "You too, Hime"
-        show yoikishi excited
+        show ryuji excited
         with Dissolve(0.5)
-        yoi "Hey! Can you help us resolve something?"
-        yoi "Which looks cooler, the pen or the sword?"
+        ryu "Hey! Can you help us resolve something?"
+        ryu "Which looks cooler, the pen or the sword?"
         show fuyu what
         with Dissolve(0.5)
-        him "No offense Fuyuhiko, but did you just ask the blind kid about if fighting or art looks cooler Yoikishi?"
+        him "No offense Fuyuhiko, but did you just ask the blind kid about if fighting or art looks cooler Ryuji?"
         him "Like, looks, in specific?"
-        show yoikishi err
+        show ryuji err
         with Dissolve(0.5)
-        yoi "Just because he's going to pick the much cooler swords doesn't mean he's biased."
+        ryu "Just because he's going to pick the much cooler swords doesn't mean he's biased."
         nar "Normally this would be the point in the the story where a couple text boxes show up for who Fuyuhiko should agree with."
         nar "Unfortunately..."
         show fuyu neut
@@ -381,59 +381,59 @@ label YoikishiandHime:
         fuy "Yeah that is pretty stupid."
         fuy "I mean, coolness is such an arbitary thing, and I. Can't. See. Shit."
         fuy "But, for the sake of agruement, Hime wins."
-        show yoikishi huh
+        show ryuji huh
         show hime yo
-        yoi "what"
-        show yoikishi err
+        ryu "what"
+        show ryuji err
         with Dissolve(0.5)
-        yoi "But whyyyyy."
+        ryu "But whyyyyy."
         him "Just face the fact that I'm better, bro."
-        yoi "No fair!"
+        ryu "No fair!"
         show hime cool
         with Dissolve(0.5)
         him "Life isn't fair."
         him "Your brilliant decision does remind me Fuyuhiko, I have some art stuff back home I could show you after school if you want."
-        show yoikishi excited
+        show ryuji excited
         with Dissolve(0.5)
-        yoi "Oh! Please come over!"
-        yoi "I got some new games I wanna show you!"
-        show yoikishi hap
+        ryu "Oh! Please come over!"
+        ryu "I got some new games I wanna show you!"
+        show ryuji hap
         with Dissolve(0.5)
         fuy "Well, I don't have anything else to do so..."
         show fuyu smile
         with Dissolve(0.5)
         fuy "Why not?"
         jump KonpekiHouse
-    if YoikishiChat:
-        yoi "Winter, Hey!!!"
+    if RyujiChat:
+        ryu "Winter, Hey!!!"
         him "Hanging out with the cool kids huh, Fuyuhiko?"
         show fuyu smile
         with Dissolve(0.5)
         fuy "You know it."
-        show yoikishi excited
+        show ryuji excited
         with Dissolve(0.5)
-        yoi "Hey! Can you help us resolve something?"
-        yoi "Which looks cooler, the pen or the sword?"
+        ryu "Hey! Can you help us resolve something?"
+        ryu "Which looks cooler, the pen or the sword?"
         show fuyu what
         with Dissolve(0.5)
-        him "No offense Fuyuhiko, but did you just ask the blind kid about if fighting or art looks cooler Yoikishi?"
+        him "No offense Fuyuhiko, but did you just ask the blind kid about if fighting or art looks cooler Ryuji?"
         him "Like, looks, in specific?"
-        show yoikishi err
+        show ryuji err
         with Dissolve(0.5)
-        yoi "Just because he's going to pick the much cooler swords doesn't mean he's biased."
+        ryu "Just because he's going to pick the much cooler swords doesn't mean he's biased."
         nar "Normally this would be the point in the the story where a couple text boxes show up for who Fuyuhiko should agree with."
         nar "Unfortunately..."
         show fuyu neut
         with Dissolve(0.5)
         fuy "Yeah that is pretty stupid."
         fuy "I mean, coolness is such an arbitary thing, and I. Can't. See. Shit."
-        yoi "I guess that's fair..."
+        ryu "I guess that's fair..."
         him "There's the Fuyuhiko we know and love."
-        show yoikishi excited
+        show ryuji excited
         with Dissolve(0.5)
-        yoi "Oh! Speaking of loving you!"
-        yoi "Do you wanna come over after club?"
-        yoi "I got some new games I wanna show you!"
+        ryu "Oh! Speaking of loving you!"
+        ryu "Do you wanna come over after club?"
+        ryu "I got some new games I wanna show you!"
         him "We could also paint some shit in my room."
         fuy "I don't have anything else to do so..."
         show fuyu smile
@@ -441,43 +441,43 @@ label YoikishiandHime:
         fuy "Why not?"
         jump KonpekiHouse
     else:
-        yoi "Hey Winter!"
+        ryu "Hey Winter!"
         him "Hanging out with the cool kids huh, Fuyuhiko?"
         show fuyu smile
         with Dissolve(0.5)
         fuy "You know it."
-        show yoikishi excited
+        show ryuji excited
         with Dissolve(0.5)
-        yoi "Hey! Can you help us resolve something?"
-        yoi "Which looks cooler, the pen or the sword?"
+        ryu "Hey! Can you help us resolve something?"
+        ryu "Which looks cooler, the pen or the sword?"
         show fuyu what
         with Dissolve(0.5)
-        him "No offense Fuyuhiko, but did you just ask the blind kid about if fighting or art looks cooler Yoikishi?"
+        him "No offense Fuyuhiko, but did you just ask the blind kid about if fighting or art looks cooler Ryuji?"
         him "Like, looks, in specific?"
-        show yoikishi err
+        show ryuji err
         with Dissolve(0.5)
-        yoi "Just because he's going to pick the much cooler swords doesn't mean he's biased."
+        ryu "Just because he's going to pick the much cooler swords doesn't mean he's biased."
         nar "Normally this would be the point in the the story where a couple text boxes show up for who Fuyuhiko should agree with."
         nar "Unfortunately..."
         show fuyu neut
         with Dissolve(0.5)
         fuy "Yeah that is pretty stupid."
         fuy "I mean, coolness is such an arbitary thing, and I. Can't. See. Shit."
-        yoi "I guess that's fair..."
+        ryu "I guess that's fair..."
         him "There's the Fuyuhiko we know and love."
-        show yoikishi excited
+        show ryuji excited
         with Dissolve(0.5)
-        yoi "Oh! Speaking of loving you!"
-        yoi "Do you wanna come over after club?"
+        ryu "Oh! Speaking of loving you!"
+        ryu "Do you wanna come over after club?"
         $ renpy.pause(1.0)
-        show yoikishi err
+        show ryuji err
         with Dissolve(0.5)
-        yoi "Oh, um, not like... that..."
-        show yoikishi excited
+        ryu "Oh, um, not like... that..."
+        show ryuji excited
         with Dissolve(0.5)
-        yoi "I got some new games I wanna show you!"
+        ryu "I got some new games I wanna show you!"
         him "We could also paint some shit in my room."
-        show yoikishi hap
+        show ryuji hap
         with Dissolve(0.5)
         fuy "I don't have anything else to do so..."
         show fuyu smile
@@ -692,7 +692,7 @@ label Nobody:
         show haruki shut
         show hime uncomfy
         show rei disappoint
-        show yoikishi so
+        show ryuji so
         with Dissolve(0.5)
         nar "His clubmates appear every now again, trying to make conversation."
         show fuyu really
@@ -701,7 +701,7 @@ label Nobody:
         hide haruki
         hide hime
         hide rei
-        hide yoikishi
+        hide ryuji
         with Dissolve(0.5)
         nar "It's clear Fuyuhiko is struggling with something but he won't talk about it."
         menu:
@@ -739,7 +739,7 @@ label KonpekiHouse:
     #Then Haruki calls Hime and tells them to meet up in club room tomorrow even though they don't have club
     hide fuyu
     hide hime
-    hide yoikishi
+    hide ryuji
     scene road day
     with dissolve(0.5)
     nar "The drive to the Konpeki place isn't long. Leave it to Himiko to know all the possible shortcuts."
