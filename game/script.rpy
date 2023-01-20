@@ -29,6 +29,7 @@ transform truecenter:
     yalign 0.5
 #Spacer
 
+#Day 1
 #Basic introduction into the gist of the story
 label start:
     #Flag Defines
@@ -296,6 +297,11 @@ label WorkMessage:
     jump Day2
 #Spacer
 
+
+
+
+
+#Day 2
 label Day2:
     nar "End of Day 1."
     nar "Start of Day 2."
@@ -731,7 +737,14 @@ label KonpekiHouse:
     #Regardless of route, Fuyuhiko is ultimately invited by both siblings for art stuff and video games respectively
     #Should offer another choice between the two and then do the thing
     #Then Haruki calls Hime and tells them to meet up in club room tomorrow even though they don't have club
-    nar "Placeholder"
+    hide fuyu
+    hide hime
+    hide yoikishi
+    scene road day
+    with dissolve(0.5)
+    nar "The drive to the Konpeki place isn't long. Leave it to Himiko to know all the possible shortcuts."
+    scene konpeki day
+    nar "And soon enough, they're home."
 #Spacer 
 
 label HarukiHouse:
