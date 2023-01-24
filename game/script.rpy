@@ -741,7 +741,7 @@ label KonpekiHouse:
     hide hime
     hide ryuji
     scene road day
-    with dissolve(0.5)
+    with Dissolve(0.5)
     nar "The drive to the Konpeki place isn't long. Leave it to Himiko to know all the possible shortcuts."
     scene konpeki day
     nar "And soon enough, they're home."
@@ -784,5 +784,51 @@ label ReiHouse:
 #Spacer
 
 label HomeAlone:
-    nar "Placeholder"
+    scene 
+    if WorkChat:
+        scene apartment afternoon
+        show fuyu really
+        with Dissolve(0.5)
+        nar "Fuyuhiko throws his bag onto his couch, and starts to pace around his room."
+        fuy "What gives them the right!"
+        show fuyu snap
+        with Dissolve(0.5)
+        fuy "WHAT GIVES THEM THE DAMN RIGHT!"
+        show fuyu really
+        with Dissolve(0.5)
+        fuy "I can't stop thinking about it."
+        fuy "The babying, the control, the lack of fucking faith."
+        fuy "I am valuable! I am!"
+        fuy "I could do my job if you just gave me the actual damn tools to do it! Ugh!"
+        hide fuyu
+        with moveinright
+        nar "Fuyuhiko goes into the bathroom. He throws water into his face until he feels a little calmer."
+        show fuyu
+        with moveinright
+        fuy "I need to lie down..."
+        nar "And soon enough, he begins to drift off into sleep..."
+    else:
+        scene apartment day
+        show fuyu down
+        with Dissolve(0.5)
+        nar "Fuyuhiko is exhausted when he arrives home."
+        nar "He's already exhausted."
+        nar "It's not even late yet, it's even 6 o'clock."
+        nar "How unfair is that..."
+        scene apartment afternoon
+        with Dissolve(0.5)
+        nar "He lays down on his couch, twiddling his thumbs on his phone."
+        nar "He watches and listens and consumes anything he can get his hands on."
+        nar "Anything other than thinking about what's bothering him."
+        nar "Eventually he falls asleep."
+        jump Day3
+#Spacer
+
+
+
+
+
+#Day3
+label Day3:
+    nar "Placeholder."
 #Spacer
