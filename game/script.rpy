@@ -773,12 +773,67 @@ label KonpekiHouse:
             #If you could get this to go off-screen that would be cool
             ryu "Let's gooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo!"
             him "Well I'll see you boys later, I've still got some spray paint calling my name."
+            show ryuji hap
+            with Dissolve(0.5)
             hide hime with moveinright
             $renpy.pause(1.0)
             show ryuji at left with moveinleft
             show fuyu at right with moveinright
             nar "Ryuji gets busy setting up the game while Fuyuhiko waits on the couch."
-            
+            ryu "Do you play many games on your own Winter?"
+            fuy "No, why?"
+            ryu "Well, I've helped you play a ton of games, but the Remaining of Them is awesome and has a ton of great accessibility features."
+            ryu "You could probably play it on your own!"
+            ryu "If you wanted to borrow it."
+            show fuyu smile with Dissolve(0.5)
+            fuy "That's really sweet Ryuji."
+            show fuyu neut with Dissolve(0.5)
+            fuy "But I don't have a console."
+            show ryuji err with Dissolve(0.5)
+            ryu "Oh. yeah..."
+            $renpy.pause(0.5)
+            show ryuji hap with Dissolve(0.5)
+            ryu "Well we can still play now!"
+            nar "The two play for a few hours. Ryuji tries his best not to intervene too often, happy to watch his friend play."
+            show hime cool at farleft with moveinleft
+            show ryuji at farright with moveinleft
+            nar "Until Hime interrupts them."
+            him "Hey guys, Haruki just called."
+            show fuyu really with Dissolve(0.5)
+            ryu "Haruki?"
+            show fuyu at center with moveinright
+            fuy "God, what does he want now?"
+            him "He said we should meet up at the clubroom tomorrow."
+            ryu "But we don't have club on Tuesdays?"
+            show hime uncomfy with Dissolve(0.5)
+            him "He said he wants to talk, he sounded really freaked out."
+            ryu "What do you think Winter?"
+            menu:
+                "Meet up with Haruki tomorrow.":
+                    $ HarukiMeeting = True
+                    fuy "I guess we should meet up with him tomorrow."
+                    show hime cool with Dissolve(0.5)
+                    him "Okay then."
+                    ryu "I'll see you afterschool then!"
+                    nar "Fuyuhiko shifts around in his seat uncomfortably, then hands his controller back to Ryuji."
+                    fuy "Hey Hime, it's getting kinda late. Could you give me a ride home?"
+                    him "Sure."
+                    jump Day3
+                "Fuck him.":
+                    fuy "Honestly? Fuck him."
+                    show ryuji err
+                    ryu "Oh."
+                    fuy "You two can meet up with him if you want."
+                    fuy "I'm not coming."
+                    show ryuji so with Dissolve(0.5)
+                    ryu "Guess we're not going then."
+                    him "I'll still go. I want to see what this is about."
+                    him "This sounds serious."
+                    fuy "Suit yourself."
+                    ryu "Hey Winter, it's getting kinda late."
+                    ryu "You wanna go home?"
+                    fuy "Yeah, sure."
+                    jump Day3
         "Spray Paint":
             #Himiko likes to paint, Fuyuhiko likes to sit and listen
             #It's more about the meaning behind the rebellion y'know

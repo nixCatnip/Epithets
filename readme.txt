@@ -11,12 +11,10 @@ on when Fuyuhiko doesn't interact with the club.
 the rest of the club does. Her brother does though, and no one ever seems to stop her from showing
 up. Her route focuses on her and Fuyuhiko's frustration with the world and capitalism, and that affects
 how they deal with the rising tensions.
-- Yoikishi: The himbo with a heart of gold, Yoikishi is true golden retriever energy, as much I hated
-writing that. His name is remnant of his origins as a BNHA OC, we should consider changing it to Ryuji
-like most modern incarnations of him. His route focuses on him teaching Fuyuhiko to take it easy sometimes
-and see the good side of life. That optimism affects how they ultimately see the actions of their friends,
+- Ryuji: The himbo with a heart of gold, Ryuji is true golden retriever energy, as much I hated
+writing that. His route focuses on him teaching Fuyuhiko to take it easy sometimes and see the 
+good side of life. That optimism affects how they ultimately see the actions of their friends,
 quite the opposite of his sister.
-    - Possible name change to Ryuji?
 - Rei: The potentially problematic mockery of cult-like faith. Rei is steeped in the control of the cult
 his family swears alligance to. Although, the god that supposedly watches all their actions and that for
 which Rei is meant to hold a major role for may be more than fiction. His route with Fuyuhiko sees them
