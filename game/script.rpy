@@ -767,7 +767,18 @@ label KonpekiHouse:
             #This references the Last of Us Part 2 and the insane blind accessiblity options it has
             #If you want, you could research them and include them in the conversation
             #Or just have Ryuji and Fuyuhiko talk about whatever
-            nar "Placeholder"
+            fuy "Let's try the Remaining of Them."
+            show ryuji excited
+            with Dissolve(0.5)
+            #If you could get this to go off-screen that would be cool
+            ryu "Let's gooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo!"
+            him "Well I'll see you boys later, I've still got some spray paint calling my name."
+            hide hime with moveinright
+            $renpy.pause(1.0)
+            show ryuji at left with moveinleft
+            show fuyu at right with moveinright
+            nar "Ryuji gets busy setting up the game while Fuyuhiko waits on the couch."
+            
         "Spray Paint":
             #Himiko likes to paint, Fuyuhiko likes to sit and listen
             #It's more about the meaning behind the rebellion y'know
