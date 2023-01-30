@@ -845,7 +845,18 @@ label HarukiHouse:
 #Spacer
 
 label ReiHouse:
-    nar "Placeholder"
+    #Rei means to show Fuyuhiko the glory of Lantern
+    #But Haruki suspects something is up, he's watching
+    #And Rei /will/ get possessed after all
+    scene road night
+    show rei cautious
+    show fuyu neut
+    with Dissolve(0.5)
+    nar "Rei is quiet the whole drive to his house."
+    nar "There's a weird sort of air around him, nervous and detirmination bundled up together."
+    nar "Fuyuhiko doesn't say anything though."
+    scene rei night
+    nar "Not until they're there."
 #Spacer
 
 label HomeAlone:
