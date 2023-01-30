@@ -490,7 +490,7 @@ label HarukiandRei:
     if HarukiChat:
         har "Oh. Hi... Fuyuhiko."
         rei "Hello, Shiro."
-        har "I was... Just getting this guy to talk about that great fire in the sky."
+        har "I was... {i}Ahem.{/i} Just getting this guy to talk about that great fire in the sky."
         show fuyu what
         with Dissolve(0.5)
         fuy "The Sun?"
@@ -502,7 +502,7 @@ label HarukiandRei:
         show haruki smug
         with Dissolve(0.5)
         har "That god his parents forced our boy into worshipping."
-        har "I mean seriously. You're so obsessed, it's almost pitiful."
+        har "I mean seriously. You're so obsessed, it's kinda pathetic."
         show rei shatter
         with Dissolve(0.5)
         rei "Dammit Haruki, They didn't force me into ANYTHING!"
@@ -516,14 +516,14 @@ label HarukiandRei:
         fuy "Shut up, Haruki."
         show rei cautious
         with Dissolve(0.5)
-        rei "Look. If you want to see that they didn't force me into following Lantern. Come to my house tonight Haruki."
-        fuy "I don't think that's a good idea."
+        rei "Look. You want proof of Lantern's glory? Come to my house tonight Haruki."
+        fuy "I don't think that's a good idea Rei."
         nar "Haruki grumbled, he had something we wanted to say but he held himself back."
         rei "Well, how about you come over, Shiro?"
         show haruki whatever
         with Dissolve(0.5)
-        har "Really? So you're just gonna invite him over. What are you planning on doing Rei?"
-        rei "Nothing!"
+        har "Really? So you're just gonna invite him over. Just like that? What are you planning on doing? Huh, Rei?"
+        rei "Nothing! We're friends!"
         har "Nothing!? Because it seems to me like you're planning a little sacrifice!"
         fuy "Haruki!"
         show haruki angry
@@ -555,11 +555,11 @@ label HarukiandRei:
         rei "Lantern. He means Lantern."
         fuy "Lantern?"
         har "That god his parents forced our boy into worshipping."
-        har "I mean seriously. You're so obsessed, it's almost pitiful."
+        har "I mean seriously. You're so obsessed, it's kinda pathetic."
         $ renpy.pause(2.0)
         rei "Shiro. Can I talk to you, in private?"
         fuy "Oh, uh, sure."
-        har "Hey, where are you going? I was just teasing Rei."
+        har "Hey, where are you going? I was just teasing him."
         rei "Sure you were, Supai."
         scene hallway afternoon
         hide haruki
@@ -576,18 +576,18 @@ label HarukiandRei:
         show fuyu down
         with Dissolve(0.5)
         nar "Fuyuhiko doesn't respond, instead opting to sit with the other boy in scilence."
-        rei "If you don't tell me, I'll just find out through Lantern."
+        rei "If you don't tell me, Lantern will."
         fuy "You can't do that."
         rei "I can, Shiro."
-        fuy "Then prove it."
+        fuy "Prove it."
         rei "I- I can't not here."
-        rei "Come ot my house, after club, I'll show you then, okay?"
+        rei "Come to my house, after club, I'll show you then, okay?"
         hide rei
         with Dissolve(0.5)
-        nar "Rei went back into the classroom, but it didn't take long for someone else to emerge from the doorway"
+        nar "Rei quickly went back into the classroom alone, but it didn't take long for someone else to emerge from the doorway."
         show haruki frown at left
         with moveinleft
-        har "What was that about? I didn't mean to hurt him, honest."
+        har "What was that about? I didn't mean to hurt him. Honest."
         har "I just, went a little far."
         fuy "This isn't about you Haruki."
         har "What?"
@@ -597,7 +597,7 @@ label HarukiandRei:
         with Dissolve(0.5)
         har "There might be another boy would love you at his house~"
         menu:
-            "Yes":
+            "I'm going to Rei's.":
                 har "Well then."
                 har "Suit yourself, Fuyu."
                 hide haruki
@@ -605,12 +605,11 @@ label HarukiandRei:
                 nar "Fuyu sat in the hallway for the rest of the club time, thinking about what the hell was going to transpire at Rei's house."
                 nar "Until the boy appeared to show him."
                 jump ReiHouse
-            "No":
-                har "Well then."
+            "Oh?":
                 har "How about coming to that other boy's house?"
                 show fuyu neut
                 with Dissolve(0.5)
-                fuyu "I don't see why not."
+                fuyu "Okay then, I don't see why not."
                 jump HarukiHouse
     else:
         har "Hey Fuyu~"
@@ -625,7 +624,7 @@ label HarukiandRei:
         rei "Lantern. He means Lantern."
         fuy "Lantern?"
         har "That god his parents forced our boy into worshipping."
-        har "I mean seriously. You're so obsessed, it's almost pitiful."
+        har "I mean seriously. You're so obsessed, it's kinda pathetic."
         show rei shatter
         with Dissolve(0.5)
         rei "Dammit Haruki, They didn't force me into ANYTHING!"
@@ -643,7 +642,7 @@ label HarukiandRei:
         show haruki whatever
         with Dissolve(0.5)
         har "Don't do that, don't drag him into this."
-        har "If you're going that then, Fuyu, you should come to mine. I haven't gotten a chance to really talk to lately."
+        har "If you're going that then, Fuyu, you should come to mine. I haven't gotten a chance to really talk to you lately."
         nar "This whole conversation, Fuyuhiko's barely processed what happened. And now a choice to make?"
         nar "How about we help our Silver Boy."
         nar "Who's offer should he accept?"
@@ -666,7 +665,7 @@ label HarukiandRei:
                 with Dissolve(0.5)
                 show fuyu at right
                 with moveinright
-                nar "Haruki left the club after what you said, the rest of you followed not soon after."
+                nar "Haruki left the club after that, the rest of you followed not soon after."
                 jump ReiHouse
 #Spacer
 
