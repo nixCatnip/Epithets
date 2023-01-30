@@ -1055,5 +1055,9 @@ label HomeAlone:
 
 #Day3
 label Day3:
-    nar "Placeholder."
+    nar "End of Day 2."
+    nar "Start of Day 3."
+    scene apartment day
+    with Dissolve(0.5)
+    nar "Placeholder"
 #Spacer
