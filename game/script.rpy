@@ -774,10 +774,10 @@ label KonpekiHouse:
             him "Well I'll see you boys later, I've still got some spray paint calling my name."
             show ryuji hap
             with Dissolve(0.5)
-            hide hime with moveinright
+            hide hime with moveinleft
             $renpy.pause(1.0)
             show ryuji at left with moveinleft
-            show fuyu at right with moveinright
+            show fuyu at right with moveinleft
             nar "Ryuji gets busy setting up the game while Fuyuhiko waits on the couch."
             ryu "Do you play many games on your own Winter?"
             fuy "No, why?"
@@ -837,7 +837,156 @@ label KonpekiHouse:
             #Himiko likes to paint, Fuyuhiko likes to sit and listen
             #It's more about the meaning behind the rebellion y'know
             #Probably have them talk about their jobs? Or maybe Haruki.
-            nar "Placeholder"
+            fuy "I've gotta hear this new spray paint."
+            show ryuji so with Dissolve(0.5)
+            ryu "If you say so..."
+            hide ryuji with moveinright
+            show fuyu at left with moveinright
+            show hime at right with moveinright
+            him "Don't worry about him, he'll be over it within the hour."
+            nar "Hime leads Fuyuhiko to her easel, judging by the crunching underfoot, it seems she's taken proper precautions to protect the house."
+            him "Welcome to the proverbial Art Corner."
+            nar "Himiko shakes up a can and begins to paint with a satisfying hiss."
+            nar "Hime has always shown mastery over spray paint, Winter can tell by the controlled highs and lows of the hissing's volume."
+            nar "It's nice listening, though granted, nothing can match the satisfaction of painting a wall that actually deserved it."
+            nar "But despite the canvas she's painting now having done nothing wrong, Hime's painting feels angry almost."
+            fuy "Wanna talk?"
+            if HimeChat:
+                show hime uncomfy with Dissolve(0.5)
+                him "Well you kinda already know what happened."
+                nar "Fuyuhiko nods, her manager, the tagging, she told him last night."
+                fuy "But didn't you already tag the place."
+                show hime cool with Dissolve(0.5)
+                him "Yeah, well, it wasn't enough."
+                nar "The hissing grows louder, more intense for a moment."
+                nar "A part of Fuyuhiko enjoys it, the sound of defiance, of the rage, of revolution."
+                nar "A part of Fuyuhiko just feels bad for his friend."
+                nar "Then Hime's phone starts to ring."
+                him "Shit."
+                $renpy.pause(1.0)
+                him "It's Haruki."
+                show fuyu really with Dissolve(0.5)
+                nar "Fuyuhiko motions her to take the call, hesitantly."
+                him "Yeah?"
+                nar "..." 
+                him "Uh-huh" 
+                nar "..."
+                him "No, he's with me." 
+                nar "..." 
+                him "Fuyuhiko too, yeah." 
+                nar "..." 
+                him "Okay, talk to you later."
+                nar "Hime ends the call and looks at Fuyuhiko with a sigh."
+                him "Let's go find Ryuji."
+                scene konpeki day
+                show hime cool at farleft
+                show ryuji at farright
+                show fuyu at center
+                nar "Ryuji is laying down on the couch, he looks up when Hime and Fuyuhiko enter."
+                him "Hey dude, Haruki just called."
+                him "He said we should meet up at the clubroom tomorrow."
+                ryu "But we don't have club on Tuesdays?"
+                show hime uncomfy with Dissolve(0.5)
+                him "He said he wants to talk, he sounded really freaked out."
+                ryu "What do you think Winter?"
+                menu:
+                "Meet up with Haruki tomorrow.":
+                    $ HarukiMeeting = True
+                    fuy "I guess we should meet up with him tomorrow."
+                    show hime cool with Dissolve(0.5)
+                    him "Okay then."
+                    ryu "I'll see you afterschool then!"
+                    nar "Fuyuhiko shifts on his feet uncomfortably."
+                    fuy "Hey Hime, it's getting kinda late. Could you give me a ride home?"
+                    him "Sure."
+                    jump Day3
+                "Fuck him.":
+                    fuy "Honestly? Fuck him."
+                    show ryuji err
+                    ryu "Oh."
+                    fuy "You two can meet up with him if you want."
+                    fuy "I'm not coming."
+                    show ryuji so with Dissolve(0.5)
+                    ryu "Guess we're not going then."
+                    him "I'll still go. I want to see what this is about."
+                    him "This sounds serious."
+                    fuy "Suit yourself."
+                    him "Hey Winter, it's getting kinda late."
+                    him "You wanna go home?"
+                    fuy "Yeah, sure."
+                    jump Day3
+            else:
+                $ HimeChat = True
+                him "It's fucking Dave. My manager."
+                show hime uncomfy with Dissolve(0.5)
+                him "He threatened my job yesterday Fuyuhiko. Because I wouldn't go out with him."
+                him "God, I hate men."
+                show hime cool with Dissolve(0.5)
+                him "No offense."
+                nar "Fuyuhiko shrugs, what could he say?."
+                show fuyu really with Dissolve(0.5) 
+                fuy "That's awful Hime..."
+                show hime uncomfy with Dissolve(0.5)
+                him "I know right!?"
+                show hime cool with Dissolve(0.5)
+                him "I'll be alright though, I just wanted to get this out of my system."
+                show fuyu neut with Dissolve(0.5)
+                him "You seem like you wanna talk too, Fuyuhiko."
+                fuy "It's nothing, I'm fine."
+                nar "Hime shrugs, Fuyuhiko can tell as the paint can stops hissing for a moment to accomodate it."
+                him "If you say so just know-"
+                $renpy.pause(1.0)
+                him "Haruki's calling."
+                show fuyu really with Dissolve(0.5)
+                nar "Fuyuhiko motions her to take the call, hesitantly."
+                him "Yeah?"
+                nar "..." 
+                him "Uh-huh" 
+                nar "..."
+                him "No, he's with me." 
+                nar "..." 
+                him "Fuyuhiko too, yeah." 
+                nar "..." 
+                him "Okay, talk to you later."
+                nar "Hime ends the call and looks at Fuyuhiko with a sigh."
+                him "Let's go find Ryuji."
+                scene konpeki day
+                show hime cool at farleft
+                show ryuji at farright
+                show fuyu at center
+                nar "Ryuji is laying down on the couch, he looks up when Hime and Fuyuhiko enter."
+                him "Hey dude, Haruki just called."
+                him "He said we should meet up at the clubroom tomorrow."
+                ryu "But we don't have club on Tuesdays?"
+                show hime uncomfy with Dissolve(0.5)
+                him "He said he wants to talk, he sounded really freaked out."
+                ryu "What do you think Winter?"
+                menu:
+                "Meet up with Haruki tomorrow.":
+                    $ HarukiMeeting = True
+                    fuy "I guess we should meet up with him tomorrow."
+                    show hime cool with Dissolve(0.5)
+                    him "Okay then."
+                    ryu "I'll see you afterschool then!"
+                    nar "Fuyuhiko shifts on his feet uncomfortably."
+                    fuy "Hey Hime, it's getting kinda late. Could you give me a ride home?"
+                    him "Sure."
+                    jump Day3
+                "Fuck him.":
+                    fuy "Honestly? Fuck him."
+                    show ryuji err
+                    ryu "Oh."
+                    fuy "You two can meet up with him if you want."
+                    fuy "I'm not coming."
+                    show ryuji so with Dissolve(0.5)
+                    ryu "Guess we're not going then."
+                    him "I'll still go. I want to see what this is about."
+                    him "This sounds serious."
+                    fuy "Suit yourself."
+                    him "Hey Winter, it's getting kinda late."
+                    him "You wanna go home?"
+                    fuy "Yeah, sure."
+                    jump Day3
 #Spacer 
 
 label HarukiHouse:
@@ -849,8 +998,8 @@ label ReiHouse:
     #But Haruki suspects something is up, he's watching
     #And Rei /will/ get possessed after all
     scene road night
-    show rei cautious
-    show fuyu neut
+    show rei cautious at right
+    show fuyu neut at left
     with Dissolve(0.5)
     nar "Rei is quiet the whole drive to his house."
     nar "There's a weird sort of air around him, nervous and detirmination bundled up together."
