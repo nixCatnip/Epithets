@@ -990,7 +990,34 @@ label KonpekiHouse:
 #Spacer 
 
 label HarukiHouse:
-    nar "Placeholder"
+    scene road day
+    show fuyu really at left
+    show haruki smug at right
+    nar "Fuyuhiko almost immediately regrets his decision the second he's in the car alone with Haruki."
+    if HarukiChat:
+        #Focus on Fuyuhiko (eventually) apologizing for blowing up at Haruki
+        #He was just under a lot of stress okay?
+        #But like, you can still cut it bit with the flirting
+        nar "Haruki is annoying as ever, though he seems to be holding something back."
+        nar "Then Fuyuhiko realizes what's wrong, Haruki hasn't called him Fuyu all day."
+        nar "He doesn't long to think about it before they arrive at his apartment though."
+        scene haruki day
+    else:
+        #Fuyuhiko might blow up yet
+        #But have Haruki push him a bit farther
+        #And try to resolve it at least a bit within the day
+        har "So, Fuyu~"
+        har "How're ya feeling?"
+        fuy "Worse now that you're talking."
+        har "Oh how you wound me so!"
+        har "But I wonder, my dear, if you're okay? You seem far too uncomfortable."
+        show haruki frown with Dissolve(0.5)
+        har "Do I need to take you home?"
+        nar "Fuyuhiko shifts in his seat, wanting to give the impression that he's considering it."
+        fuy "No."
+        show haruki smug with Dissolve(0.5) 
+        har "Okay then, Fuyu."
+        scene haruki day
 #Spacer
 
 label ReiHouse:
