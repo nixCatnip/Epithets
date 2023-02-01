@@ -1033,6 +1033,49 @@ label ReiHouse:
     nar "Fuyuhiko doesn't say anything though."
     scene rei night
     nar "Not until they're there."
+    rei "This is it."
+    rei "I just need a minute."
+    rei "To get ready..."
+    hide rei with moveinright
+    nar "With Rei gone, Fuyuhiko sighs and takes out his cane."
+    nar "He walks around the house, mentally mapping where the furniture is in order to try and avoid tripping later on."
+    nar "But there's one thing he can't place."
+    nar "A small rectangular box, too hard to be a footrest, but too small to be a coffee table."
+    nar "It seems centerally placed, so it doesn't seem to be a nightstand either."
+    show rei with moveinright
+    nar "Fuyuhiko jumps up when Rei re-enters."
+    rei "Okay then, let's get started. I just need you to witness this."
+    hide fuyu with Dissolve(0.5)
+    show rei at center with moveinright
+    nar "Rei guides Fuyuhiko to sit at the strange box, as he sits down on the other side. He takes a deep breath before he begins a chant."
+    rei "{i}Inter nos in nobis.{/i}"
+    rei "{i}Per flammam et lucem.{/i}"
+    show rei posesso with Dissolve(0.5)
+    rei "{i}Te ipsum rev-!{/i}"
+    #The finished chant is "Te ipsum revelare!", "Among us, among us. By flame and light. Reveal thyself!"
+    har "Stop it!"
+    show rei paradox with Dissolve(0.5)
+    rei "What?"
+    show haruki at farright with moveinright
+    show fuyu really at farleft with moveinleft
+    har "I said stop it."
+    show rei shatter with Dissolve(0.5)
+    rei "{i}AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARRRGH!!!{/i}"
+    rei "How do you ruin EVERYTHING!?"
+    rei "How did you even GET here!?"
+    rei "Did you follow me to my fucking house, Haruki!?"
+    har "Well, yeah, but-"
+    rei "Get the fuck out!"
+    har "What about-"
+    rei "OUT!"
+    hide rei with Dissolve(0.5)
+    hide haruki with Dissolve(0.5)
+    nar "Rei shoves Haruki out his front door and slams it in his face."
+    show rei at right with Dissolve(0.5)
+    show fuyu at left with moveinleft
+    rei "I can't believe him..."
+    rei "This night is over. Let me drive you home Shiro..."
+    jump Day3
 #Spacer
 
 label HomeAlone:
