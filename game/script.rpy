@@ -1002,6 +1002,47 @@ label HarukiHouse:
         nar "Then Fuyuhiko realizes what's wrong, Haruki hasn't called him Fuyu all day."
         nar "He doesn't long to think about it before they arrive at his apartment though."
         scene haruki day
+        har "Welcome to my humble abode."
+        $ renpy.pause(1.0)
+        show haruki frown with Dissolve(0.5)
+        har "I, uh, didn't think I would get this far."
+        har "I don't really know what to do."
+        har "Wanna like, throw darts or something?"
+        $ renpy.pause(0.5)
+        fuy "I'm blind, Haruki."
+        har "Oh yeah..."
+        show haruki smug with Dissolve(0.5)
+        har "How about I just wear a blindfold! It'll be even."
+        fuy "If you want us both to poke your eyes out, then sure."
+        show haruki frown with Dissolve(0.5)
+        har "How about... No... Um, reading something...? Probably not."
+        fuy "Look if you don't wanna hang out with me, I can just go home."
+        show haruki shut with Dissolve(0.5)
+        har "No! I uh... I just need a minute."
+        fuy "I'm going home."
+        har "Come on Fuyuhiko, I-"
+        fuy "No, if it's such a problem for you to accomdate me then I think I should just go home."
+        har "I-I'm trying here, I-"
+        fuy "You shouldn't have to! Hime and Fall, they-"
+        har "You never hang out with me Fuyuhiko!"
+        har "I barely know the things you like! I'm not familiar with your limits."
+        har "You don't tell when I do something that bothers you until you're at an exploding point!"
+        har "You won't let me!"
+        $ renpy.pause(1.0)
+        show fuyu neut with Dissolve(0.5)
+        fuy "..."
+        har "Look if you wanna go home, just let me drive you, alright?"
+        fuy "No, I-"
+        fuy "Let's just watch a movie, okay?"
+        show haruki smug with Dissolve(0.5)
+        har "Oh, um, okay. What kind?"
+        show fuyu smile with Dissolve(0.5)
+        fuy "Something gorey, so that you're the only one who has to see it."
+        har "Hah. Okay then, come on."
+        $ HarukiFriend = True
+        scene black with Dissolve(1)
+        nar "Eventually, Haruki does end up driving Fuyuhiko home."
+        jump Day3
     else:
         #Fuyuhiko might blow up yet
         #But have Haruki push him a bit farther
@@ -1018,6 +1059,46 @@ label HarukiHouse:
         show haruki smug with Dissolve(0.5) 
         har "Okay then, Fuyu."
         scene haruki day
+        har "Welcome to my humble abode."
+        $ renpy.pause(1.0)
+        show haruki frown with Dissolve(0.5)
+        har "I, uh, didn't think I would get this far."
+        har "I don't really know what to do."
+        har "Wanna like, throw darts or something?"
+        $ renpy.pause(0.5)
+        fuy "I'm blind, Haruki."
+        har "Oh yeah..."
+        show haruki smug with Dissolve(0.5)
+        har "How about I just wear a blindfold! It'll be even."
+        fuy "If you want us both to poke your eyes out, then sure."
+        show haruki frown with Dissolve(0.5)
+        har "How about... No... Um, reading something...? Probably not."
+        fuy "Look if you don't wanna hang out with me, I can just go home."
+        show haruki shut with Dissolve(0.5)
+        har "No! I uh... I just need a minute."
+        fuy "I'm going home."
+        har "Come on Fuyu, I-"
+        fuy "No, if it's such a problem for you to accomdate me then I think I should just go home."
+        har "I-I'm trying here, I-"
+        fuy "You shouldn't have to! Hime and Fall, they-"
+        har "You never hang out with me Fuyuhiko!"
+        har "I barely know the things you like! I'm not familiar with your limits."
+        har "You won't let me!"
+        $ renpy.pause(1.0)
+        show fuyu neut with Dissolve(0.5)
+        fuy "..."
+        har "Look if you wanna go home, just let me drive you, alright?"
+        fuy "No, I-"
+        fuy "Let's just watch a movie, okay?"
+        show haruki smug with Dissolve(0.5)
+        har "Oh, um, okay. What kind?"
+        show fuyu smile with Dissolve(0.5)
+        fuy "Something gorey, so that you're the only one who has to see it."
+        har "Hah. Okay then, come on."
+        $ HarukiFriend = True
+        scene black with Dissolve(1)
+        nar "Eventually, Haruki does end up driving Fuyuhiko home."
+        jump Day3
 #Spacer
 
 label ReiHouse:
