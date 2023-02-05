@@ -750,7 +750,7 @@ label KonpekiHouse:
     show fuyu smile at center
     with Dissolve(0.5)
     fuy "I'm coming! I'm coming."
-    show hime yo at far right
+    show hime yo at farright
     him "Slow down!"
     show ryuji hap
     show hime cool
@@ -890,31 +890,31 @@ label KonpekiHouse:
                 him "He said he wants to talk, he sounded really freaked out."
                 ryu "What do you think Winter?"
                 menu:
-                "Meet up with Haruki tomorrow.":
-                    $ HarukiMeeting = True
-                    fuy "I guess we should meet up with him tomorrow."
-                    show hime cool with Dissolve(0.5)
-                    him "Okay then."
-                    ryu "I'll see you afterschool then!"
-                    nar "Fuyuhiko shifts on his feet uncomfortably."
-                    fuy "Hey Hime, it's getting kinda late. Could you give me a ride home?"
-                    him "Sure."
-                    jump Day3
-                "Fuck him.":
-                    fuy "Honestly? Fuck him."
-                    show ryuji err
-                    ryu "Oh."
-                    fuy "You two can meet up with him if you want."
-                    fuy "I'm not coming."
-                    show ryuji so with Dissolve(0.5)
-                    ryu "Guess we're not going then."
-                    him "I'll still go. I want to see what this is about."
-                    him "This sounds serious."
-                    fuy "Suit yourself."
-                    him "Hey Winter, it's getting kinda late."
-                    him "You wanna go home?"
-                    fuy "Yeah, sure."
-                    jump Day3
+                    "Meet up with Haruki tomorrow.":
+                        $ HarukiMeeting = True
+                        fuy "I guess we should meet up with him tomorrow."
+                        show hime cool with Dissolve(0.5)
+                        him "Okay then."
+                        ryu "I'll see you afterschool then!"
+                        nar "Fuyuhiko shifts on his feet uncomfortably."
+                        fuy "Hey Hime, it's getting kinda late. Could you give me a ride home?"
+                        him "Sure."
+                        jump Day3
+                    "Fuck him.":
+                        fuy "Honestly? Fuck him."
+                        show ryuji err
+                        ryu "Oh."
+                        fuy "You two can meet up with him if you want."
+                        fuy "I'm not coming."
+                        show ryuji so with Dissolve(0.5)
+                        ryu "Guess we're not going then."
+                        him "I'll still go. I want to see what this is about."
+                        him "This sounds serious."
+                        fuy "Suit yourself."
+                        him "Hey Winter, it's getting kinda late."
+                        him "You wanna go home?"
+                        fuy "Yeah, sure."
+                        jump Day3
             else:
                 $ HimeChat = True
                 him "It's fucking Dave. My manager."
@@ -962,31 +962,31 @@ label KonpekiHouse:
                 him "He said he wants to talk, he sounded really freaked out."
                 ryu "What do you think Winter?"
                 menu:
-                "Meet up with Haruki tomorrow.":
-                    $ HarukiMeeting = True
-                    fuy "I guess we should meet up with him tomorrow."
-                    show hime cool with Dissolve(0.5)
-                    him "Okay then."
-                    ryu "I'll see you afterschool then!"
-                    nar "Fuyuhiko shifts on his feet uncomfortably."
-                    fuy "Hey Hime, it's getting kinda late. Could you give me a ride home?"
-                    him "Sure."
-                    jump Day3
-                "Fuck him.":
-                    fuy "Honestly? Fuck him."
-                    show ryuji err
-                    ryu "Oh."
-                    fuy "You two can meet up with him if you want."
-                    fuy "I'm not coming."
-                    show ryuji so with Dissolve(0.5)
-                    ryu "Guess we're not going then."
-                    him "I'll still go. I want to see what this is about."
-                    him "This sounds serious."
-                    fuy "Suit yourself."
-                    him "Hey Winter, it's getting kinda late."
-                    him "You wanna go home?"
-                    fuy "Yeah, sure."
-                    jump Day3
+                    "Meet up with Haruki tomorrow.":
+                        $ HarukiMeeting = True
+                        fuy "I guess we should meet up with him tomorrow."
+                        show hime cool with Dissolve(0.5)
+                        him "Okay then."
+                        ryu "I'll see you afterschool then!"
+                        nar "Fuyuhiko shifts on his feet uncomfortably."
+                        fuy "Hey Hime, it's getting kinda late. Could you give me a ride home?"
+                        him "Sure."
+                        jump Day3
+                    "Fuck him.":
+                        fuy "Honestly? Fuck him."
+                        show ryuji err
+                        ryu "Oh."
+                        fuy "You two can meet up with him if you want."
+                        fuy "I'm not coming."
+                        show ryuji so with Dissolve(0.5)
+                        ryu "Guess we're not going then."
+                        him "I'll still go. I want to see what this is about."
+                        him "This sounds serious."
+                        fuy "Suit yourself."
+                        him "Hey Winter, it's getting kinda late."
+                        him "You wanna go home?"
+                        fuy "Yeah, sure."
+                        jump Day3
 #Spacer 
 
 label HarukiHouse:
