@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 333, in script
-    jump SadBoyHours
-ScriptError: could not find label 'SadBoyHours'.
+  File "game/script.rpy", line 396, in script
+    jump KonpekiHouse
+ScriptError: could not find label 'KonpekiHouse'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 333, in script
-    jump SadBoyHours
-  File "C:\Users\Nix\Downloads\renpy-7.3.5-sdk\renpy\ast.py", line 1697, in execute
+  File "game/script.rpy", line 396, in script
+    jump KonpekiHouse
+  File "C:\Users\Nix\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
     rv = renpy.game.script.lookup(target)
-  File "C:\Users\Nix\Downloads\renpy-7.3.5-sdk\renpy\script.py", line 898, in lookup
+  File "C:\Users\Nix\Downloads\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'SadBoyHours'.
+ScriptError: could not find label 'KonpekiHouse'.
 
-Windows-8-6.2.9200
-Ren'Py 7.3.5.606
+Windows-10-10.0.19044 AMD64
+Ren'Py 8.0.3.22090809
 Epithets 1.0
-Wed Jun 17 17:54:08 2020
+Sun Dec  4 19:34:44 2022
