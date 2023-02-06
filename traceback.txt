@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 396, in script
-    jump KonpekiHouse
-ScriptError: could not find label 'KonpekiHouse'.
+  File "game/script.rpy", line 621, in script
+    fuyu "Okay then, I don't see why not."
+Exception: Sayer 'fuyu' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 396, in script
-    jump KonpekiHouse
-  File "C:\Users\Nix\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
-    rv = renpy.game.script.lookup(target)
-  File "C:\Users\Nix\Downloads\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'KonpekiHouse'.
+  File "game/script.rpy", line 621, in script
+    fuyu "Okay then, I don't see why not."
+  File "C:\Users\Nix\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 881, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\Nix\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 774, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'fuyu' is not defined.
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
 Epithets 1.0
-Sun Dec  4 19:34:44 2022
+Mon Feb  6 16:13:57 2023

@@ -618,7 +618,7 @@ label HarukiandRei:
                 har "How about coming to that other boy's house?"
                 show fuyu neut
                 with Dissolve(0.5)
-                fuyu "Okay then, I don't see why not."
+                fuy "Okay then, I don't see why not."
                 jump HarukiHouse
     else:
         har "Hey Fuyu~"
@@ -1014,8 +1014,9 @@ label HarukiHouse:
         nar "Haruki is annoying as ever, though he seems to be holding something back."
         nar "Then Fuyuhiko realizes what's wrong, Haruki hasn't called him Fuyu all day."
         nar "He doesn't long to think about it before they arrive at his apartment though."
-        scene haruki day
-        #need asset
+        scene supai day
+        show fuyu really at left
+        show haruki smug at right
         har "Welcome to my humble abode."
         $ renpy.pause(1.0)
         show haruki frown with Dissolve(0.5)
@@ -1074,8 +1075,9 @@ label HarukiHouse:
         fuy "No."
         show haruki smug with Dissolve(0.5) 
         har "Okay then, Fuyu."
-        scene haruki day
-        #need asset
+        scene supai day
+        show fuyu really at left
+        show haruki smug at right
         har "Welcome to my humble abode."
         $ renpy.pause(1.0)
         show haruki frown with Dissolve(0.5)
@@ -1132,7 +1134,7 @@ label ReiHouse:
     nar "Rei is quiet the whole drive to his house."
     nar "There's a weird sort of air around him, nervous and detirmination bundled up together."
     nar "Fuyuhiko doesn't say anything though."
-    scene rei day
+    scene amanshi day
     #^^, need asset
     nar "Not until they're there."
     rei "This is it."
@@ -1193,7 +1195,7 @@ label HomeAlone:
         show fuyu snap
         with Dissolve(0.5)
         stop music
-        fuy "WHAT GIVES THEM THE DAMN RIGHT!" with hpunk
+        fuy "WHAT GIVES THEM THE DAMN RIGHT!" with hpunch
         show fuyu really
         with Dissolve(0.5)
         fuy "I can't stop thinking about it."
@@ -1241,6 +1243,6 @@ label Day3:
     "Their stuff was liscenced under https://creativecommons.org/licenses/by-nc/3.0/ and https://creativecommons.org/licenses/by-nc/4.0/"
     "Also credit to Kinetik Lee for just letting people use their music!"
     "And the sprites were made using a picrew by chemicataclysm."
-    "Anyway the game is totally about to crash."
+    "Anyway the game is over, for now."
     "See you later."
 #Spacer
