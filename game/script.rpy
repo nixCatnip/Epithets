@@ -49,7 +49,7 @@ label start:
     fuy "I can't believe that woman!"
     fuy "She always thinks she knows what's best for me. She's not my fucking mom!"
     nar "He stomps across his small apartment and flips open a laptop, furiously scrolling through social media."
-    nar "perhaps we should have him recall a few of his companions to take his mind off of things."
+    nar "Perhaps we should have him recall a few of his companions to take his mind off of things."
     nar "Noncanonically, of course."
     jump recallMenu
 #Spacer
@@ -913,7 +913,7 @@ label KonpekiHouse:
                 nar "Then Hime's phone starts to ring."
                 him "Shit."
                 play sound "audio/phone.mp3" volume 0.5
-                $renpy.pause(1.0)
+                $renpy.pause(2.0)
                 him "It's Haruki."
                 show fuyu really 
                 with Dissolve(0.5)
