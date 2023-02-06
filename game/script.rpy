@@ -39,7 +39,7 @@ label start:
     $ ReiChat = False
     $ WorkChat = False
     #Spacer
-    play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0
+    play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
     nar "Ah, San Francisco, the salty air of the sea mixed with the salty attitudes of young adults experiencing true independence for the first time in their lives."
     nar "Five of these young adults attend the local prestigious university, hailing from across the sea, here to expand their hearts and minds."
     nar "Ah, here comes one now, arriving home after a long day of work. Perhaps the saltiest of them all, Fuyuhiko Shiro."
@@ -120,6 +120,7 @@ label textMessage:
 #Spacer
 
 label HarukiMessage:
+    play sound "audio/phone.mp3" volume 0.5
     nar "...Haruki."
     $ HarukiChat = True
     show fuyu really at farleft
@@ -149,7 +150,7 @@ label HarukiMessage:
     $ renpy.pause(2.0)
     thar "Fuyu..."
     tfuy "I'm done talking with you."
-    play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0
+    play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
     nar "The boy powers off his phone. If Haruki continued messaging him, he didn't recieve it."
     show fuyu down at center
     with moveinleft
@@ -162,6 +163,7 @@ label HarukiMessage:
 #Spacer
 
 label RyujiMessage:
+    play sound "audio/phone.mp3" volume 0.5
     nar "...Ryuji."
     $ RyujiChat = True
     show fuyu neut at farleft
@@ -195,6 +197,7 @@ label RyujiMessage:
 #Spacer
 
 label HimeMessage:
+    play sound "audio/phone.mp3" volume 0.5
     nar "...Hime."
     $ HimeChat = True
     show fuyu neut at farleft
@@ -245,6 +248,7 @@ label HimeMessage:
 #Spacer
 
 label ReiMessage:
+    play sound "audio/phone.mp3" volume 0.5
     nar "...Rei."
     $ ReiChat = True
     show fuyu down at farleft
@@ -270,6 +274,7 @@ label ReiMessage:
 #Spacer
 
 label WorkMessage:
+    play sound "audio/phone.mp3" volume 0.5
     nar "...Her."
     $ WorkChat = True
     hide fuyu neut
@@ -289,7 +294,7 @@ label WorkMessage:
     show fuyu what
     with Dissolve(0.5)
     fuy "I-"
-    play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0
+    play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
     $ renpy.pause(2.0)
     show fuyu down
     with Dissolve(0.5)
@@ -513,7 +518,7 @@ label HarukiandRei:
         show fuyu down
         with Dissolve(0.5)
         $ renpy.pause(1.0)
-        play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0
+        play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
         har "Hey..."
         show fuyu really
         with Dissolve(0.5)
@@ -637,7 +642,7 @@ label HarukiandRei:
         show fuyu down
         with Dissolve(0.5)
         $ renpy.pause(2.0)
-        play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0
+        play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
         har "Rei..."
         har "I- I was just teasing."
         rei "Can you hear yourself!?"
@@ -852,6 +857,7 @@ label KonpekiHouse:
             him "Don't worry about him, he'll be over it within the hour."
             nar "Hime leads Fuyuhiko to her easel, judging by the crunching underfoot, it seems she's taken proper precautions to protect the house."
             him "Welcome to the proverbial Art Corner."
+            play sound "audio/spraycan.mp3" volume 0.5
             nar "Himiko shakes up a can and begins to paint with a satisfying hiss."
             nar "Hime has always shown mastery over spray paint, Winter can tell by the controlled highs and lows of the hissing's volume."
             nar "It's nice listening, though granted, nothing can match the satisfaction of painting a wall that actually deserved it."
@@ -869,8 +875,7 @@ label KonpekiHouse:
                 nar "A part of Fuyuhiko just feels bad for his friend."
                 nar "Then Hime's phone starts to ring."
                 him "Shit."
-                #play sound "audio/"
-                #get phone sound
+                play sound "audio/phone.mp3" volume 0.5
                 $renpy.pause(1.0)
                 him "It's Haruki."
                 show fuyu really with Dissolve(0.5)
@@ -1043,7 +1048,7 @@ label HarukiHouse:
         fuy "..."
         har "Look if you wanna go home, just let me drive you, alright?"
         fuy "No, I-"
-        play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0
+        play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
         fuy "Let's just watch a movie, okay?"
         show haruki smug with Dissolve(0.5)
         har "Oh, um, okay. What kind?"
@@ -1114,6 +1119,8 @@ label HarukiHouse:
 #Spacer
 
 label ReiHouse:
+    stop music fadeout 1.0
+    play music "audio/KinetikLee-MidnightMirrors.mp3" fadein 1.0 fadeout 1.0 volume 0.5
     #Rei means to show Fuyuhiko the glory of Lantern
     #But Haruki suspects something is up, he's watching
     #And Rei /will/ get possessed after all
@@ -1148,6 +1155,7 @@ label ReiHouse:
     show rei posesso with Dissolve(0.5)
     rei "{i}Te ipsum rev-!{/i}"
     #The finished chant is "Te ipsum revelare!", "Among us, among us. By flame and light. Reveal thyself!"
+    stop music
     har "Stop it!"
     show rei paradox with Dissolve(0.5)
     rei "What?"
@@ -1168,6 +1176,7 @@ label ReiHouse:
     nar "Rei shoves Haruki out his front door and slams it in his face."
     show rei at right with Dissolve(0.5)
     show fuyu at left with moveinleft
+    play music "audio/Urban-Flight.mp3" fadein 1.0 fadeout 1.0 volume 0.5
     rei "I can't believe him..."
     rei "This night is over. Let me drive you home Shiro..."
     jump Day3
@@ -1196,7 +1205,7 @@ label HomeAlone:
         nar "Fuyuhiko goes into the bathroom. He throws water into his face until he feels a little calmer."
         show fuyu
         with moveinright
-        play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0
+        play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
         fuy "I need to lie down..."
         nar "And soon enough, he begins to drift off into sleep..."
     else:
@@ -1226,5 +1235,11 @@ label Day3:
     nar "Start of Day 3."
     scene apartment day
     with Dissolve(0.5)
-    nar "Placeholder"
+    "That's all I have for now!"
+    "Credit to Chocolate Berry for making their backgrounds free to use!"
+    "Orange Free Sounds was also pretty helpful."
+    "Their stuff was liscenced under https://creativecommons.org/licenses/by-nc/3.0/ and https://creativecommons.org/licenses/by-nc/4.0/"
+    "Also credit to Kinetik Lee for just letting people use their music!"
+    "Anyway the game is totally about to crash."
+    "See you later."
 #Spacer
