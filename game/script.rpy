@@ -774,7 +774,7 @@ label KonpekiHouse:
             him "Well I'll see you boys later, I've still got some spray paint calling my name."
             show ryuji hap
             with Dissolve(0.5)
-            hide hime with moveinleft
+            hide hime with moveoutright
             $renpy.pause(1.0)
             show ryuji at left with moveinleft
             show fuyu at right with moveinleft
@@ -840,7 +840,7 @@ label KonpekiHouse:
             fuy "I've gotta hear this new spray paint."
             show ryuji so with Dissolve(0.5)
             ryu "If you say so..."
-            hide ryuji with moveinright
+            hide ryuji with moveoutleft
             show fuyu at left with moveinright
             show hime at right with moveinright
             him "Don't worry about him, he'll be over it within the hour."
@@ -1123,7 +1123,7 @@ label ReiHouse:
     rei "This is it."
     rei "I just need a minute."
     rei "To get ready..."
-    hide rei with moveinright
+    hide rei with moveoutright
     nar "With Rei gone, Fuyuhiko sighs and takes out his cane."
     nar "He walks around the house, mentally mapping where the furniture is in order to try and avoid tripping later on."
     nar "But there's one thing he can't place."
@@ -1183,7 +1183,7 @@ label HomeAlone:
         fuy "I am valuable! I am!"
         fuy "I could do my job if you just gave me the actual damn tools to do it! Ugh!"
         hide fuyu
-        with moveinright
+        with moveoutright
         nar "Fuyuhiko goes into the bathroom. He throws water into his face until he feels a little calmer."
         show fuyu
         with moveinright
