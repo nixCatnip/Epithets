@@ -863,6 +863,8 @@ label KonpekiHouse:
                 nar "A part of Fuyuhiko just feels bad for his friend."
                 nar "Then Hime's phone starts to ring."
                 him "Shit."
+                #play sound "audio/"
+                #get phone sound
                 $renpy.pause(1.0)
                 him "It's Haruki."
                 show fuyu really with Dissolve(0.5)
@@ -1002,6 +1004,7 @@ label HarukiHouse:
         nar "Then Fuyuhiko realizes what's wrong, Haruki hasn't called him Fuyu all day."
         nar "He doesn't long to think about it before they arrive at his apartment though."
         scene haruki day
+        #need asset
         har "Welcome to my humble abode."
         $ renpy.pause(1.0)
         show haruki frown with Dissolve(0.5)
@@ -1059,6 +1062,7 @@ label HarukiHouse:
         show haruki smug with Dissolve(0.5) 
         har "Okay then, Fuyu."
         scene haruki day
+        #need asset
         har "Welcome to my humble abode."
         $ renpy.pause(1.0)
         show haruki frown with Dissolve(0.5)
@@ -1105,14 +1109,16 @@ label ReiHouse:
     #Rei means to show Fuyuhiko the glory of Lantern
     #But Haruki suspects something is up, he's watching
     #And Rei /will/ get possessed after all
-    scene road night
+    scene road day
+    #consider changing to night for mood, even if it doesn't make total sense chronologically
     show rei cautious at right
     show fuyu neut at left
     with Dissolve(0.5)
     nar "Rei is quiet the whole drive to his house."
     nar "There's a weird sort of air around him, nervous and detirmination bundled up together."
     nar "Fuyuhiko doesn't say anything though."
-    scene rei night
+    scene rei day
+    #^^, need asset
     nar "Not until they're there."
     rei "This is it."
     rei "I just need a minute."
