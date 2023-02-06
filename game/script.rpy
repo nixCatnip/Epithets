@@ -1240,6 +1240,7 @@ label Day3:
     "Orange Free Sounds was also pretty helpful."
     "Their stuff was liscenced under https://creativecommons.org/licenses/by-nc/3.0/ and https://creativecommons.org/licenses/by-nc/4.0/"
     "Also credit to Kinetik Lee for just letting people use their music!"
+    "And the sprites were made using a piccrew by chemicataclysm."
     "Anyway the game is totally about to crash."
     "See you later."
 #Spacer
