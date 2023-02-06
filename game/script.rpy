@@ -513,7 +513,8 @@ label HarukiandRei:
         show rei shatter
         with Dissolve(0.5)
         stop music
-        rei "Dammit Haruki, They didn't force me into ANYTHING!" with hpunch
+        rei "Dammit Haruki, They didn't force me into ANYTHING!" 
+        with hpunch
         show haruki frown
         show fuyu down
         with Dissolve(0.5)
@@ -534,26 +535,47 @@ label HarukiandRei:
         har "Really? So you're just gonna invite him over. Just like that? What are you planning on doing? Huh, Rei?"
         rei "Nothing! We're friends!"
         har "Nothing!? Because it seems to me like you're planning a little sacrifice!"
-        fuy "Haruki!"
-        show haruki angry
-        with Dissolve(0.5)
-        har "Oh fuck you too Fuyuhiko!"
-        show haruki shut
-        with Dissolve(0.5)
-        har "I'm done with this, I'll see you all next time..."
-        hide haruki
-        with Dissolve(0.5)
-        show rei at left
-        with moveinright
-        show fuyu at right
-        with moveinleft
-        rei "I can't believe him."
-        show rei distracted
-        with Dissolve(0.5)
-        rei "So Shiro, are you coming over?"
-        fuy "Sure."
-        rei "Good. We'll leave once club is over."
-        jump ReiHouse
+        menu:
+            "Intervene":
+                fuy "Haruki!"
+                show haruki angry
+                with Dissolve(0.5)
+                har "Oh fuck you too Fuyuhiko!"
+                show haruki shut
+                with Dissolve(0.5)
+                har "I'm done with this, I'll see you all next time..."
+                hide haruki
+                with Dissolve(0.5)
+                show rei at left
+                with moveinright
+                show fuyu at right
+                with moveinleft
+                rei "I can't believe him."
+                show rei distracted
+                with Dissolve(0.5)
+                rei "So Shiro, are you coming over?"
+                fuy "Sure."
+                rei "Good. We'll leave once club is over."
+                jump ReiHouse
+            "Standby":
+                rei "I don't need to take this."
+                rei "Sorry, Shiro, I'm going home."
+                rei "You can come over some other time."
+                hide rei
+                with moveoutleft
+                show haruki smug at right with moveinleft(0.5)
+                show fuyu at left with moveinright(0.5)
+                har "Well. Since you're recently free..."
+                show fuyu really
+                with Dissolve(0.5)
+                fuy "Really?"
+                har "You got anything better to do?"
+                fuy "... No."
+                har "Then come to mine!"
+                fuy "... "
+                extend "... "
+                extend "Fine."
+                jump HarukiHouse
     elif ReiChat:
         har "Hey Fuyu~"
         rei "Shiro."
@@ -637,7 +659,8 @@ label HarukiandRei:
         show rei shatter
         with Dissolve(0.5)
         stop music
-        rei "Dammit Haruki, They didn't force me into ANYTHING!" with hpunch
+        rei "Dammit Haruki, They didn't force me into ANYTHING!" 
+        with hpunch
         show haruki frown
         show fuyu down
         with Dissolve(0.5)
@@ -754,6 +777,7 @@ label KonpekiHouse:
     with Dissolve(0.5)
     nar "The drive to the Konpeki place isn't long. Leave it to Himiko to know all the possible shortcuts."
     scene konpeki day
+    with Dissolve(0.5)
     nar "And soon enough, they're home."
     show ryuji excited at farleft
     with Dissolve(0.5)
@@ -787,8 +811,10 @@ label KonpekiHouse:
             with Dissolve(0.5)
             hide hime with moveoutright
             $renpy.pause(1.0)
-            show ryuji at left with moveinleft
-            show fuyu at right with moveinleft
+            show ryuji at left 
+            with moveinleft
+            show fuyu at right 
+            with moveinleft
             nar "Ryuji gets busy setting up the game while Fuyuhiko waits on the couch."
             ryu "Do you play many games on your own Winter?"
             fuy "No, why?"
@@ -805,13 +831,16 @@ label KonpekiHouse:
             show ryuji hap with Dissolve(0.5)
             ryu "Well we can still play now!"
             nar "The two play for a few hours. Ryuji tries his best not to intervene too often, happy to watch his friend play."
-            show hime cool at farleft with moveinleft
-            show ryuji at farright with moveinleft
+            show hime cool at farleft 
+            with moveinleft
+            show ryuji at farright 
+            with moveinleft
             nar "Until Hime interrupts them."
             him "Hey guys, Haruki just called."
             show fuyu really with Dissolve(0.5)
             ryu "Haruki?"
-            show fuyu at center with moveinright
+            show fuyu at center 
+            with moveinright
             fuy "God, what does he want now?"
             him "He said we should meet up at the clubroom tomorrow."
             ryu "But we don't have club on Tuesdays?"
@@ -822,7 +851,8 @@ label KonpekiHouse:
                 "Meet up with Haruki tomorrow.":
                     $ HarukiMeeting = True
                     fuy "I guess we should meet up with him tomorrow."
-                    show hime cool with Dissolve(0.5)
+                    show hime cool 
+                    with Dissolve(0.5)
                     him "Okay then."
                     ryu "I'll see you afterschool then!"
                     nar "Fuyuhiko shifts around in his seat uncomfortably, then hands his controller back to Ryuji."
@@ -835,7 +865,8 @@ label KonpekiHouse:
                     ryu "Oh."
                     fuy "You two can meet up with him if you want."
                     fuy "I'm not coming."
-                    show ryuji so with Dissolve(0.5)
+                    show ryuji so 
+                    with Dissolve(0.5)
                     ryu "Guess we're not going then."
                     him "I'll still go. I want to see what this is about."
                     him "This sounds serious."
@@ -849,11 +880,15 @@ label KonpekiHouse:
             #It's more about the meaning behind the rebellion y'know
             #Probably have them talk about their jobs? Or maybe Haruki.
             fuy "I've gotta hear this new spray paint."
-            show ryuji so with Dissolve(0.5)
+            show ryuji so 
+            with Dissolve(0.5)
             ryu "If you say so..."
-            hide ryuji with moveoutleft
-            show fuyu at left with moveinright
-            show hime at right with moveinright
+            hide ryuji 
+            with moveoutleft
+            show fuyu at left 
+            with moveinright
+            show hime at right 
+            with moveinright
             him "Don't worry about him, he'll be over it within the hour."
             nar "Hime leads Fuyuhiko to her easel, judging by the crunching underfoot, it seems she's taken proper precautions to protect the house."
             him "Welcome to the proverbial Art Corner."
@@ -864,11 +899,13 @@ label KonpekiHouse:
             nar "But despite the canvas she's painting now having done nothing wrong, Hime's painting feels angry almost."
             fuy "Wanna talk?"
             if HimeChat:
-                show hime uncomfy with Dissolve(0.5)
+                show hime uncomfy
+                with Dissolve(0.5)
                 him "Well you kinda already know what happened."
                 nar "Fuyuhiko nods, her manager, the tagging, she told him last night."
                 fuy "But didn't you already tag the place."
-                show hime cool with Dissolve(0.5)
+                show hime cool 
+                with Dissolve(0.5)
                 him "Yeah, well, it wasn't enough."
                 nar "The hissing grows louder, more intense for a moment."
                 nar "A part of Fuyuhiko enjoys it, the sound of defiance, of the rage, of revolution."
@@ -878,7 +915,8 @@ label KonpekiHouse:
                 play sound "audio/phone.mp3" volume 0.5
                 $renpy.pause(1.0)
                 him "It's Haruki."
-                show fuyu really with Dissolve(0.5)
+                show fuyu really 
+                with Dissolve(0.5)
                 nar "Fuyuhiko motions her to take the call, hesitantly."
                 him "Yeah?"
                 nar "..." 
@@ -895,18 +933,21 @@ label KonpekiHouse:
                 show hime cool at farleft
                 show ryuji at farright
                 show fuyu at center
+                with Dissolve(0.5)
                 nar "Ryuji is laying down on the couch, he looks up when Hime and Fuyuhiko enter."
                 him "Hey dude, Haruki just called."
                 him "He said we should meet up at the clubroom tomorrow."
                 ryu "But we don't have club on Tuesdays?"
-                show hime uncomfy with Dissolve(0.5)
+                show hime uncomfy 
+                with Dissolve(0.5)
                 him "He said he wants to talk, he sounded really freaked out."
                 ryu "What do you think Winter?"
                 menu:
                     "Meet up with Haruki tomorrow.":
                         $ HarukiMeeting = True
                         fuy "I guess we should meet up with him tomorrow."
-                        show hime cool with Dissolve(0.5)
+                        show hime cool 
+                        with Dissolve(0.5)
                         him "Okay then."
                         ryu "I'll see you afterschool then!"
                         nar "Fuyuhiko shifts on his feet uncomfortably."
@@ -919,7 +960,8 @@ label KonpekiHouse:
                         ryu "Oh."
                         fuy "You two can meet up with him if you want."
                         fuy "I'm not coming."
-                        show ryuji so with Dissolve(0.5)
+                        show ryuji so 
+                        with Dissolve(0.5)
                         ryu "Guess we're not going then."
                         him "I'll still go. I want to see what this is about."
                         him "This sounds serious."
@@ -931,26 +973,33 @@ label KonpekiHouse:
             else:
                 $ HimeChat = True
                 him "It's fucking Dave. My manager."
-                show hime uncomfy with Dissolve(0.5)
+                show hime uncomfy 
+                with Dissolve(0.5)
                 him "He threatened my job yesterday Fuyuhiko. Because I wouldn't go out with him."
                 him "God, I hate men."
-                show hime cool with Dissolve(0.5)
+                show hime cool 
+                with Dissolve(0.5)
                 him "No offense."
                 nar "Fuyuhiko shrugs, what could he say?."
-                show fuyu really with Dissolve(0.5) 
+                show fuyu really 
+                with Dissolve(0.5) 
                 fuy "That's awful Hime..."
-                show hime uncomfy with Dissolve(0.5)
+                show hime uncomfy 
+                with Dissolve(0.5)
                 him "I know right!?"
-                show hime cool with Dissolve(0.5)
+                show hime cool 
+                with Dissolve(0.5)
                 him "I'll be alright though, I just wanted to get this out of my system."
-                show fuyu neut with Dissolve(0.5)
+                show fuyu neut 
+                with Dissolve(0.5)
                 him "You seem like you wanna talk too, Fuyuhiko."
                 fuy "It's nothing, I'm fine."
                 nar "Hime shrugs, Fuyuhiko can tell as the paint can stops hissing for a moment to accomodate it."
                 him "If you say so just know-"
                 $renpy.pause(1.0)
                 him "Haruki's calling."
-                show fuyu really with Dissolve(0.5)
+                show fuyu really 
+                with Dissolve(0.5)
                 nar "Fuyuhiko motions her to take the call, hesitantly."
                 him "Yeah?"
                 nar "..." 
@@ -965,20 +1014,23 @@ label KonpekiHouse:
                 him "Let's go find Ryuji."
                 scene konpeki day
                 show hime cool at farleft
-                show ryuji at farright
-                show fuyu at center
+                show ryuji hap at farright
+                show fuyu really at center
+                with Dissolve(0.5)
                 nar "Ryuji is laying down on the couch, he looks up when Hime and Fuyuhiko enter."
                 him "Hey dude, Haruki just called."
                 him "He said we should meet up at the clubroom tomorrow."
                 ryu "But we don't have club on Tuesdays?"
-                show hime uncomfy with Dissolve(0.5)
+                show hime uncomfy 
+                with Dissolve(0.5)
                 him "He said he wants to talk, he sounded really freaked out."
                 ryu "What do you think Winter?"
                 menu:
                     "Meet up with Haruki tomorrow.":
                         $ HarukiMeeting = True
                         fuy "I guess we should meet up with him tomorrow."
-                        show hime cool with Dissolve(0.5)
+                        show hime cool 
+                        with Dissolve(0.5)
                         him "Okay then."
                         ryu "I'll see you afterschool then!"
                         nar "Fuyuhiko shifts on his feet uncomfortably."
@@ -991,7 +1043,8 @@ label KonpekiHouse:
                         ryu "Oh."
                         fuy "You two can meet up with him if you want."
                         fuy "I'm not coming."
-                        show ryuji so with Dissolve(0.5)
+                        show ryuji so 
+                        with Dissolve(0.5)
                         ryu "Guess we're not going then."
                         him "I'll still go. I want to see what this is about."
                         him "This sounds serious."
@@ -1006,6 +1059,7 @@ label HarukiHouse:
     scene road day
     show fuyu really at left
     show haruki smug at right
+    with Dissolve(0.5)
     nar "Fuyuhiko almost immediately regrets his decision the second he's in the car alone with Haruki."
     if HarukiChat:
         #Focus on Fuyuhiko (eventually) apologizing for blowing up at Haruki
@@ -1017,23 +1071,28 @@ label HarukiHouse:
         scene supai day
         show fuyu really at left
         show haruki smug at right
+        with Dissolve(0.5)
         har "Welcome to my humble abode."
         $ renpy.pause(1.0)
-        show haruki frown with Dissolve(0.5)
+        show haruki frown 
+        with Dissolve(0.5)
         har "I, uh, didn't think I would get this far."
         har "I don't really know what to do."
         har "Wanna like, throw darts or something?"
         $ renpy.pause(0.5)
         fuy "I'm blind, Haruki."
         har "Oh yeah..."
-        show haruki smug with Dissolve(0.5)
+        show haruki smug 
+        with Dissolve(0.5)
         har "How about I just wear a blindfold! It'll be even."
         fuy "If you want us both to poke your eyes out, then sure."
-        show haruki frown with Dissolve(0.5)
+        show haruki frown 
+        with Dissolve(0.5)
         har "How about... No... Um, reading something...? Probably not."
         stop music fadeout 1.0
         fuy "Look if you don't wanna hang out with me, I can just go home."
-        show haruki shut with Dissolve(0.5)
+        show haruki shut 
+        with Dissolve(0.5)
         har "No! I uh... I just need a minute."
         fuy "I'm going home."
         har "Come on Fuyuhiko, I-"
@@ -1045,19 +1104,23 @@ label HarukiHouse:
         har "You don't tell when I do something that bothers you until you're at an exploding point!"
         har "You won't let me!"
         $ renpy.pause(1.0)
-        show fuyu neut with Dissolve(0.5)
+        show fuyu neut 
+        with Dissolve(0.5)
         fuy "..."
         har "Look if you wanna go home, just let me drive you, alright?"
         fuy "No, I-"
         play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
         fuy "Let's just watch a movie, okay?"
-        show haruki smug with Dissolve(0.5)
+        show haruki smug 
+        with Dissolve(0.5)
         har "Oh, um, okay. What kind?"
-        show fuyu smile with Dissolve(0.5)
+        show fuyu smile 
+        with Dissolve(0.5)
         fuy "Something gorey, so that you're the only one who has to see it."
         har "Hah. Okay then, come on."
         $ HarukiFriend = True
-        scene black with Dissolve(1)
+        scene black 
+        with Dissolve(1.0)
         nar "Eventually, Haruki does end up driving Fuyuhiko home."
         jump Day3
     else:
@@ -1069,31 +1132,38 @@ label HarukiHouse:
         fuy "Worse now that you're talking."
         har "Oh how you wound me so!"
         har "But I wonder, my dear, if you're okay? You seem far too uncomfortable."
-        show haruki frown with Dissolve(0.5)
+        show haruki frown 
+        with Dissolve(0.5)
         har "Do I need to take you home?"
         nar "Fuyuhiko shifts in his seat, wanting to give the impression that he's considering it."
         fuy "No."
-        show haruki smug with Dissolve(0.5) 
+        show haruki smug 
+        with Dissolve(0.5) 
         har "Okay then, Fuyu."
         scene supai day
         show fuyu really at left
         show haruki smug at right
+        with Dissolve(0.5)
         har "Welcome to my humble abode."
         $ renpy.pause(1.0)
-        show haruki frown with Dissolve(0.5)
+        show haruki frown 
+        with Dissolve(0.5)
         har "I, uh, didn't think I would get this far."
         har "I don't really know what to do."
         har "Wanna like, throw darts or something?"
         $ renpy.pause(0.5)
         fuy "I'm blind, Haruki."
         har "Oh yeah..."
-        show haruki smug with Dissolve(0.5)
+        show haruki smug 
+        with Dissolve(0.5)
         har "How about I just wear a blindfold! It'll be even."
         fuy "If you want us both to poke your eyes out, then sure."
-        show haruki frown with Dissolve(0.5)
+        show haruki frown 
+        with Dissolve(0.5)
         har "How about... No... Um, reading something...? Probably not."
         fuy "Look if you don't wanna hang out with me, I can just go home."
-        show haruki shut with Dissolve(0.5)
+        show haruki shut 
+        with Dissolve(0.5)
         har "No! I uh... I just need a minute."
         fuy "I'm going home."
         har "Come on Fuyu, I-"
@@ -1104,18 +1174,22 @@ label HarukiHouse:
         har "I barely know the things you like! I'm not familiar with your limits."
         har "You won't let me!"
         $ renpy.pause(1.0)
-        show fuyu neut with Dissolve(0.5)
+        show fuyu neut 
+        with Dissolve(0.5)
         fuy "..."
         har "Look if you wanna go home, just let me drive you, alright?"
         fuy "No, I-"
         fuy "Let's just watch a movie, okay?"
-        show haruki smug with Dissolve(0.5)
+        show haruki smug 
+        with Dissolve(0.5)
         har "Oh, um, okay. What kind?"
-        show fuyu smile with Dissolve(0.5)
+        show fuyu smile 
+        with Dissolve(0.5)
         fuy "Something gorey, so that you're the only one who has to see it."
         har "Hah. Okay then, come on."
         $ HarukiFriend = True
-        scene black with Dissolve(1)
+        scene black 
+        with Dissolve(1)
         nar "Eventually, Haruki does end up driving Fuyuhiko home."
         jump Day3
 #Spacer
@@ -1127,6 +1201,7 @@ label ReiHouse:
     #But Haruki suspects something is up, he's watching
     #And Rei /will/ get possessed after all
     scene road day
+    with Dissolve(0.5)
     #consider changing to night for mood, even if it doesn't make total sense chronologically
     show rei cautious at right
     show fuyu neut at left
@@ -1135,49 +1210,67 @@ label ReiHouse:
     nar "There's a weird sort of air around him, nervous and detirmination bundled up together."
     nar "Fuyuhiko doesn't say anything though."
     scene amanshi day
+    show rei cautious at right
+    show fuyu neut at left
+    with Dissolve(0.5)
     #^^, need asset
     nar "Not until they're there."
     rei "This is it."
     rei "I just need a minute."
     rei "To get ready..."
-    hide rei with moveoutright
+    hide rei 
+    with moveoutright
     nar "With Rei gone, Fuyuhiko sighs and takes out his cane."
     nar "He walks around the house, mentally mapping where the furniture is in order to try and avoid tripping later on."
     nar "But there's one thing he can't place."
     nar "A small rectangular box, too hard to be a footrest, but too small to be a coffee table."
     nar "It seems centerally placed, so it doesn't seem to be a nightstand either."
-    show rei with moveinright
+    show rei cautious at right 
+    with moveinright
     nar "Fuyuhiko jumps up when Rei re-enters."
     rei "Okay then, let's get started. I just need you to witness this."
-    hide fuyu with Dissolve(0.5)
-    show rei at center with moveinright
+    hide fuyu
+    with Dissolve(0.5)
+    show rei at center 
+    with moveinright
     nar "Rei guides Fuyuhiko to sit at the strange box, as he sits down on the other side. He takes a deep breath before he begins a chant."
     rei "{i}Inter nos in nobis.{/i}"
     rei "{i}Per flammam et lucem.{/i}"
-    show rei posesso with Dissolve(0.5)
+    show rei posesso 
+    with Dissolve(0.5)
     rei "{i}Te ipsum rev-!{/i}"
     #The finished chant is "Te ipsum revelare!", "Among us, among us. By flame and light. Reveal thyself!"
     stop music
     har "Stop it!"
-    show rei paradox with Dissolve(0.5)
+    show rei paradox 
+    with Dissolve(0.5)
     rei "What?"
-    show haruki at farright with moveinright
-    show fuyu really at farleft with moveinleft
+    show haruki shut at farright 
+    with moveinright
+    show fuyu really at farleft 
+    with moveinleft
     har "I said stop it."
-    show rei shatter with Dissolve(0.5)
+    show rei shatter 
+    with Dissolve(0.5)
     rei "{i}AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARRRGH!!!{/i}" with hpunch
     rei "How do you ruin EVERYTHING!?"
     rei "How did you even GET here!?"
     rei "Did you follow me to my fucking house, Haruki!?"
+    show haruki smug 
+    with Dissolve(0.5)
     har "Well, yeah, but-"
     rei "Get the fuck out!"
     har "What about-"
     rei "OUT!"
-    hide rei with Dissolve(0.5)
-    hide haruki with Dissolve(0.5)
+    hide rei 
+    with Dissolve(0.5)
+    hide haruki 
+    with Dissolve(0.5)
     nar "Rei shoves Haruki out his front door and slams it in his face."
-    show rei at right with Dissolve(0.5)
-    show fuyu at left with moveinleft
+    show rei distracted at right 
+    with Dissolve(0.5)
+    show fuyu at left 
+    with moveinleft
     play music "audio/Urban-Flight.mp3" fadein 1.0 fadeout 1.0 volume 0.5
     rei "I can't believe him..."
     rei "This night is over. Let me drive you home Shiro..."
@@ -1195,7 +1288,8 @@ label HomeAlone:
         show fuyu snap
         with Dissolve(0.5)
         stop music
-        fuy "WHAT GIVES THEM THE DAMN RIGHT!" with hpunch
+        fuy "WHAT GIVES THEM THE DAMN RIGHT!" 
+        with hpunch
         show fuyu really
         with Dissolve(0.5)
         fuy "I can't stop thinking about it."

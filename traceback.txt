@@ -1,22 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 621, in script
-    fuyu "Okay then, I don't see why not."
-Exception: Sayer 'fuyu' is not defined.
+  File "game/script.rpy", line 566, in script
+    show haruki at right with moveinleft()
+  File "game/script.rpy", line 566, in <module>
+    show haruki at right with moveinleft()
+AttributeError: 'NoneType' object has no attribute 'delay'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 621, in script
-    fuyu "Okay then, I don't see why not."
-  File "C:\Users\Nix\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 881, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\Nix\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 774, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'fuyu' is not defined.
+  File "game/script.rpy", line 566, in script
+    show haruki at right with moveinleft()
+  File "C:\Users\Nix\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1654, in execute
+    paired = renpy.python.py_eval(self.paired)
+  File "C:\Users\Nix\Downloads\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Nix\Downloads\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 566, in <module>
+    show haruki at right with moveinleft()
+  File "C:\Users\Nix\Downloads\renpy-8.0.3-sdk\renpy\display\movetransition.py", line 655, in MoveTransition
+    rv.delay = delay
+AttributeError: 'NoneType' object has no attribute 'delay'
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
 Epithets 1.0
-Mon Feb  6 16:13:57 2023
+Mon Feb  6 17:06:23 2023
