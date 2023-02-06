@@ -140,7 +140,7 @@ label HarukiMessage:
     $ renpy.pause(2.0)
     thar "What do you mean, Fuyu?"
     show fuyu snap
-    tfuy "MY NAME IS FUYUHIKO."
+    tfuy "MY NAME IS FUYUHIKO." with hpunch
     show fuyu really
     with Dissolve(0.5)
     tfuy "It's not \"Fuyu\"."
@@ -283,11 +283,13 @@ label WorkMessage:
     fuy "It's bad enough putting up with her shit when it was just us."
     fuy "I bet she thinks she's doing what's best for me. I-"
     nar "Winter seethes, fury threatening to cloud his mind."
-    fuy "I'M NOT A FUCKING KID ANYMORE DAD!"
+    stop music
+    fuy "I'M NOT A FUCKING KID ANYMORE DAD!" with hpunch
     $ renpy.pause(2.0)
     show fuyu what
     with Dissolve(0.5)
     fuy "I-"
+    play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0
     $ renpy.pause(2.0)
     show fuyu down
     with Dissolve(0.5)
@@ -505,11 +507,13 @@ label HarukiandRei:
         har "I mean seriously. You're so obsessed, it's kinda pathetic."
         show rei shatter
         with Dissolve(0.5)
-        rei "Dammit Haruki, They didn't force me into ANYTHING!"
+        stop music
+        rei "Dammit Haruki, They didn't force me into ANYTHING!" with hpunch
         show haruki frown
         show fuyu down
         with Dissolve(0.5)
         $ renpy.pause(1.0)
+        play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0
         har "Hey..."
         show fuyu really
         with Dissolve(0.5)
@@ -627,11 +631,13 @@ label HarukiandRei:
         har "I mean seriously. You're so obsessed, it's kinda pathetic."
         show rei shatter
         with Dissolve(0.5)
-        rei "Dammit Haruki, They didn't force me into ANYTHING!"
+        stop music
+        rei "Dammit Haruki, They didn't force me into ANYTHING!" with hpunch
         show haruki frown
         show fuyu down
         with Dissolve(0.5)
         $ renpy.pause(2.0)
+        play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0
         har "Rei..."
         har "I- I was just teasing."
         rei "Can you hear yourself!?"
@@ -1019,6 +1025,7 @@ label HarukiHouse:
         fuy "If you want us both to poke your eyes out, then sure."
         show haruki frown with Dissolve(0.5)
         har "How about... No... Um, reading something...? Probably not."
+        stop music fadeout 1.0
         fuy "Look if you don't wanna hang out with me, I can just go home."
         show haruki shut with Dissolve(0.5)
         har "No! I uh... I just need a minute."
@@ -1036,6 +1043,7 @@ label HarukiHouse:
         fuy "..."
         har "Look if you wanna go home, just let me drive you, alright?"
         fuy "No, I-"
+        play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0
         fuy "Let's just watch a movie, okay?"
         show haruki smug with Dissolve(0.5)
         har "Oh, um, okay. What kind?"
@@ -1147,7 +1155,7 @@ label ReiHouse:
     show fuyu really at farleft with moveinleft
     har "I said stop it."
     show rei shatter with Dissolve(0.5)
-    rei "{i}AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARRRGH!!!{/i}"
+    rei "{i}AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARRRGH!!!{/i}" with hpunch
     rei "How do you ruin EVERYTHING!?"
     rei "How did you even GET here!?"
     rei "Did you follow me to my fucking house, Haruki!?"
@@ -1175,7 +1183,8 @@ label HomeAlone:
         fuy "What gives them the right!"
         show fuyu snap
         with Dissolve(0.5)
-        fuy "WHAT GIVES THEM THE DAMN RIGHT!"
+        stop music
+        fuy "WHAT GIVES THEM THE DAMN RIGHT!" with hpunk
         show fuyu really
         with Dissolve(0.5)
         fuy "I can't stop thinking about it."
@@ -1187,6 +1196,7 @@ label HomeAlone:
         nar "Fuyuhiko goes into the bathroom. He throws water into his face until he feels a little calmer."
         show fuyu
         with moveinright
+        play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0
         fuy "I need to lie down..."
         nar "And soon enough, he begins to drift off into sleep..."
     else:
