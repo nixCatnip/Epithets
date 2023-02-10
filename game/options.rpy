@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "1.0"
+define config.version = "2.0"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -47,13 +47,13 @@ define build.name = "Epithets"
 
 define config.has_sound = True
 define config.has_music = True
-define config.has_voice = True
+define config.has_voice = False
 
 
 ## To allow the user to play a test sound on the sound or voice channel,
 ## uncomment a line below and use it to set a sample sound to play.
 
-# define config.sample_sound = "sample-sound.ogg"
+define config.sample_sound = "audio/phone.mp3"
 # define config.sample_voice = "sample-voice.ogg"
 
 
@@ -205,5 +205,4 @@ init python:
 ## The username and project name associated with an itch.io project, separated
 ## by a slash.
 
-# define build.itch_project = "renpytom/test-project"
 define build.itch_project = "programmedAnthropologist/Epithets"
