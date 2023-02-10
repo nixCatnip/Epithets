@@ -103,6 +103,7 @@ label recallMenu:
 label textMessage:
     show fuyu neut
     with Dissolve(0.5)
+    play sound "audio/phone.mp3" volume 0.5
     nar "As the boy finishes his recollection, his phone begins to buzz. When he picks it up, a message from someone appears on the screen."
     nar "A message from..."
     menu:
@@ -1119,6 +1120,7 @@ label HarukiHouse:
 #Spacer
 
 label ReiHouse:
+    $ ReiHouse = True
     stop music fadeout 1.0
     play music "audio/KinetikLee-MidnightMirrors.mp3" fadein 1.0 fadeout 1.0 volume 0.5
     #Rei means to show Fuyuhiko the glory of Lantern
@@ -1235,12 +1237,71 @@ label Day3:
     nar "Start of Day 3."
     scene apartment day
     with Dissolve(0.5)
-    "That's all I have for now!"
-    "Credit to Chocolate Berry for making their backgrounds free to use!"
-    "Orange Free Sounds was also pretty helpful."
-    "Their stuff was liscenced under https://creativecommons.org/licenses/by-nc/3.0/ and https://creativecommons.org/licenses/by-nc/4.0/"
-    "Also credit to Kinetik Lee for just letting people use their music!"
-    "And the sprites were made using a picrew by chemicataclysm."
-    "Anyway the game is totally about to crash."
-    "See you later."
+    nar "Fuyuhiko felt awful the next morning."
+    if HarukiMeeting:
+        nar "The meeting he agreed to go to earlier wasn't helping any."
+    if ReiHouse:
+        play sound "audio/phone.mp3" volume 0.5
+        nar "Especially not with his phone going off."
+        nar "Especially not with with a text from him."
+        show fuyu really at farleft
+        with moveinright
+        show haruki smug at farright
+        with Dissolve(0.5)
+        thar "I need to talk to you about last night."
+        $ renpy.pause(1.5)
+        show haruki shut
+        with Dissolve(0.5)
+        if HarukiChat:
+            thar "C'mon Fuyuhiko, it's important."
+        else:
+            thar "C'mon Fuyu it's important."
+        $ renpy.pause (1.0)
+        thar "Fine just, come to club tonight okay?"
+        thar "I really need to talk with you and the others."
+        menu:
+            "Fine.":
+                tfuy "Fine."
+                show haruki smug
+                with Dissolve(0.5)
+                thar "Great."
+                $ HarukiMeeting = True
+                show fuyu down at center
+                with moveinleft
+                hide haruki frown
+                with Dissolve(0.5)
+            "Don't Respond.":
+                nar "Fuyuhiko just mutes his phone."
+                nar "He can't deal with this right now. He can't deal with {i}him{/i} right now."
+                nar "He needs to get ready."
+                show fuyu down at center
+                with moveinleft
+                hide haruki frown
+                with Dissolve(0.5)
+    nar "The boy manages to get himself to brush his teeth, shower, put on his clothes. All the horrible necessities."
+    scene hallway day
+    with Dissolve(0.5)
+    nar "He drags himself to class."
+    if HarukiMeeting:
+        jump HarukiMeeting
+    nar "Then decides to spend some time... with someone."
+    nar "He should check on..."
+    menu:
+        "Hime":
+            #
+        "Ryuji":
+            #
+        "Haruki":
+            #
+        "Rei":
+            #
+        "Nobody":
+            #
+#Spacer
+
+label HarukiMeeting:
+    scene classroom evening
+    with Dissolve(0.5)
+    nar "Then to the club room."
+    #Meeting Time
 #Spacer
