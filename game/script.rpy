@@ -38,6 +38,9 @@ label start:
     $ HimeChat = False
     $ ReiChat = False
     $ WorkChat = False
+    $ HarukiMeeting = False
+    $ NoMeeting = False
+    $ DeniedMeeting = False
     #Spacer
     play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
     nar "Ah, San Francisco, the salty air of the sea mixed with the salty attitudes of young adults experiencing true independence for the first time in their lives."
@@ -861,6 +864,7 @@ label KonpekiHouse:
                     him "Sure."
                     jump Day3
                 "Fuck him.":
+                    $ DeniedMeeting = False
                     fuy "Honestly? Fuck him."
                     show ryuji err
                     ryu "Oh."
@@ -1039,6 +1043,7 @@ label KonpekiHouse:
                         him "Sure."
                         jump Day3
                     "Fuck him.":
+                        $ DeniedMeeting = True
                         fuy "Honestly? Fuck him."
                         show ryuji err
                         ryu "Oh."
@@ -1057,6 +1062,7 @@ label KonpekiHouse:
 #Spacer 
 
 label HarukiHouse:
+    $ NoMeeting = False
     scene road day
     show fuyu really at left
     show haruki smug at right
@@ -1367,6 +1373,7 @@ label Day3:
                 hide haruki frown
                 with Dissolve(0.5)
             "Don't Respond.":
+                $ DeniedMeeting = True
                 nar "Fuyuhiko just mutes his phone."
                 nar "He can't deal with this right now. He can't deal with {i}him{/i} right now."
                 nar "He needs to get ready."
@@ -1384,15 +1391,99 @@ label Day3:
     nar "He should check on..."
     menu:
         "Hime":
-            #
+            if NoMeeting:
+                jump HimeCheck
+            else:
+                jump KonpekiMeeting
         "Ryuji":
-            #
+            if NoMeeting:
+                jump RyujiCheck
+            else:
+                jump KonpekiMeeting
         "Haruki":
-            #
+            if NoMeeting:
+                jump HarukiCheck
+            else:
+                if DeniedMeeting:
+                    nar "Fuyuhiko goes to text Haruki, but he rememebers..."
+                    nar "If he texts Haruki right now, he's going to try to pressure him to meet with him."
+                    nar "Not wanting that he decides to just stay home."
+                    jump AloneForever
+                else:
+                    #Requires HomeAlone Specifically, move to HomeAlone?
+                    show fuyu neut at farleft
+                    with moveinright
+                    tfuy "Hey Haruki."
+                    if HarukiChat:
+                        thar "Hey?"
+                        show haruki frown at farright
+                        with Dissolve(0.5)
+                    else:
+                        thar "Hey Fuyu~"
+                        show haruki smug at farright
+                        with Dissolve(0.5)
+                    thar "Look, I don't really know why you're texting me, but we do need to talk."
+                    thar "I'm organizing a meeting after school, I can't say what about right now, but you need to come. Okay?"
+                    menu:
+                        "Sure":
+                            show haruki smug
+                            with Dissolve(0.5)
+                            thar "Great."
+                            $ HarukiMeeting = True
+                            show fuyu neut at center
+                            with moveinleft
+                            hide haruki frown
+                            with Dissolve(0.5)
+                            jump HarukiMeeting
+                        "I Can't.":
+                            show fuyu down
+                            with Dissolve(0.5)
+                            tfuy "My shift is soon, and I don't want to miss it..."
+                            $ DeniedMeeting = True
+                            show haruki frown
+                            with Dissolve(0.5)
+                            thar "Well, okay then. Just, take care of yourself."
+                            show fuyu down at center
+                            with moveinleft
+                            hide haruki frown
+                            with Dissolve(0.5)
+                            jump AloneForever
         "Rei":
-            #
+            if NoMeeting:
+                jump ReiCheck
+            else:
+                jump ReiMeeting
         "Nobody":
-            #
+            jump AloneForever
+#Spacer
+
+#Checks are NoMeeting, Meetings are MeetingDenied (or HomeAlone)
+label HimeCheck:
+    #Placeholder
+#Spacer
+
+label RyujiCheck:
+    #Placeholder
+#Spacer
+
+label HarukiCheck:
+    #Placeholder
+#Spacer
+
+label ReiCheck:
+    #Placeholder
+#Spacer
+
+label AloneForever:
+    #Placeholder
+#Spacer
+
+label KonpekiMeeting:
+    #Placeholder
+#Spacer
+
+label ReiMeeting:
+    #Placeholder
 #Spacer
 
 label HarukiMeeting:
