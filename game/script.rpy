@@ -1286,7 +1286,6 @@ label ReiHouse:
 #Spacer
 
 label HomeAlone:
-    scene 
     if WorkChat:
         scene apartment afternoon
         show fuyu really
@@ -1312,6 +1311,7 @@ label HomeAlone:
         play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
         fuy "I need to lie down..."
         nar "And soon enough, he begins to drift off into sleep..."
+        jump Day3
     else:
         scene apartment day
         show fuyu down
@@ -1463,7 +1463,27 @@ label HimeCheck:
 #Spacer
 
 label RyujiCheck:
-    #Placeholder
+    show fuyu neut at farleft
+    with moveinright
+    tfuy "Hey Ryuji."
+    show ryuji hap at right
+    with Dissolve(0.5)
+    tryu "hey winter!"
+    tryu "do you wanna come over?"
+    show fuyu what
+    with Dissolve(0.5)
+    tfuy "What?"
+    tryu "oh! i just thought you wanted to study"
+    tryu "we have a math exam coming up, y'know"
+    tfuy "What!"
+    tryu "don't tell me you didn't remember!"
+    tryu "just think, i'm being more responsible than you right now!"
+    tryu "speaking of, don't you usually have work around now?"
+    play sound "audio/phone.mp3" volume 0.5
+    nar "Fuyuhiko's alarm goes off."
+    tfuy "I do..."
+    tryu "well, ttyl! we should study together!"
+    jump WorkTime
 #Spacer
 
 label HarukiCheck:
