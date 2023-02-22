@@ -1426,13 +1426,13 @@ label HimeCheck:
     show fuyu neut at farleft
     with moveinright
     tfuy "Hey Hime."
-    show ryuji ugh at right
+    show ryuji ugh at farright
     with Dissolve(0.5)
     thim "Hey Fuyuhiko."
-    show ryuji uncomfy at right
+    show ryuji uncomfy
     with Dissolve(0.5)
     thim "My boss is being a dick again."
-    show ryuji ugh at right
+    show ryuji ugh
     with Dissolve(0.5)
     extend "More than normal."
     show fuyu really
@@ -1461,7 +1461,7 @@ label RyujiCheck:
     show fuyu neut at farleft
     with moveinright
     tfuy "Hey Ryuji."
-    show ryuji hap at right
+    show ryuji hap at farright
     with Dissolve(0.5)
     tryu "hey winter!"
     tryu "do you wanna come over?"
@@ -1482,11 +1482,65 @@ label RyujiCheck:
 #Spacer
 
 label HarukiCheck:
-    #Placeholder
+    show fuyu neut at farleft
+    with moveinright
+    tfuy "Hey Haruki."
+    show haruki smug at farright
+    thar "Hey Fuyu!"
+    show fuyu really
+    with Dissolve(0.5)
+    tfuy "Don't. Start."
+    thar "Okay, okay."
+    thar "Hey I was meaning to talk to you about something, alright?"
+    show fuyu neut
+    with Dissolve(0.5)
+    tfuy "Alright."
+    show haruki frown
+    with Dissolve(0.5)
+    thar "I'm sorry for a being a shitty host, last night."
+    tfuy "Oh."
+    show fuyu down
+    with Dissolve(0.5)
+    extend "No, I'm sorry for being a shitty guest."
+    show haruki smug
+    with Dissolve(0.5)
+    thar "I think we both could take each other into account more often, huh."
+    show fuyu neut
+    with Dissolve(0.5)
+    tfuy "Yeah, I think we could."
+    play sound "audio/phone.mp3" volume 0.5
+    nar "Fuyuhiko's alarm goes off, it's time for his shift."
+    tfuy "I need to go. I'll see you later Haruki."
+    jump WorkTime
 #Spacer
 
 label ReiCheck:
-    #Placeholder
+    show fuyu neut at farleft
+    with moveinright
+    tfuy "Hey Rei."
+    show rei posesso at farright
+    $renpy.pause(0.1)
+    show rei happy
+    trei "Hello Fuyuhiko. Would you like to come over?"
+    show fuyu what
+    with Dissolve(0.5)
+    tfuy "No, I have my shift soon."
+    if ReiHouse:
+        tfuy "Besides it didn't that well last time."
+    trei "Come after your shift."
+    trei "Or anytime really, you're always welcome."
+    trei "But preferably after your shift."
+    tfuy "Okay, fine."
+    trei "Good."
+    hide rei
+    with Dissovle(0.5)
+    show fuyu what at center
+    with moveinleft
+    fuy "That was weird, Rei never calls me-"
+    play sound "audio/phone.mp3" volume 0.5
+    nar "Fuyuhiko's alarm goes off."
+    fuy "Shit."
+    jump WorkTime
 #Spacer
 
 label AloneForever:
