@@ -1286,6 +1286,7 @@ label ReiHouse:
 #Spacer
 
 label HomeAlone:
+    $ HomeAlone = True
     if WorkChat:
         scene apartment afternoon
         show fuyu really
@@ -1342,7 +1343,7 @@ label Day3:
     nar "Fuyuhiko felt awful the next morning."
     if HarukiMeeting:
         nar "The meeting he agreed to go to earlier wasn't helping any."
-    if ReiHouse:
+    if ReiHouse or HomeAlone:
         play sound "audio/phone.mp3" volume 0.5
         nar "Especially not with his phone going off."
         nar "Especially not with with a text from him."
@@ -1350,7 +1351,10 @@ label Day3:
         with moveinright
         show haruki smug at farright
         with Dissolve(0.5)
-        thar "I need to talk to you about last night."
+        if ReiHouse:
+            thar "I need to talk to you about last night."
+        else:
+            thar "I need to talk to you."
         $ renpy.pause(1.5)
         show haruki shut
         with Dissolve(0.5)
@@ -1404,50 +1408,10 @@ label Day3:
             if NoMeeting:
                 jump HarukiCheck
             else:
-                if DeniedMeeting:
-                    nar "Fuyuhiko goes to text Haruki, but he rememebers..."
-                    nar "If he texts Haruki right now, he's going to try to pressure him to meet with him."
-                    nar "Not wanting that he decides to just stay home."
-                    jump AloneForever
-                else:
-                    #Requires HomeAlone Specifically, move to HomeAlone?
-                    show fuyu neut at farleft
-                    with moveinright
-                    tfuy "Hey Haruki."
-                    if HarukiChat:
-                        thar "Hey?"
-                        show haruki frown at farright
-                        with Dissolve(0.5)
-                    else:
-                        thar "Hey Fuyu~"
-                        show haruki smug at farright
-                        with Dissolve(0.5)
-                    thar "Look, I don't really know why you're texting me, but we do need to talk."
-                    thar "I'm organizing a meeting after school, I can't say what about right now, but you need to come. Okay?"
-                    menu:
-                        "Sure":
-                            show haruki smug
-                            with Dissolve(0.5)
-                            thar "Great."
-                            $ HarukiMeeting = True
-                            show fuyu neut at center
-                            with moveinleft
-                            hide haruki frown
-                            with Dissolve(0.5)
-                            jump HarukiMeeting
-                        "I Can't.":
-                            show fuyu down
-                            with Dissolve(0.5)
-                            tfuy "My shift is soon, and I don't want to miss it..."
-                            $ DeniedMeeting = True
-                            show haruki frown
-                            with Dissolve(0.5)
-                            thar "Well, okay then. Just, take care of yourself."
-                            show fuyu down at center
-                            with moveinleft
-                            hide haruki frown
-                            with Dissolve(0.5)
-                            jump AloneForever
+                nar "Fuyuhiko goes to text Haruki, but he rememebers..."
+                nar "If he texts Haruki right now, he's going to try to pressure him to meet with him."
+                nar "Not wanting that he decides to just stay home."
+                jump AloneForever
         "Rei":
             if NoMeeting:
                 jump ReiCheck
@@ -1457,7 +1421,7 @@ label Day3:
             jump AloneForever
 #Spacer
 
-#Checks are NoMeeting, Meetings are MeetingDenied (or HomeAlone)
+#Checks are NoMeeting, Meetings are MeetingDenied (or HarukiMeeting)
 label HimeCheck:
     #Placeholder
 #Spacer
