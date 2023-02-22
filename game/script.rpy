@@ -1544,7 +1544,23 @@ label ReiCheck:
 #Spacer
 
 label AloneForever:
-    #Placeholder
+    show fuyu really
+    nar "Fuyuhiko lies alone in his bed, dreading the moment he has to go to work."
+    nar "The moment he had to face being treated as useless, again."
+    nar "He tosses himself around-"
+    fuy "It's so awful!"
+    fuy "I can do everything right, and they still treat me like I can't take care of myself!"
+    fuy "Like I can't do my fucking job! Like I'm a fucking child!"
+    fuy "It's humiliating..."
+    fuy "I'm an adult! I don't need a damn babysitter watching my every move, I just need a damn screenreader!"
+    extend "I-"
+    extend "Ugh!" with hpunch
+    fuy "This is awful..."
+    play sound "audio/phone.mp3" volume 0.5
+    nar "Fuyuhiko's alarm goes off."
+    nar "He breathes a long sigh, and snaps up."
+    nar "It's time to work."
+    jump WorkTime
 #Spacer
 
 label KonpekiMeeting:
