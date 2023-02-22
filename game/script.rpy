@@ -1423,7 +1423,38 @@ label Day3:
 
 #Checks are NoMeeting, Meetings are MeetingDenied (or HarukiMeeting)
 label HimeCheck:
-    #Placeholder
+    show fuyu neut at farleft
+    with moveinright
+    tfuy "Hey Hime."
+    show ryuji ugh at right
+    with Dissolve(0.5)
+    thim "Hey Fuyuhiko."
+    show ryuji uncomfy at right
+    with Dissolve(0.5)
+    thim "My boss is being a dick again."
+    show ryuji ugh at right
+    with Dissolve(0.5)
+    extend "More than normal."
+    show fuyu really
+    with Dissolve(0.5)
+    tfuy "What did he do now?"
+    thim "Nothing in particular, it's that kind of shitty."
+    thim "It's just giving me work, getting on me more often, threatening to write me up for the littlest things."
+    show fuyu down
+    with Dissolve(0.5)
+    tfuy "That sucks."
+    thim "Yeah..."
+    show hime cool
+    with Dissolve(0.5)
+    extend "But hey, don't you usually have work when I do on Tuesdays? How's your job?"
+    play sound "audio/phone.mp3" volume 0.5
+    nar "Fuyuhiko's alarm goes off."
+    tfuy "Shit."
+    show hime yo
+    with Dissolve(0.5)
+    thim "Awesome, see you later Fuyuhiko."
+    tfuy "You too Hime."
+    jump WorkTime
 #Spacer
 
 label RyujiCheck:
