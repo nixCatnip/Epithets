@@ -1564,7 +1564,11 @@ label AloneForever:
 #Spacer
 
 label KonpekiMeeting:
-    #Placeholder
+    nar "Fuyuhiko goes to text someone, when he receives a call from Ryuji."
+    #Ryuji calls Fuyuhiko, Hime is there too
+    #Hime is about to go to the meeting though
+    #Give another chance to join? Fuyu just auto-denies it?
+    #Mirror RyujiCheck
 #Spacer
 
 label ReiMeeting:
