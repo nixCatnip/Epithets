@@ -1647,7 +1647,63 @@ label HarukiMeeting:
     scene classroom evening
     with Dissolve(0.5)
     nar "Then to the club room."
-    #Meeting Time
+    show haruki shut at farleft
+    show hime ugh at center
+    show ryuji so at farright
+    show fuyu really at right
+    with Dissolve(0.5)
+    har "I'm telling you I know what I saw!"
+    har "Rei was at this altar and green fire started sprouting all around him."
+    har "He was summoning some weird demon thing with his powers!"
+    if ReiHouse:
+        har "You were {i}there{/i} Fuyuhiko!"
+    him "Haruki, I just think that we should wait a little longer until we do anything."
+    extend "Maybe until someone else-"
+    har "Are you calling me crazy!?"
+    ryu "She didn't say that!"
+    har "Why don't you believe me, I-!"
+    #Door Crash SFX
+    nar "The clubroom door swings open." with hpunch
+    hide hime
+    show rei shatter at center
+    with Dissolve(0.5)
+    nar "And Rei shows up."
+    show rei at left
+    with moveinright
+    show hime uncomfy at center
+    with Dissolve(0.5)
+    nar "And he goes right for Haruki."
+    rei "What are you doing!?"
+    har "Rei! Buddy! Heyyyy..."
+    rei "Calling a meeting behind my back, after {i}breaking in to my HOUSE!?{/i}"
+    rei "What is wrong with you!?"
+    nar "Fuyuhiko's phone alarm starts to sound, only to be quickly silenced."
+    nar "It's too late though, Rei's attention turns."
+    rei "And you three! Why did you agree to meet him!?"
+    ryu "We didn't know you wouldn't be here!"
+    rei "Ugh! That's it! I'm done with all of you!"
+    rei "I can't believe this."
+    hide rei
+    with moveoutright
+    har "Well... That ju-"
+    show hime fuck
+    with Dissolve(0.5)
+    him "Don't."
+    him "I'm going home, you want a ride Fuyuhiko?"
+    nar "Fuyuhiko checks his phone, reading out the time."
+    fuy "I'm good."
+    him "Okay then."
+    nar "Hime grabs Ryuji's arm and pratically drags him out of the clubroom."
+    hide hime
+    hide ryuji
+    with moveoutright
+    har "Fuyuhiko-"
+    fuy "I have to go."
+    show haruki frown
+    with Dissolve(0.5)
+    har "But-"
+    fuy "Bye, Haruki."
+    jump WorkTimeLate
 #Spacer
 
 label CrashMeeting:
