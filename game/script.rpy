@@ -1398,11 +1398,15 @@ label Day3:
             if NoMeeting:
                 jump HimeCheck
             else:
+                nar "Fuyuhiko goes to text Hime when he suddenly recieves a call from Ryuji"
+                play sound "audio/phone.mp3" volume 0.5
                 jump KonpekiMeeting
         "Ryuji":
             if NoMeeting:
                 jump RyujiCheck
             else:
+                nar "Fuyuhiko goes to text Ryuji when he suddenly recieves a call from him"
+                play sound "audio/phone.mp3" volume 0.5
                 jump KonpekiMeeting
         "Haruki":
             if NoMeeting:
@@ -1564,11 +1568,75 @@ label AloneForever:
 #Spacer
 
 label KonpekiMeeting:
-    nar "Fuyuhiko goes to text someone, when he receives a call from Ryuji."
-    #Ryuji calls Fuyuhiko, Hime is there too
-    #Hime is about to go to the meeting though
-    #Give another chance to join? Fuyu just auto-denies it?
-    #Mirror RyujiCheck
+    show fuyu neut at farleft
+    with moveinright
+    show ryuji hap at farright
+    with Dissolve(0.5)
+    tryu "Hey Winter!"
+    if KonpekiHouse:
+        tfuy "I thought you were going to Haruki's meeting."
+        tryu "Oh, Hime is!"
+        show hime cool at right
+        with Dissolve(0.5)
+        thim "Hey Fuyuhiko!"
+        hide hime
+        with Dissolve(0.5)
+        tryu "But she's getting ready to leave, which is why I called you!"
+        tryu "Have you studied for our math test at all?"
+        show fuyu what
+        with Dissolve(0.5)
+        tfuy "Our what?"
+        tryu "You really don't remember!?"
+        tryu "In our math class, we have a test coming up, the professor was really adamant about it."
+        tfuy "I..."
+        extend "No."
+        show ryuji excited
+        with Dissolve(0.5)
+        tryu "Then we need to study!"
+        show fuyu neut
+        with Dissolve(0.5)
+        play sound "audio/phone.mp3" volume 0.5
+        nar "Fuyuhiko's alarm goes off."
+        tfuy "Sorry Ryuji, but I need to go."
+        show ryuji so
+        with Dissolve(0.5)
+        tryu "Awww."
+        tfuy "Bye."
+        hide ryuji
+        with Dissovle(0.5)
+        show fuyu at center
+        with moveinleft
+        nar "Fuyuhiko quickly ends the call."
+        nar "He has a job to get to, unfortunately."
+        jump WorkTime
+    else:
+        tryu "Haruki said to tell you about this meeting at-"
+        tfuy "I already know."
+        tryu "Oh- Well are you gonna go?"
+        tfuy "No."
+        tryu "Aw really? Me and Hime are getting ready to go right now!"
+        tfuy "I'm not putting up with him any longer than I have to."
+        show ryuji so
+        with Dissolve(0.5)
+        tryu "If you say so..."
+        show ryuji hap
+        with Dissolve(0.5)
+        tryu "Just, uh, try to study for our math test while I'm gone!"
+        show fuyu what
+        with Dissolve(0.5)
+        tfuy "Wait, what-"
+        play sound "audio/phone.mp3" volume 0.5
+        nar "Fuyuhiko's alarm goes off."
+        tfuy "Ugh, I have to go."
+        tfuy "Bye, Ryuji."
+        tryu "Oh, okay, bye Winter!"
+        hide ryuji
+        with Dissovle(0.5)
+        show fuyu at center
+        with moveinleft
+        nar "Fuyuhiko quickly ends the call."
+        nar "He has a job to get to, unfortunately."
+        jump WorkTime
 #Spacer
 
 label ReiMeeting:
@@ -1580,4 +1648,8 @@ label HarukiMeeting:
     with Dissolve(0.5)
     nar "Then to the club room."
     #Meeting Time
+#Spacer
+
+label CrashMeeting:
+    #Placeholder
 #Spacer
