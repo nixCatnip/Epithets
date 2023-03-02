@@ -1839,9 +1839,10 @@ label WorkTimeLate:
     nar "But that doesn't make him not late, and his manager? God he's heard people get chewed out for less."
     scene coffee shop
     show fuyu frown at center
-    with Dissolve (0.5)
+    with Dissolve(0.5)
     #Fuyuhiko being late doesn't get noticed, which is cool because fuck this job, but like,
     #He sure is treated as worthless and useless.
+    #(Micromanaged? Underestimated? Explaining Himself?)
 #Spacer
 
 label ReiRitual:
