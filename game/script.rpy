@@ -41,6 +41,7 @@ label start:
     $ HarukiMeeting = False
     $ NoMeeting = False
     $ DeniedMeeting = False
+    $ RyujiGoing = True
     #Spacer
     play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
     nar "Ah, San Francisco, the salty air of the sea mixed with the salty attitudes of young adults experiencing true independence for the first time in their lives."
@@ -610,7 +611,7 @@ label HarukiandRei:
         rei "I just, want to know what's going on."
         show fuyu down
         with Dissolve(0.5)
-        nar "Fuyuhiko doesn't respond, instead opting to sit with the other boy in scilence."
+        nar "Fuyuhiko doesn't respond, instead opting to sit with the other boy in silence."
         rei "If you don't tell me, Lantern will."
         fuy "You can't do that."
         rei "I can, Shiro."
@@ -865,6 +866,7 @@ label KonpekiHouse:
                     jump Day3
                 "Fuck him.":
                     $ DeniedMeeting = False
+                    $ RyujiGoing = False
                     fuy "Honestly? Fuck him."
                     show ryuji err
                     ryu "Oh."
@@ -960,6 +962,8 @@ label KonpekiHouse:
                         him "Sure."
                         jump Day3
                     "Fuck him.":
+                        $ MeetingDenied = True
+                        $ RyujiGoing = False
                         fuy "Honestly? Fuck him."
                         show ryuji err
                         ryu "Oh."
@@ -1391,21 +1395,21 @@ label Day3:
     nar "He drags himself to class."
     if HarukiMeeting:
         jump HarukiMeeting
-    nar "Then decides to spend some time... with someone."
-    nar "He should check on..."
+    nar "Then decides to talk with... someone. What a rarity."
+    nar "He should text..."
     menu:
         "Hime":
             if NoMeeting:
                 jump HimeCheck
             else:
-                nar "Fuyuhiko goes to text Hime when he suddenly recieves a call from Ryuji"
+                nar "Fuyuhiko goes to text Hime when he suddenly recieves a call from Ryuji."
                 play sound "audio/phone.mp3" volume 0.5
                 jump KonpekiMeeting
         "Ryuji":
             if NoMeeting:
                 jump RyujiCheck
             else:
-                nar "Fuyuhiko goes to text Ryuji when he suddenly recieves a call from him"
+                nar "Fuyuhiko goes to text Ryuji when he suddenly recieves a call from him."
                 play sound "audio/phone.mp3" volume 0.5
                 jump KonpekiMeeting
         "Haruki":
@@ -1640,7 +1644,91 @@ label KonpekiMeeting:
 #Spacer
 
 label ReiMeeting:
-    #Placeholder
+    show fuyu neut at farleft
+    with moveinright
+    tfuy "Hey Rei."
+    show rei disappoint at farright
+    with Dissolve(0.5)
+    trei "Hello Shiro."
+    if ReiHouse:
+        trei "Hey, I'm sorry about last night."
+        trei "That was a mess but there's bigger problems now."
+    trei "I just recieved a vision from Lantern."
+    show fuyu what
+    with Dissolve(0.5)
+    tfuy "A vision?"
+    trei "Yes, that Haruki is hosting a club meeting behind my back, with the others."
+    trei "Do you know about this?"
+    menu:
+        "Yes. {i}(Support Him){/i}":
+            tfuy "Yeah, Haruki asked me to go."
+            show rei cautious
+            show fuyu neut
+            with Dissolve(0.5)
+            trei "I suspected as much."
+            trei "I'm planning to confront him."
+            show rei disappoint
+            trei "Would you come with me?"
+            nar "Fuyuhiko breathes a heavy sigh, all this to end up showing up to this stupid meeting anyway."
+            tfuy "Sure."
+            jump CrashMeeting
+        "No. {i}(Distract Him){/i}":
+            show fuyu frown
+            with Dissolve(0.5)
+            nar "This is bad, whatever Haruki is doing, it's going to hurt everyone if Rei blows up because of it."
+            nar "He needs a distraction, quick."
+            if ReiChat:
+                tfuy "Remember when you said you ask Lantern what happened to me earlier this week?"
+            tfuy "Use your powers to look into my secrets, now."
+            show rei cautious
+            with Dissolve(0.5)
+            trei "What?"
+            tfuy "Just do it, Rei. Prove to me that you can."
+            trei "I don't understand."
+            extend "But, okay."
+            play sound "audio/phone.mp3" volume 0.5
+            trei "We need to video call."
+            nar "Fuyuhiko sighs and accepts the call."
+            trei "Okay, just, try to remain calm while I do this okay?"
+            tfuy "Yeah, of course."
+            scene black
+            with Dissolve(0.5)
+            stop music fadeout 10.0
+            nar "Fuyuhiko takes a deep breath as Rei starts to chant something."
+            hide rei
+            with Dissolve(0.5)
+            show fuyu at center
+            with moveinleft
+            nar "He can't understand it though, and it's almost... distant."
+            nar "Then something begins to stir inside him, this awful all-consuming dread."
+            nar "He feels lik he's choking, he's almost convinced he is when he sees it."
+            fuy "Blanc..."
+            nar "His cat."
+            extend "In front of him."
+            extend "Dead."
+            extend "You caused this."
+            extend "You did this."
+            extend "Why?" with hpunch
+            extend "You MONSTER!!" with hpunch
+            #SFX?
+            nar "Fuyuhiko screams."
+            show rei paradox
+            $ renpy.pause(0.1)
+            show rei cautious at farright
+            scene classroom evening
+            nar "His senses fade back in quickly after that."
+            nar "But he's in a different place, and there are hands on him?"
+            nar "He tries to shove them off, to get away-"
+            rei "Fuyu, stop!"
+            show rei disappoint
+            with Dissolve(0.5)
+            rei "You're fine now..."
+            nar "Rei is... actually here."
+            rei "Look you're probably pretty out of it."
+            rei "Let's just go to my house, okay?"
+            nar "Fuyuhiko nods weakly as Rei helps him up from the corner he finds himself sitting in."
+            nar "But he can't stop thinking about what he saw."
+            jump ReiRitual
 #Spacer
 
 label HarukiMeeting:
@@ -1707,5 +1795,54 @@ label HarukiMeeting:
 #Spacer
 
 label CrashMeeting:
-    #Placeholder
+    nar "Fuyuhiko meets Rei in the hallways. He never had a a chance to leave the school anyway."
+    nar "They stand outside the clubroom doors for a second, but when Rei nods..."
+    scene classroom evening
+    show fuyu really at farright
+    show rei shatter at right
+    show haruki shut at farleft
+    show hime uncomfy at left
+    with Dissolve(0.5)
+    if RyujiGoing:
+        show ryuji err at center
+        with Dissolve(0.5)
+    nar "You both go in."
+    nar "And Rei goes right for Haruki."
+    rei "What are you doing!?"
+    har "Rei! Buddy! Heyyyy..."
+    rei "Calling a meeting behind my back, after {i}breaking in to my HOUSE!?{/i}"
+    rei "What is wrong with you!?"
+    nar "Fuyuhiko's phone alarm starts to sound, only to be quickly silenced."
+    nar "It's too late though, Rei's attention turns, he prompts Fuyuhiko to speak."
+    fuy "Rei's right! Why did you call the rest of us but not him Haruki!?"
+    har "Look, I just- I... I..."
+    rei "I can't believe you."
+    rei "I'm going home."
+    hide rei
+    with moveoutright
+    nar "Fuyuhiko goes to follow, and he checks his phone, prompting it to read the time."
+    nar "Oh shit. He has to go. Now."
+    jump WorkTimeLate
+#Spacer
+
+label WorkTime:
+    #Fuyuhiko is at his job, he think it kinda sucks, no actual accomodations just help from his coworkers
+    #(Where they're basically just doing his job for him). Near the end of his shift Ryuji and Hime show up.
+    #Fuyuhiko is grumpy about it. Rei corners after his shift (ReiMeeting cannot have occured), path to
+    #Day4 or ReiRitual
+#Spacer
+
+label WorkTimeLate:
+    scene road day
+    nar "Fuyuhiko was late to work."
+    nar "Luckily the coffee shop isn't far from work, it's a pretty short walk."
+    nar "But that doesn't make him not late, and his manager? God he's heard people get chewed out for less."
+    #Shop Background?
+    #Fuyuhiko being late doesn't get noticed, which is cool because fuck this job, but like,
+    #He sure is treated as worthless and useless.
+#Spacer
+
+label ReiRitual:
+    #Lantern's power and control only grows. Rei gets hard-possessed and attacks Fuyuhiko, he escapes though.
+    #Wary transition to Day4
 #Spacer
