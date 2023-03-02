@@ -1837,7 +1837,9 @@ label WorkTimeLate:
     nar "Fuyuhiko was late to work."
     nar "Luckily the coffee shop isn't far from work, it's a pretty short walk."
     nar "But that doesn't make him not late, and his manager? God he's heard people get chewed out for less."
-    #Shop Background?
+    scene coffee shop
+    show fuyu frown at center
+    with Dissolve (0.5)
     #Fuyuhiko being late doesn't get noticed, which is cool because fuck this job, but like,
     #He sure is treated as worthless and useless.
 #Spacer
