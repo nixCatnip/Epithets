@@ -1836,16 +1836,37 @@ label WorkTimeLate:
     scene road day
     nar "Fuyuhiko was late to work."
     nar "Luckily the coffee shop isn't far from work, it's a pretty short walk."
-    nar "But that doesn't make him not late, and his manager? God he's heard people get chewed out for less."
+    nar "But he's still late, god, and he's heard people get chewed out for less."
     scene coffee shop
     show fuyu frown at center
     with Dissolve(0.5)
-    #Fuyuhiko being late doesn't get noticed, which is cool because fuck this job, but like,
-    #He sure is treated as worthless and useless.
-    #(Micromanaged? Underestimated? Explaining Himself?)
+    nar "But when Fuyuhiko finally gets there, no one seems to notice?"
+    show fuyu really
+    with Dissolve(0.5)
+    show fuyu at farleft
+    with moveinleft
+    fuy "Which is cool because fuck this job but like..."
+    show fuyu at farright
+    with moveinright
+    fuy "Doesn't exactly make me feel any less worthless."
+    show fuyu at center
+    with moveinleft
+    fuy "Everything about this makes me feel useless."
+    fuy "The micromanagement, the underestimation, the explaining my damn disability {i}all{/i} the time."
+    fuy "It's awful."
+    scene black
+    with Dissolve(0.5)
+    fuy "I'm just glad when my shift is over."
+    jump Day4
 #Spacer
 
 label ReiRitual:
     #Lantern's power and control only grows. Rei gets hard-possessed and attacks Fuyuhiko, he escapes though.
     #Wary transition to Day4
+#Spacer
+
+
+
+label Day4:
+    #Placeholder
 #Spacer
