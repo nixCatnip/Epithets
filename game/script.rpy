@@ -1826,10 +1826,91 @@ label CrashMeeting:
 #Spacer
 
 label WorkTime:
-    #Fuyuhiko is at his job, he think it kinda sucks, no actual accomodations just help from his coworkers
-    #(Where they're basically just doing his job for him). Near the end of his shift Ryuji and Hime show up.
-    #Fuyuhiko is grumpy about it. Rei corners after his shift (ReiMeeting cannot have occured), path to
-    #Day4 or ReiRitual
+    scene coffee shop
+    show fuyu neut at center
+    nar "Fuyuhiko gets to his shift."
+    nar "It's a nice enough place, nice enough pay (all things considered), but that doesn't mean he doesn't hate it."
+    nar "The micromanagement, the underestimation, the re-explaining of his disability {i}all{/i} the time."
+    show fuyu frown
+    with Dissolve(0.5)
+    nar "It's not great."
+    show fuyu at farleft
+    show hime yo at farright
+    show ryuji hap at right
+    with moveinright
+    nar "It's worse when his friends show up."
+    show ryuji excited
+    with Dissolve(0.5)
+    show ryuji at left
+    with moveinright
+    ryu "Winter! You work here!?"
+    fuy "I do."
+    ryu "Since when! This is like, my favorite coffee shop. Normally I'm busy right about now but-"
+    fuy "Order, Ryuji."
+    show ryuji err
+    with Dissolve(0.5)
+    ryu "Oh."
+    show ryuji so
+    with Dissolve(0.5)
+    ryu "Okay."
+    show ryuji at right
+    with moveinleft
+    nar "The Konpeki siblings eventually get back together. But they're looking at him. Fuyuhiko can feel it."
+    nar "It's awful, overwhelming, but soon enough-"
+    scene road day
+    with Dissolve(0.5)
+    nar "His shift is over, and he leaves."
+    if HarukiMeeting or MeetingDenied:
+        jump Day4
+    else:
+        show fuyu at left
+        with moveinleft
+        show rei posesso at right
+        nar "And that's when Rei showed up."
+        nar "Fuyuhiko was a little out of it, his job is draining emotionally."
+        nar "Rei seemed a little out of it too, his voice seemed different, almost."
+        rei "Fuyuhiko! Buddy, hey!"
+        if ReiChat:
+            fuy "Rei. If this is about-"
+            rei "Of course not!"
+        else:
+            fuy "Rei. What do you-"
+        rei "I just want you to come over friend!"
+        fuy "..."
+        extend "Are you high?"
+        rei "Depends..."
+        rei "You coming over?"
+        menu:
+            "Yes":
+                nar "He's definitely out of it, someone should keep an eye on him."
+                fuy "You know what, sure."
+                rei "Great! Now come on."
+                fuy "... Okay."
+                jump ReiRitual
+            "No":
+                fuy "No, Rei."
+                rei "..."
+                extend "..."
+                show rei paradox
+                with Dissolve(0.5)
+                extend "Now that's just sad."
+                show rei at center
+                with moveinright
+                rei "I guess I'll have to make you."
+                nar "Fuyuhiko feels something hot against his cheek."
+                scene black
+                hide rei
+                hide fuyu
+                with Dissolve(0.5)
+                nar "Then everything goes dark."
+                scene road day
+                show fuyu frown at center
+                show rei err at farleft
+                show hime uncomfy at farright
+                nar "When he regains his senses, he's with Fuyu and Hime."
+                nar "And Rei is gone..."
+                him "Let's just... get you home."
+                jump Day4
 #Spacer
 
 label WorkTimeLate:
@@ -1868,5 +1949,7 @@ label ReiRitual:
 
 
 label Day4:
-    #Placeholder
+    scene black
+    nar "End of Day 3."
+    nar "Start of Day 4."
 #Spacer
