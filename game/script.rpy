@@ -2005,4 +2005,8 @@ label Day4:
     with Dissolve(0.5)
     nar "End of Day 3."
     nar "Start of Day 4."
+    nar "That's the end of Day 4, hopefully this update will be up within a few days of me writing this."
+    nar "There may be some minor audio issues or missing SFX depending on if I decide it's worth fixing before uploading."
+    nar "Again though, thanks to Free Orange Sounds, Kinetik Lee, and Chocolate Berry for letting me use their tracks, SFX, backgrounds, and such."
+    nar "See you next update."
 #Spacer
