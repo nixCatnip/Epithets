@@ -42,6 +42,7 @@ label start:
     $ NoMeeting = False
     $ DeniedMeeting = False
     $ RyujiGoing = True
+    $ BlancVision = False
     #Spacer
     play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
     nar "Ah, San Francisco, the salty air of the sea mixed with the salty attitudes of young adults experiencing true independence for the first time in their lives."
@@ -1673,6 +1674,7 @@ label ReiMeeting:
             tfuy "Sure."
             jump CrashMeeting
         "No. {i}(Distract Him){/i}":
+            $ BlancVision = True
             show fuyu frown
             with Dissolve(0.5)
             nar "This is bad, whatever Haruki is doing, it's going to hurt everyone if Rei blows up because of it."
@@ -1866,6 +1868,8 @@ label WorkTime:
         show fuyu at left
         with moveinleft
         show rei posesso at right
+        $ renpy.pause(0.1)
+        show rei happy at right
         nar "And that's when Rei showed up."
         nar "Fuyuhiko was a little out of it, his job is draining emotionally."
         nar "Rei seemed a little out of it too, his voice seemed different, almost."
@@ -1942,14 +1946,63 @@ label WorkTimeLate:
 #Spacer
 
 label ReiRitual:
-    #Lantern's power and control only grows. Rei gets hard-possessed and attacks Fuyuhiko, he escapes though.
-    #Wary transition to Day4
+    scene road day
+    with Dissolve(0.5)
+    nar "Rei drives, he's still acting weird even in that too."
+    nar "He's going fast, quick, sloppy, reckless. It isn't like him."
+    scene konpeki day
+    with Dissolve(0.5)
+    nar "It's not any better when they get there either."
+    show fuyu neut at left
+    show rei posesso at right
+    $ renpy.pause(0.1)
+    show rei happy at right
+    rei "Okay, yes, follow me. Perfect, Winter, perfect."
+    if BlancVision:
+        show fuyu down
+        with Dissolve(0.5)
+        nar "Fuyuhiko is just resigned to it. He's barely thinking about anything at all at the moment."
+    else:
+        show fuyu really
+        with Dissovle(0.5)
+        nar "Fuyuhiko hates it, but he plays along for the point of making sure Rei doesn't do anything stupid."
+    rei "Okay, perfect. Now just stay still. Ahem."
+    rei "{i}Inter nos in nobis.{/i}"
+    show fuyu really
+    fuy "Wait-"
+    rei "{i}Per flammam et lucem.{/i}"
+    fuy "What are you-"
+    show rei posesso 
+    with Dissolve(0.5)
+    rei "{i}Te ipsum revelare!{/i}"
+    rei "Now {i}that{/i} is better!"
+    if ReiHouse:
+        rei "Now we can finally meet face-to-face without any rude interruptions."
+    rei "Puppeting that meat puppet around with the mask of his face is so tiring."
+    nar "Fuyuhiko doesn't move, he just stares. What has he gotten himself into?"
+    nar "He feels heat on his cheek, like fire threatening to lick his face. Whatever this is, it's real."
+    nar "He starts to slowly crawl away from the source."
+    show rei paradox
+    with Dissolve(0.5)
+    rei "Tch. Just what are you doing."
+    rei "I said. Stay still!"
+    nar "There's rush of air next to Fuyuhiko, and the sound of the couch cushion he was sitting on getting ripped through by something sharp."
+    nar "He struggles with the door for a moment and-"
+    scene road day
+    show fuyu really at farleft
+    with moveinleft
+    nar "He runs."
+    show fuyu at farright
+    nar "He runs and he runs."
+    nar "Until evenutally, he calls Haruki to pick him up."
+    jump Day4
 #Spacer
 
 
 
 label Day4:
     scene black
+    with Dissolve(0.5)
     nar "End of Day 3."
     nar "Start of Day 4."
 #Spacer
