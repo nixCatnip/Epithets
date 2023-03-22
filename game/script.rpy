@@ -3,6 +3,7 @@ define har = Character("Haruki", color="#fa8c8c")
 define rei = Character("Rei", color="#93fa8c")
 define him = Character("Hime", color="#faf48c")
 define ryu = Character("Ryuji", color="#8c95fa")
+define lan = Character("The Lantern", color="#ffffff")
 define tfuy = Character("Fuyuhiko", color="#1d8f5f")
 define thar = Character("Haruki", color="#1d8f5f")
 define trei = Character("Rei", color="#1d8f5f")
@@ -43,6 +44,7 @@ label start:
     $ DeniedMeeting = False
     $ RyujiGoing = True
     $ BlancVision = False
+    $ ReiRitual = False
     #Spacer
     play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
     nar "Ah, San Francisco, the salty air of the sea mixed with the salty attitudes of young adults experiencing true independence for the first time in their lives."
@@ -804,6 +806,7 @@ label KonpekiHouse:
     him "Hang out with who you want man, but I did get some cool new spray paint cans, wanna see how they sound?"
     menu:
         "The Remaining of Them":
+            $ RyujiChat = True
             #This references the Last of Us Part 2 and the insane blind accessiblity options it has
             #If you want, you could research them and include them in the conversation
             #Or just have Ryuji and Fuyuhiko talk about whatever
@@ -1946,6 +1949,7 @@ label WorkTimeLate:
 #Spacer
 
 label ReiRitual:
+    $ ReiRitual = True
     scene road day
     with Dissolve(0.5)
     nar "Rei drives, he's still acting weird even in that too."
@@ -1975,18 +1979,25 @@ label ReiRitual:
     show rei posesso 
     with Dissolve(0.5)
     rei "{i}Te ipsum revelare!{/i}"
-    rei "Now {i}that{/i} is better!"
+    lan "Now {i}that{/i} is better! Full control at last."
     if ReiHouse:
-        rei "Now we can finally meet face-to-face without any rude interruptions."
-    rei "Puppeting that meat puppet around with the mask of his face is so tiring."
+        lan "Now we can finally meet face-to-face without any rude interruptions."
+    lan "Puppeting that meat puppet around with the mask of his face is so tiring."
     nar "Fuyuhiko doesn't move, he just stares. What has he gotten himself into?"
     nar "He feels heat on his cheek, like fire threatening to lick his face. Whatever this is, it's real."
     nar "He starts to slowly crawl away from the source."
     show rei paradox
     with Dissolve(0.5)
-    rei "Tch. Just what are you doing."
-    rei "I said. Stay still!"
+    lan "Tch. Just what are you doing."
+    lan "I said. Stay still!"
     nar "There's rush of air next to Fuyuhiko, and the sound of the couch cushion he was sitting on getting ripped through by something sharp."
+    show rei cautious
+    $ renpy.pause(0.1)
+    show rei paradox
+    $ renpy.pause(0.1)
+    show rei cautious
+    rei "{i}S-shiro, run!{/i}"
+    show rei possesso
     nar "He struggles with the door for a moment and-"
     scene road day
     show fuyu really at farleft
@@ -2001,12 +2012,129 @@ label ReiRitual:
 
 
 label Day4:
+    #Least information is Fuyuhiko skipped a meeting and Rei kinda made them black out a bit after work
     scene black
     with Dissolve(0.5)
     nar "End of Day 3."
     nar "Start of Day 4."
-    nar "That's the end of Day 4, hopefully this update will be up within a few days of me writing this."
-    nar "There may be some minor audio issues or missing SFX depending on if I decide it's worth fixing before uploading."
-    nar "Again though, thanks to Free Orange Sounds, Kinetik Lee, and Chocolate Berry for letting me use their tracks, SFX, backgrounds, and such."
-    nar "See you next update."
+    scene apartment day
+    show fuyu neut
+    with Dissolve(0.5)
+    nar "Fuyuhiko wakes up but he can't stop thinking about whatever's happening with Rei."
+    nar "He needs to call someone, meet up, do something. Whatever it is he can't just stay here."
+    nar "But that means deciding who to call..."
+#Spacer
+
+label CallMenu:
+    "Haruki" if HarukiMeeting or HarukiFriend:
+        jump HarukiCall
+    "Hime" if DeniedMeeting or HimeChat:
+        jump HimeCall
+    "Ryuji" if RyujiChat or not RyujiGoing:
+        jump RyujiCall
+    "Rei" if BlancVision or ReiRitual:
+        jump ReiCall
+    "Nobody":
+        jump NoCall
+
+label HarukiCall:
+    #Placeholder
+#Spacer
+
+label HimeCall:
+    #Placeholder
+#Spacer
+
+label RyujiCall:
+    #Placeholder
+#Spacer
+
+label ReiCall:
+    scene black
+    with Dissolve(0.5)
+    fuy "We meet at his house."
+    scene amanshi day
+    with Dissolve(0.5)
+    fuy "I know that I shouldn't be here."
+    fuy "But the Rei I know, my friend, has to be in there somewhere."
+    fuy "I can't leave him alone."
+    show fuyu neut at left
+    show rei posesso at right
+    with Dissolve(0.5)
+    lan "I have to say Fuyuhiko, I didn't expect you just walk back to me."
+    lan "I'm almost dissapointed, I had this whole elaborate plan to steal you away again."
+    lan "That doesn't matter though, my precious lamb has returned to me!"
+    nar "Fuyuhiko hardly moves the entire conversation, like he's steeling himself. Waiting, for something. For a breakthough."
+    nar "But before anything like that can happen, he feels a wet cloth against his mouth, and suddenly his body feels..."
+    scene black
+    with Dissolve(1)
+    extend " very weak..."
+    jump ReiEnding
+#Spacer
+
+label NoCall:
+    #Placeholder
+#Spacer
+
+label HarukiEnding:
+    #Placeholder
+#Spacer
+
+label HimeEnding:
+    #Placeholder
+#Spacer
+
+label RyujiEnding:
+    #Placeholder
+#Spacer
+
+label ReiEnding:
+    nar "End of Day 4..."
+    nar "Start of Day 5."
+    scene bedroom candles
+    show fuyu really at center
+    with Dissolve(10)
+    fuy "The first thing that hits me is the smell."
+    fuy "It's kinda gross, manufactured, scented candles of all sorts of types."
+    fuy "I try to get up and the that's when I realize."
+    fuy "ERGH!" with hpunch
+    fuy "I'm tied down."
+    fuy "The panic starts to set in."
+    fuy "I struggle against my restraints for what feels like hours, to no avail. What have I gotten myself into..."
+    fuy "Then the door opens."
+    show fuyu at left
+    show rei possesso at right 
+    with moveinright
+    lan "So you're awake. Good. That will make this better."
+    fuy "What are you going to do, dickhead?"
+    lan "Heh. I'm sure you noticed I'm not exactly mortal, Rei was right about that."
+    lan "But I'm not exactly incarnated either, I have to pilot his stupid fleshy body just to get around."
+    lan "So I'll sacrifice you both, with that kind of power I should be able to enter this plane properly."
+    fuy "What- but, Rei worships you..."
+    lan "Exactly! There so much more power in hurting someone who loves you."
+    lan "I'm sure you know that well Fuyuhiko, you're so harsh to people you call friends."
+    nar "Fuyuhiko continues to thrash against his restraints, but it doesn't do him any good."
+    lan "Well then, let's get started."
+    lan "Ahem."
+    lan "{i}Inter nos in nobis.{/i}"
+    lan "{i}Per sanguinem et ferro.{/i}"
+    lan "{i}Veram forman tu-{/i}"
+    #"Veram formam tuam incarnate.", "Incarnate thy true form."
+    show rei shatter
+    with Dissolve(0.5)
+    rei "AAAAAAAAAAA!"
+    show rei cautious
+    with Dissolve(0.5)
+    nar "Fuyuhiko can't tell whether or not to be relieved at the sudden screaming, but he gets a hint when he feels his restraints being cut away rather than his chest."
+    rei "Y-you need to go. I can't keep this going forever."
+    fuy "No! I can't just leave you!" with hpunch
+    rei "S-shiro, you're going to get hurt-"
+    fuy "I don't care! This entire thing, i-it's our fault, your friends' fault."
+    fuy "I need to help you fix it."
+    #unfinished :(
+    #"We can't banish him not alone, but..."?
+#Spacer
+
+label AloneEnding:
+    #Placeholder
 #Spacer
