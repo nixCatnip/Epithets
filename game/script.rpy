@@ -2126,15 +2126,59 @@ label ReiEnding:
     show rei cautious
     with Dissolve(0.5)
     nar "Fuyuhiko can't tell whether or not to be relieved at the sudden screaming, but he gets a hint when he feels his restraints being cut away rather than his chest."
+    show fuyu what
+    with Dissolve(0.5)
     rei "Y-you need to go. I can't keep this going forever."
+    show fuyu down
+    with Dissolve(0.5)
+    nar "Rei's voice has this echo-y quality to it, like he's speaking to Fuyuhiko through a phone with bad reception."
     fuy "No! I can't just leave you!" with hpunch
     rei "S-shiro, you're going to get hurt-"
     fuy "I don't care! This entire thing, i-it's our fault, your friends' fault."
     fuy "I need to help you fix it."
-    #unfinished :(
-    #"We can't banish him not alone, but..."?
+    rei "..."
+    extend " Fine."
+    rei "B-but it's not your fault Shiro, or Supai's. I-I preformed the ritual."
+    rei "I-I'll just need to bond to something stronger."
+    rei "G-give me your hand, this might pinch a little."
+    nar "Fuyuhiko places his hand in Rei's, he grits his teeth when Rei runs the blade he's still holding his palm."
+    nar "Then Rei does the same to his own hand and clasps them together so the blood mixes."
+    rei "R-repeat after me. {i}Inter nos in nobis.{/i}"
+    show fuyu neut
+    with Dissolve(0.5)
+    fuy "{i}Inter nos in nobis.{/i}"
+    show rei paradox
+    $ renpy.pause(0.1)
+    show rei cautious
+    rei "{i}Per cor et fiducia.{/i}"
+    fuy "{i}Per cor et fiducia.{/i}"
+    show rei paradox
+    show rei happy
+    with Dissolve(0.5)
+    rei "{i}Expellimus te!{/i}"
+    fuy "{i}Expellimus te!{/i}"
+    #"By heart and trust. We banish thee!"
+    lan "{i}AAAAAAAAAAARRRRRRRRGGGGGHHHHH!!!!!{/i}" with hpunch
+    nar "Rei collapses on the floor, pratically dragging Fuyuhiko down with him."
+    rei "We did it! Shiro, we did it!"
+    nar "Rei goes into a fit of manic laughter."
+    rei "I wasn't even sure if that was going to work! But, um, it's not permament."
+    rei "Lantern will be back for me, for my family. He always has."
+    rei "Will you still be with me, even if that happens."
+    nar "Fuyuhiko pauses, before smiling."
+    fuy "Of course, Rei."
+    jump Credits
 #Spacer
 
 label AloneEnding:
     #Placeholder
+#Spacer
+
+label Credits:
+    scene black
+    with Dissolve(1)
+    "That's all there is!"
+    "Thanks to Kinetik Lee for letting me use their music and Chocolate Berry for making the backgrounds they made free-to use."
+    "Free Orange Sounds was super helpful for SFX and Chemicataclysm's picrew let me scrap together sprites."
+    "Thanks for playing!"
 #Spacer
