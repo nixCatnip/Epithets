@@ -2073,7 +2073,23 @@ label ReiCall:
 #Spacer
 
 label NoCall:
-    #Placeholder
+    show fuyu down
+    with Dissolve(0.5)
+    nar "But he can't bring himself to call anyone."
+    nar "He can barely even bring himself to set his phone down."
+    nar "How could he bring himself to stand against Rei?"
+    scene apartment evening
+    show fuyu down
+    with Dissolve(0.5)
+    nar "Instead he sits in his room, waiting, quietly."
+    nar "It's safer here, quieter here, than anywhere else."
+    nar "He can't bring himself to do anything else."
+    scene apartment night
+    show fuyu down
+    with Dissolve(0.5)
+    nar "The day passes slowly, Fuyuhiko can do little more but eat and wait."
+    nar "He's not really sure what he's waiting for, but he is, a part of him is."
+    jump AloneEnding
 #Spacer
 
 label HarukiEnding:
@@ -2171,7 +2187,21 @@ label ReiEnding:
 #Spacer
 
 label AloneEnding:
-    #Placeholder
+    scene apartment day
+    show fuyu down
+    with Dissolve(0.5)
+    nar "End of Day 4."
+    nar "Start of Day 5."
+    nar "Soon enough, the next day, a knock comes on Fuyuhiko's door, and he gets exactly what he's been waiting for."
+    show rei posesso at right
+    with Dissolve(0.5)
+    show fuyu down
+    with moveinright
+    nar "And he doesn't have the strength to fight it. He doesn't have the strength to even call for help."
+    nar "Instead he simply..."
+    extend " opens the door."
+    jump Credits
+    #Unfinished
 #Spacer
 
 label Credits:
