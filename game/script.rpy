@@ -45,6 +45,7 @@ label start:
     $ RyujiGoing = True
     $ BlancVision = False
     $ ReiRitual = False
+    $ CrashMeeting = False
     #Spacer
     play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
     nar "Ah, San Francisco, the salty air of the sea mixed with the salty attitudes of young adults experiencing true independence for the first time in their lives."
@@ -1800,6 +1801,7 @@ label HarukiMeeting:
 #Spacer
 
 label CrashMeeting:
+    $ CrashMeeting = True
     nar "Fuyuhiko meets Rei in the hallways. He never had a a chance to leave the school anyway."
     nar "They stand outside the clubroom doors for a second, but when Rei nods..."
     scene classroom evening
@@ -2038,7 +2040,37 @@ label CallMenu:
         jump NoCall
 
 label HarukiCall:
-    #Placeholder
+    nar "It's a short call, one that ends almost immediately with Haruki telling Fuyuhiko to meet at his house. Guess he's not going to class today either."
+    scene supai day
+    show fuyu neut at left 
+    show haruki smug at right
+    with Dissolve(0.5)
+    if HarukiFriend:
+        har "Well Fuyu, I'm glad you made the right call."
+    else: 
+        har "Well Fuyuhiko, I'm glad you made the right call."
+    if CrashMeeting or MeetingDenied:
+        show haruki frown
+        with Dissolve(0.5)
+        har "I don't really get what changed but, I'm glad it did."
+        show haruki smug
+        with Dissolve(0.5)
+    har "So, here's the plan. I need to make some more calls, but we can't just let Rei run rampant while whatever is happening to him continues."
+    har "So we're gonna go to his tomorrow, convince him to come with us, or ah- \"convince\" him, if nescessary."
+    nar "Haruki bounces a bat against his palm, which- has he had that this whole time??"
+    fuy "Haruki, I-"
+    har "Trust me on this Fuyuhiko."
+    har "I don't want anyone getting hurt, this is the best way of doing that. I'll call you tomorrow, okay?"
+    "..."
+    fuy "Okay."
+    har "Cool, now, um, it might be better if you stay here actually..."
+    har "I don't want Rei showing up outside your apartment or something."
+    scene guestbed day
+    show fuyu neut at left 
+    show haruki smug at right
+    with Dissolve(0.5)
+    har "I have guest bed you can use. Just uh, make yourself at home until tomorrow. You're safe here at least."
+    har "I'll get you tomorrow."
 #Spacer
 
 label HimeCall:
@@ -2093,7 +2125,33 @@ label NoCall:
 #Spacer
 
 label HarukiEnding:
-    #Placeholder
+    scene guestbed night
+    with Dissolve(0.5)
+    nar "End of Day 4..."
+    nar "Start of Day 5."
+    show haruki smug at right
+    with moveinright
+    har "Fuyu, c'mon, wake up."
+    show fuyu really at left
+    with moveinbottom
+    fuy "Ugh, Haruki? Isn't it like, midnight?"
+    har "Yeah well, it's tomorrow isn't it?"
+    show fuyu neut
+    with dissolve(0.5)
+    fuy "Well now it's today. What do you want?"
+    har "Whatever's going on with Rei, it's made him like, crazy strong. If we want to take him down we need the jump on him."
+    fuy "Why do you know so much about him?"
+    show haruki frown
+    with dissolve(0.5)
+    har "Well, I've been keeping tabs on him since Monday. He's been acting weird since then."
+    fuy "Keeping tabs?"
+    har "Watching him, whenever I could. It's not like I was wrong, he {i}is{/i} dangerous."
+    nar "Fuyuhiko sighs, but he nods."
+    har "We'll go capture him together, then we can figure out what we can do to help him. But we won't have to worry anymore. That's important."
+    har "Okay Fuyu?"
+    "..."
+    fuy "Okay."
+    jump Credits
 #Spacer
 
 label HimeEnding:
@@ -2199,9 +2257,8 @@ label AloneEnding:
     with moveinright
     nar "And he doesn't have the strength to fight it. He doesn't have the strength to even call for help."
     nar "Instead he simply..."
-    extend " opens the door."
+    nar "Opens the door."
     jump Credits
-    #Unfinished
 #Spacer
 
 label Credits:
