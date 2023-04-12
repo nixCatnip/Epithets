@@ -46,6 +46,7 @@ label start:
     $ BlancVision = False
     $ ReiRitual = False
     $ CrashMeeting = False
+    $ Burned = False
     #Spacer
     play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
     nar "Ah, San Francisco, the salty air of the sea mixed with the salty attitudes of young adults experiencing true independence for the first time in their lives."
@@ -1897,6 +1898,7 @@ label WorkTime:
                 fuy "... Okay."
                 jump ReiRitual
             "No":
+                $ Burned = True
                 fuy "No, Rei."
                 rei "..."
                 extend "..."
@@ -2030,7 +2032,7 @@ label Day4:
 label CallMenu:
     "Haruki" if HarukiMeeting or HarukiFriend:
         jump HarukiCall
-    "Hime" if DeniedMeeting or HimeChat:
+    "Hime" if Burned or HimeChat:
         jump HimeCall
     "Ryuji" if RyujiChat or not RyujiGoing:
         jump RyujiCall
@@ -2074,7 +2076,31 @@ label HarukiCall:
 #Spacer
 
 label HimeCall:
-    #Placeholder
+    nar "Hime tells Fuyuhiko to meet up at her house, she wasn't really planning on going to her shift anyway."
+    scene konpeki day
+    show fuyu neut at left
+    show hime yo at right
+    with Dissolve(0.5)
+    fuy "Rei's behavior is just concerning, he has me worried."
+    him "I don't know, maybe he just needs some time?"
+    if Burned:
+        him "But that time after your shift, Rei straight-up attacked you." 
+    if ReiRitual:
+        him "Not including the fact he tried to sacrifice you or whatever."
+    show hime uncomfy
+    with Dissolve(0.5)
+    him "But what are we supposed to do about it."
+    nar "Fuyuhiko shrugs."
+    fuy "That's why I called you."
+    him "... Look, how attached are you to your job? Or your classes?"
+    show fuyu what
+    with Dissolve(0.5)
+    fuy "Not very?"
+    him "Good. I'll call you early tomorrow morning, just, try to chill out until then, okay?"
+    show fuyu neut
+    with Dissolve(0.5)
+    fuy "Sure. I guess."
+    jump HimeEnding
 #Spacer
 
 label RyujiCall:
@@ -2155,7 +2181,33 @@ label HarukiEnding:
 #Spacer
 
 label HimeEnding:
-    #Placeholder
+    scene black
+    with Dissolve(0.5)
+    nar "End of Day 4..."
+    nar "Start of Day 5."
+    scene apartment day
+    show fuyu down at center
+    with Dissolve(0.5)
+    nar "It's hard to sit still overnight but Fuyuhiko manages it, ultimately."
+    nar "He is rewarded with a 6am call."
+    show fuyu at left
+    with moveinleft
+    show hime cool
+    with moveinright
+    thim "Yo, pack your things."
+    show fuyu what
+    with Dissolve(0.5)
+    fuy "What!? Why?" with hpunch
+    thim "We need to get out of this town. I've been thinking about this for a while, this is the last straw."
+    fuy "What about your brother?"
+    thim "I already talked to him, he knows how I am. He's not happy about it but he understands."
+    show hime yo
+    with Dissolve(0.5)
+    thim "Besides, we'll have each other, won't we?"
+    fuy "I..."
+    nar "Fuyuhiko walks around his room, his fingers land on his work apron. He thinks about his impending panic about Rei."
+    fuy "Yeah. We will."
+    jump Credits
 #Spacer
 
 label RyujiEnding:
