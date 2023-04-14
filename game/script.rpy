@@ -2104,7 +2104,38 @@ label HimeCall:
 #Spacer
 
 label RyujiCall:
-    #Placeholder
+    nar "Ryuji tells Fuyuhiko to stay put, he'll be right over."
+    show fuyu what
+    with Dissolve(0.5)
+    show fuyu at left
+    with moveinleft
+    show ryuji hap at right
+    with moveinright
+    ryu "Okay! I'm here! What do you need?"
+    fuy "You doidn't need to drop everything and come over."
+    ryu "Of course I did! You never call me, so this has to be important!"
+    show fuyu down
+    with Dissolve(0.5)
+    fuy "Do I really not?"
+    show ryuji so
+    with Dissolve(0.5)
+    ryu "Wellnotreallybutitfeelsthatwaysometimesy'know?AlsoIjustreallywantedtocomeoverInevercomeover-"
+    show ryuji hap
+    with Dissolve(0.5)
+    ryu "But you mentioned Rei?"
+    fuy "Yeah he's been acting weird lately, like dangerously wierd."
+    ryu "So? We should ask him about it!"
+    if Burned or RyujiGoing:
+        ryu "Sure he's been weird, but Rei is nothing we can't handle."
+    fuy "I don't know if that's a good idea."
+    rei "Well, what else should we do?"
+    fuy "..."
+    extend " I don't know."
+    rei "Well then, we can talk to him tomorrow. For now... We can play some games together."
+    show fuyu neut
+    with Dissolve(0.5)
+    fuy "Sure."
+    jump RyujiEnding
 #Spacer
 
 label ReiCall:
@@ -2211,7 +2242,25 @@ label HimeEnding:
 #Spacer
 
 label RyujiEnding:
-    #Placeholder
+    scene apartment evening
+    with Dissolve(0.5)
+    nar "End of Day 4..."
+    nar "Start of Day 5."
+    scene apartment day
+    with Dissolve(0.5)
+    nar "Fuyuhiko and Ryuji head out to Rei's house early in the morning."
+    scene road day
+    with Dissolve(0.5)
+    nar "Rei is happy to recieve them."
+    show rei posesso at right
+    with Dissolve(0.1)
+    scene amanshi day
+    show fuyu neut at far left
+    show ryuji hap at left
+    show rei happy at right
+    with Dissolve(0.5)
+    #Unfinished
+    #Ryuji and Rei talk, they "fix" Rei's problem, but before the transition to credits it implies Lantern is still around.
 #Spacer
 
 label ReiEnding:
