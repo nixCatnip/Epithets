@@ -2252,14 +2252,66 @@ label RyujiEnding:
     scene road day
     with Dissolve(0.5)
     nar "Rei is happy to recieve them."
-    show rei posesso at right
-    with Dissolve(0.1)
     scene amanshi day
     show fuyu neut at far left
     show ryuji hap at left
     show rei happy at right
     with Dissolve(0.5)
-    #Unfinished
+    rei "Hello friends!"
+    if ReiRitual:
+        rei "Honestly I didn't expect to see you here again so soon, but I am definitely glad to see you."
+    show ryuji so
+    ryu "So, Rei, you've been acting weird lately."
+    if ReiRitual or Burned:
+        extend " Like, dangerously weird."
+    ryu "What's going on with you?"
+    show rei distracted
+    with Dissolve(0.5)
+    rei "Ah, well, that's a long story."
+    show rei cautious
+    with Dissolve(0.5)
+    rei "I was possessed, literally. I know that sounds weird, but that what happens when you're descended from a faith like mine."
+    show rei happy
+    show fuyu really
+    with Dissolve(0.5)
+    rei "But with proper management, it'll be fine! It's fine! I'm fine."
+    fuy "How fine {i}are{/i} you Rei."
+    rei "Let me show you."
+    hide rei
+    with moveoutright
+    nar "Rei goes into another room, where the sound of opening and closing cabinets sounds."
+    show rei happy at right
+    with moveinright
+    nar "Then he returns, carrying a long thin flask of orange liquid."
+    rei "This stuff is {i}aqua vitae{/i}, a sip of this a day keeps the curse away!"
+    show rei cautious
+    with Dissolve(0.5)
+    nar "Rei gives a demonstrative sip of the bottle, only seeming to recoil slightly at it's taste."
+    show rei happy
+    with Dissolve(0.5)
+    ryu "So we just gotta keep you accountable on that stuff and... problem solved?"
+    rei "Yeah, and no more attempted sacrifices, scout's honor."
+    ryu "Awesome! So that's it Winter!"
+    show fuyu neut
+    with Dissolve(0.5)
+    fuy "Yeah, I guess it is..."
+    ryu "Well, we should go do something to celebrate!"
+    hide ryuji
+    hide fuyu
+    with moveoutleft
+    show rei possesso
+    with Dissolve(0.5)
+    lan "Yeah... We should."
+    show rei happy
+    with Dissolve(0.5)
+    show ryuji at farleft
+    with moveinleft
+    ryu "You coming Rei?"
+    rei "Yeah, hold on."
+    hide ryuji
+    hide rei
+    with moveoutleft
+    jump Credits
     #Ryuji and Rei talk, they "fix" Rei's problem, but before the transition to credits it implies Lantern is still around.
 #Spacer
 
