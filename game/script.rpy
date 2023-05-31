@@ -47,6 +47,11 @@ label start:
     $ ReiRitual = False
     $ CrashMeeting = False
     $ Burned = False
+    $ ReiHouse = False
+    $ HarukiFriend = False
+    $ HomeAlone = False
+    $ KonpekiHouse = False
+    $ MeetingDenied = False
     #Spacer
     play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
     nar "Ah, San Francisco, the salty air of the sea mixed with the salty attitudes of young adults experiencing true independence for the first time in their lives."
@@ -777,6 +782,7 @@ label Nobody:
 #Spacer
 
 label KonpekiHouse:
+    $ KonpekiHouse = True
     #Regardless of route, Fuyuhiko is ultimately invited by both siblings for art stuff and video games respectively
     #Should offer another choice between the two and then do the thing
     #Then Haruki calls Hime and tells them to meet up in club room tomorrow even though they don't have club
@@ -944,8 +950,8 @@ label KonpekiHouse:
                 him "Let's go find Ryuji."
                 scene konpeki day
                 show hime cool at farleft
-                show ryuji at farright
-                show fuyu at center
+                show ryuji hap at farright
+                show fuyu really at center
                 with Dissolve(0.5)
                 nar "Ryuji is laying down on the couch, he looks up when Hime and Fuyuhiko enter."
                 him "Hey dude, Haruki just called."
@@ -1298,7 +1304,7 @@ label ReiHouse:
 label HomeAlone:
     $ HomeAlone = True
     if WorkChat:
-        scene apartment afternoon
+        scene apartment evening
         show fuyu really
         with Dissolve(0.5)
         nar "Fuyuhiko throws his bag onto his couch, and starts to pace around his room."
@@ -1317,7 +1323,7 @@ label HomeAlone:
         hide fuyu
         with moveoutright
         nar "Fuyuhiko goes into the bathroom. He throws water into his face until he feels a little calmer."
-        show fuyu
+        show fuyu neut
         with moveinright
         play music "audio/Urban-Flight.mp3" fadeout 1.0 fadein 1.0 volume 0.5
         fuy "I need to lie down..."
@@ -1331,7 +1337,7 @@ label HomeAlone:
         nar "He's already exhausted."
         nar "It's not even late yet, it's even 6 o'clock."
         nar "How unfair is that..."
-        scene apartment afternoon
+        scene apartment evening
         with Dissolve(0.5)
         nar "He lays down on his couch, twiddling his thumbs on his phone."
         nar "He watches and listens and consumes anything he can get his hands on."
@@ -1547,7 +1553,7 @@ label ReiCheck:
     tfuy "Okay, fine."
     trei "Good."
     hide rei
-    with Dissovle(0.5)
+    with Dissolve(0.5)
     show fuyu what at center
     with moveinleft
     fuy "That was weird, Rei never calls me-"
@@ -1613,7 +1619,7 @@ label KonpekiMeeting:
         tryu "Awww."
         tfuy "Bye."
         hide ryuji
-        with Dissovle(0.5)
+        with Dissolve(0.5)
         show fuyu at center
         with moveinleft
         nar "Fuyuhiko quickly ends the call."
@@ -1641,7 +1647,7 @@ label KonpekiMeeting:
         tfuy "Bye, Ryuji."
         tryu "Oh, okay, bye Winter!"
         hide ryuji
-        with Dissovle(0.5)
+        with Dissolve(0.5)
         show fuyu at center
         with moveinleft
         nar "Fuyuhiko quickly ends the call."
@@ -1680,7 +1686,7 @@ label ReiMeeting:
             jump CrashMeeting
         "No. {i}(Distract Him){/i}":
             $ BlancVision = True
-            show fuyu frown
+            show fuyu down
             with Dissolve(0.5)
             nar "This is bad, whatever Haruki is doing, it's going to hurt everyone if Rei blows up because of it."
             nar "He needs a distraction, quick."
@@ -1704,7 +1710,7 @@ label ReiMeeting:
             nar "Fuyuhiko takes a deep breath as Rei starts to chant something."
             hide rei
             with Dissolve(0.5)
-            show fuyu at center
+            show fuyu down at center
             with moveinleft
             nar "He can't understand it though, and it's almost... distant."
             nar "Then something begins to stir inside him, this awful all-consuming dread."
@@ -1712,11 +1718,11 @@ label ReiMeeting:
             fuy "Blanc..."
             nar "His cat."
             extend "In front of him."
-            extend "Dead."
-            extend "You caused this."
-            extend "You did this."
-            extend "Why?" with hpunch
-            extend "You MONSTER!!" with hpunch
+            extend " Dead."
+            extend " You caused this."
+            extend " You did this."
+            extend " Why?" with hpunch
+            extend " You MONSTER!!" with hpunch
             #SFX?
             nar "Fuyuhiko screams."
             show rei paradox
@@ -1839,7 +1845,7 @@ label WorkTime:
     nar "Fuyuhiko gets to his shift."
     nar "It's a nice enough place, nice enough pay (all things considered), but that doesn't mean he doesn't hate it."
     nar "The micromanagement, the underestimation, the re-explaining of his disability {i}all{/i} the time."
-    show fuyu frown
+    show fuyu down
     with Dissolve(0.5)
     nar "It's not great."
     show fuyu at farleft
@@ -1871,7 +1877,7 @@ label WorkTime:
     if HarukiMeeting or MeetingDenied:
         jump Day4
     else:
-        show fuyu at left
+        show fuyu neut at left
         with moveinleft
         show rei posesso at right
         $ renpy.pause(0.1)
@@ -1915,8 +1921,8 @@ label WorkTime:
                 with Dissolve(0.5)
                 nar "Then everything goes dark."
                 scene road day
-                show fuyu frown at center
-                show rei err at farleft
+                show fuyu down at center
+                show ryuji err at farleft
                 show hime uncomfy at farright
                 nar "When he regains his senses, he's with Fuyu and Hime."
                 nar "And Rei is gone..."
@@ -1930,7 +1936,7 @@ label WorkTimeLate:
     nar "Luckily the coffee shop isn't far from work, it's a pretty short walk."
     nar "But he's still late, god, and he's heard people get chewed out for less."
     scene coffee shop
-    show fuyu frown at center
+    show fuyu down at center
     with Dissolve(0.5)
     nar "But when Fuyuhiko finally gets there, no one seems to notice?"
     show fuyu really
@@ -1972,7 +1978,7 @@ label ReiRitual:
         nar "Fuyuhiko is just resigned to it. He's barely thinking about anything at all at the moment."
     else:
         show fuyu really
-        with Dissovle(0.5)
+        with Dissolve(0.5)
         nar "Fuyuhiko hates it, but he plays along for the point of making sure Rei doesn't do anything stupid."
     rei "Okay, perfect. Now just stay still. Ahem."
     rei "{i}Inter nos in nobis.{/i}"
@@ -2001,7 +2007,7 @@ label ReiRitual:
     $ renpy.pause(0.1)
     show rei cautious
     rei "{i}S-shiro, run!{/i}"
-    show rei possesso
+    show rei posesso
     nar "He struggles with the door for a moment and-"
     scene road day
     show fuyu really at farleft
@@ -2030,16 +2036,17 @@ label Day4:
 #Spacer
 
 label CallMenu:
-    "Haruki" if HarukiMeeting or HarukiFriend:
-        jump HarukiCall
-    "Hime" if Burned or HimeChat:
-        jump HimeCall
-    "Ryuji" if RyujiChat or not RyujiGoing:
-        jump RyujiCall
-    "Rei" if BlancVision or ReiRitual:
-        jump ReiCall
-    "Nobody":
-        jump NoCall
+    menu:
+        "Haruki" if HarukiMeeting or HarukiFriend:
+            jump HarukiCall
+        "Hime" if Burned or HimeChat:
+            jump HimeCall
+        "Ryuji" if RyujiChat or not RyujiGoing:
+            jump RyujiCall
+        "Rei" if BlancVision or ReiRitual:
+            jump ReiCall
+        "Nobody":
+            jump NoCall
 
 label HarukiCall:
     nar "It's a short call, one that ends almost immediately with Haruki telling Fuyuhiko to meet at his house. Guess he's not going to class today either."
@@ -2067,12 +2074,9 @@ label HarukiCall:
     fuy "Okay."
     har "Cool, now, um, it might be better if you stay here actually..."
     har "I don't want Rei showing up outside your apartment or something."
-    scene guestbed day
-    show fuyu neut at left 
-    show haruki smug at right
-    with Dissolve(0.5)
     har "I have guest bed you can use. Just uh, make yourself at home until tomorrow. You're safe here at least."
     har "I'll get you tomorrow."
+    jump HarukiEnding
 #Spacer
 
 label HimeCall:
@@ -2182,7 +2186,7 @@ label NoCall:
 #Spacer
 
 label HarukiEnding:
-    scene guestbed night
+    scene black
     with Dissolve(0.5)
     nar "End of Day 4..."
     nar "Start of Day 5."
@@ -2253,7 +2257,7 @@ label RyujiEnding:
     with Dissolve(0.5)
     nar "Rei is happy to recieve them."
     scene amanshi day
-    show fuyu neut at far left
+    show fuyu neut at farleft
     show ryuji hap at left
     show rei happy at right
     with Dissolve(0.5)
@@ -2299,12 +2303,12 @@ label RyujiEnding:
     hide ryuji
     hide fuyu
     with moveoutleft
-    show rei possesso
+    show rei posesso
     with Dissolve(0.5)
     lan "Yeah... We should."
-    show rei happy
+    show rei happpy
     with Dissolve(0.5)
-    show ryuji at farleft
+    show ryuji so at farleft
     with moveinleft
     ryu "You coming Rei?"
     rei "Yeah, hold on."
@@ -2330,7 +2334,7 @@ label ReiEnding:
     fuy "I struggle against my restraints for what feels like hours, to no avail. What have I gotten myself into..."
     fuy "Then the door opens."
     show fuyu at left
-    show rei possesso at right 
+    show rei posesso at right 
     with moveinright
     lan "So you're awake. Good. That will make this better."
     fuy "What are you going to do, dickhead?"

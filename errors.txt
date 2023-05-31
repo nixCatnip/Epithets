@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1230: end of line expected.
-    show haruki smug \with Dissolve(0.5)
-                     ^
+File "game/script.rpy", line 2042: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Nobody"
+            ^
 
-Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Feb  6 16:49:52 2023
+Ren'Py Version: Ren'Py 8.1.0.23051307
+Wed May 31 12:13:30 2023
