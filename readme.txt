@@ -1,4 +1,4 @@
-Welcome to Epithets! The very cool awesome visual novel I'm hoping to complete... eventually.
+Welcome to Epithets! The very cool awesome visual novel I created!
 The story centers on five Japanese students studying in San Francisco when a weird conspiracy
 begins to haunt their club.
 
